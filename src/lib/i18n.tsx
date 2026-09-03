@@ -379,7 +379,7 @@ const es = {
       "Las imágenes son de referencia. La información de permisos y certificaciones se publica únicamente cuando es verificable.",
     rights: "Todos los derechos reservados.",
   },
-} as const;
+};
 
 const en: Dict = {
   brand: {
