@@ -10,33 +10,128 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CumplimientoRouteImport } from './routes/cumplimiento'
+import { Route as LegalRouteImport } from './routes/legal'
+import { Route as LogisticaRouteImport } from './routes/logistica'
+import { Route as MaterialesRouteImport } from './routes/materiales'
+import { Route as NosotrosRouteImport } from './routes/nosotros'
+import { Route as ProcesoRouteImport } from './routes/proceso'
+import { Route as ServiciosRouteImport } from './routes/servicios'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CumplimientoRoute = CumplimientoRouteImport.update({
+  id: '/cumplimiento',
+  path: '/cumplimiento',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalRoute = LegalRouteImport.update({
+  id: '/legal',
+  path: '/legal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LogisticaRoute = LogisticaRouteImport.update({
+  id: '/logistica',
+  path: '/logistica',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MaterialesRoute = MaterialesRouteImport.update({
+  id: '/materiales',
+  path: '/materiales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NosotrosRoute = NosotrosRouteImport.update({
+  id: '/nosotros',
+  path: '/nosotros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProcesoRoute = ProcesoRouteImport.update({
+  id: '/proceso',
+  path: '/proceso',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServiciosRoute = ServiciosRouteImport.update({
+  id: '/servicios',
+  path: '/servicios',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cumplimiento': typeof CumplimientoRoute
+  '/legal': typeof LegalRoute
+  '/logistica': typeof LogisticaRoute
+  '/materiales': typeof MaterialesRoute
+  '/nosotros': typeof NosotrosRoute
+  '/proceso': typeof ProcesoRoute
+  '/servicios': typeof ServiciosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cumplimiento': typeof CumplimientoRoute
+  '/legal': typeof LegalRoute
+  '/logistica': typeof LogisticaRoute
+  '/materiales': typeof MaterialesRoute
+  '/nosotros': typeof NosotrosRoute
+  '/proceso': typeof ProcesoRoute
+  '/servicios': typeof ServiciosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cumplimiento': typeof CumplimientoRoute
+  '/legal': typeof LegalRoute
+  '/logistica': typeof LogisticaRoute
+  '/materiales': typeof MaterialesRoute
+  '/nosotros': typeof NosotrosRoute
+  '/proceso': typeof ProcesoRoute
+  '/servicios': typeof ServiciosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/cumplimiento'
+    | '/legal'
+    | '/logistica'
+    | '/materiales'
+    | '/nosotros'
+    | '/proceso'
+    | '/servicios'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/cumplimiento'
+    | '/legal'
+    | '/logistica'
+    | '/materiales'
+    | '/nosotros'
+    | '/proceso'
+    | '/servicios'
+  id:
+    | '__root__'
+    | '/'
+    | '/cumplimiento'
+    | '/legal'
+    | '/logistica'
+    | '/materiales'
+    | '/nosotros'
+    | '/proceso'
+    | '/servicios'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CumplimientoRoute: typeof CumplimientoRoute
+  LegalRoute: typeof LegalRoute
+  LogisticaRoute: typeof LogisticaRoute
+  MaterialesRoute: typeof MaterialesRoute
+  NosotrosRoute: typeof NosotrosRoute
+  ProcesoRoute: typeof ProcesoRoute
+  ServiciosRoute: typeof ServiciosRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +143,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cumplimiento': {
+      id: '/cumplimiento'
+      path: '/cumplimiento'
+      fullPath: '/cumplimiento'
+      preLoaderRoute: typeof CumplimientoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal': {
+      id: '/legal'
+      path: '/legal'
+      fullPath: '/legal'
+      preLoaderRoute: typeof LegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/logistica': {
+      id: '/logistica'
+      path: '/logistica'
+      fullPath: '/logistica'
+      preLoaderRoute: typeof LogisticaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/materiales': {
+      id: '/materiales'
+      path: '/materiales'
+      fullPath: '/materiales'
+      preLoaderRoute: typeof MaterialesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nosotros': {
+      id: '/nosotros'
+      path: '/nosotros'
+      fullPath: '/nosotros'
+      preLoaderRoute: typeof NosotrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/proceso': {
+      id: '/proceso'
+      path: '/proceso'
+      fullPath: '/proceso'
+      preLoaderRoute: typeof ProcesoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servicios': {
+      id: '/servicios'
+      path: '/servicios'
+      fullPath: '/servicios'
+      preLoaderRoute: typeof ServiciosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CumplimientoRoute: CumplimientoRoute,
+  LegalRoute: LegalRoute,
+  LogisticaRoute: LogisticaRoute,
+  MaterialesRoute: MaterialesRoute,
+  NosotrosRoute: NosotrosRoute,
+  ProcesoRoute: ProcesoRoute,
+  ServiciosRoute: ServiciosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

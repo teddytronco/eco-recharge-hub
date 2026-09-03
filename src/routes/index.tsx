@@ -110,7 +110,7 @@ function Index() {
         <SectionTitle title={t.home.valueTitle} />
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           {t.home.values.map((v, i) => {
-            const Icon = icons[i];
+            const Icon = icons[i % icons.length]!;
             return (
               <div key={v.t} className="rounded-lg border border-border bg-card p-6">
                 <Icon className="size-5 text-accent-foreground" aria-hidden />
