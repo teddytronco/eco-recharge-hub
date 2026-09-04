@@ -49,7 +49,7 @@ const MAX_SIZE = 10 * 1024 * 1024;
 const MAX_FILES = 5;
 
 const fieldClass =
-  "mt-1.5 w-full rounded-md border border-input bg-background px-3 py-2.5 text-sm outline-none transition-colors focus:border-ring focus:ring-2 focus:ring-ring/30";
+  "mt-1.5 w-full rounded-md border border-input bg-background px-3 py-3 text-base outline-none transition-colors focus:border-ring focus:ring-2 focus:ring-ring/30 sm:py-2.5 sm:text-sm";
 
 export function QuoteForm({ initialChemistry }: { initialChemistry?: string }) {
   const { t, lang } = useI18n();
