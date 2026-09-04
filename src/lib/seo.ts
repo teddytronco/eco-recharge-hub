@@ -13,6 +13,7 @@ export type SeoInput = {
   ogTitle?: string;
   ogDescription?: string;
   type?: "website" | "article";
+  robots?: string;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 };
 
@@ -23,6 +24,7 @@ export function pageHead({
   ogTitle,
   ogDescription,
   type = "website",
+  robots,
   jsonLd,
 }: SeoInput) {
   const url = absoluteUrl(path);
@@ -30,7 +32,9 @@ export function pageHead({
     meta: [
       { title },
       { name: "description", content: description },
+      ...(robots ? [{ name: "robots", content: robots }] : []),
       { property: "og:title", content: ogTitle ?? title },
+
       { property: "og:description", content: ogDescription ?? description },
       { property: "og:type", content: type },
       { property: "og:url", content: url },
