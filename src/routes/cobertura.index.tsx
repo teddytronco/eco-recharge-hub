@@ -42,13 +42,14 @@ function CoverageHub() {
       />
       <Section>
         {regionOrder.map((region) => {
-          const list = places.filter((p) => p.region === region);
+          const list = places.filter((p) => p.region === region.key);
           if (!list.length) return null;
           return (
-            <div key={region} className="mb-12 last:mb-0">
+            <div key={region.key} className="mb-12 last:mb-0">
               <h2 className="text-xl font-semibold tracking-tight">
-                {list[0].regionLabel[lang]}
+                {region.label[lang]}
               </h2>
+
               <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {list.map((p) => (
                   <li key={p.slug}>
