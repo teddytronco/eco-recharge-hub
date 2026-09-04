@@ -135,6 +135,7 @@ function RootComponent() {
             <Outlet />
           </main>
           <Footer />
+          <FloatingWhatsApp />
         </div>
       </I18nProvider>
     </QueryClientProvider>
