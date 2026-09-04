@@ -98,7 +98,7 @@ export function serviceLd({
     serviceType: "Battery waste management and recycling logistics",
     provider: {
       "@type": "Organization",
-      name: "Reciclaje de Baterías Latinoamérica",
+      name: "Recyc Latam",
       url: SITE_URL,
     },
     areaServed: areaServed.map((a) => ({ "@type": "Place", name: a })),

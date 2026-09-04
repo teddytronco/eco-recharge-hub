@@ -21,7 +21,7 @@ export const Route = createFileRoute("/recursos/$slug")({
     const path = `/recursos/${article.slug}`;
     return pageHead({
       path,
-      title: `${article.title.es} | Reciclaje de Baterías Latinoamérica`,
+      title: `${article.title.es} | Recyc Latam`,
       description: article.description.es,
       type: "article",
       jsonLd: [
@@ -34,11 +34,11 @@ export const Route = createFileRoute("/recursos/$slug")({
           mainEntityOfPage: absoluteUrl(path),
           author: {
             "@type": "Organization",
-            name: "Reciclaje de Baterías Latinoamérica",
+            name: "Recyc Latam",
           },
           publisher: {
             "@type": "Organization",
-            name: "Reciclaje de Baterías Latinoamérica",
+            name: "Recyc Latam",
           },
         },
         breadcrumbLd([

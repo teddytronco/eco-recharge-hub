@@ -85,13 +85,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "theme-color", content: "#101820" },
       { name: "format-detection", content: "telephone=yes" },
       { name: "mobile-web-app-capable", content: "yes" },
-      { title: "Reciclaje de Baterías Latinoamérica" },
+      { title: "Recyc Latam" },
       {
         name: "description",
         content:
           "Gestión responsable de baterías de litio para clientes industriales en Latinoamérica.",
       },
-      { property: "og:site_name", content: "Reciclaje de Baterías Latinoamérica" },
+      { property: "og:site_name", content: "Recyc Latam" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

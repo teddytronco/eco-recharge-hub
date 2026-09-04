@@ -8,7 +8,7 @@ export const Route = createFileRoute("/legal")({
   head: () =>
     pageHead({
       path: "/legal",
-      title: "Aviso legal y privacidad | Reciclaje de Bater\u00edas Latinoam\u00e9rica",
+      title: "Aviso legal y privacidad | Recyc Latam",
       description: "Tratamiento de datos personales y condiciones de uso del sitio.",
       robots: "noindex",
     }),
