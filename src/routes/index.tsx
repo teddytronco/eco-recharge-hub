@@ -41,7 +41,7 @@ function Index() {
           height={1080}
           className="absolute inset-0 size-full object-cover opacity-20"
         />
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8 lg:py-28">
+        <div className="relative mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:gap-12 sm:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8 lg:py-28">
           <div>
             <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
               {t.home.eyebrow}
