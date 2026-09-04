@@ -17,8 +17,12 @@ import { Route as LogisticaRouteImport } from './routes/logistica'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as ProcesoRouteImport } from './routes/proceso'
 import { Route as ServiciosRouteImport } from './routes/servicios'
+import { Route as CoberturaIndexRouteImport } from './routes/cobertura.index'
+import { Route as CoberturaSlugRouteImport } from './routes/cobertura.$slug'
 import { Route as MaterialesIndexRouteImport } from './routes/materiales.index'
 import { Route as MaterialesSlugRouteImport } from './routes/materiales.$slug'
+import { Route as RecursosIndexRouteImport } from './routes/recursos.index'
+import { Route as RecursosSlugRouteImport } from './routes/recursos.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -60,6 +64,16 @@ const ServiciosRoute = ServiciosRouteImport.update({
   path: '/servicios',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CoberturaIndexRoute = CoberturaIndexRouteImport.update({
+  id: '/cobertura/',
+  path: '/cobertura/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoberturaSlugRoute = CoberturaSlugRouteImport.update({
+  id: '/cobertura/$slug',
+  path: '/cobertura/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MaterialesIndexRoute = MaterialesIndexRouteImport.update({
   id: '/materiales/',
   path: '/materiales/',
@@ -68,6 +82,16 @@ const MaterialesIndexRoute = MaterialesIndexRouteImport.update({
 const MaterialesSlugRoute = MaterialesSlugRouteImport.update({
   id: '/materiales/$slug',
   path: '/materiales/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecursosIndexRoute = RecursosIndexRouteImport.update({
+  id: '/recursos/',
+  path: '/recursos/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecursosSlugRoute = RecursosSlugRouteImport.update({
+  id: '/recursos/$slug',
+  path: '/recursos/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -80,8 +104,12 @@ export interface FileRoutesByFullPath {
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
   '/servicios': typeof ServiciosRoute
+  '/cobertura/$slug': typeof CoberturaSlugRoute
   '/materiales/$slug': typeof MaterialesSlugRoute
+  '/recursos/$slug': typeof RecursosSlugRoute
+  '/cobertura/': typeof CoberturaIndexRoute
   '/materiales/': typeof MaterialesIndexRoute
+  '/recursos/': typeof RecursosIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -92,8 +120,12 @@ export interface FileRoutesByTo {
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
   '/servicios': typeof ServiciosRoute
+  '/cobertura/$slug': typeof CoberturaSlugRoute
   '/materiales/$slug': typeof MaterialesSlugRoute
+  '/recursos/$slug': typeof RecursosSlugRoute
+  '/cobertura': typeof CoberturaIndexRoute
   '/materiales': typeof MaterialesIndexRoute
+  '/recursos': typeof RecursosIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -105,8 +137,12 @@ export interface FileRoutesById {
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
   '/servicios': typeof ServiciosRoute
+  '/cobertura/$slug': typeof CoberturaSlugRoute
   '/materiales/$slug': typeof MaterialesSlugRoute
+  '/recursos/$slug': typeof RecursosSlugRoute
+  '/cobertura/': typeof CoberturaIndexRoute
   '/materiales/': typeof MaterialesIndexRoute
+  '/recursos/': typeof RecursosIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -119,8 +155,12 @@ export interface FileRouteTypes {
     | '/nosotros'
     | '/proceso'
     | '/servicios'
+    | '/cobertura/$slug'
     | '/materiales/$slug'
+    | '/recursos/$slug'
+    | '/cobertura/'
     | '/materiales/'
+    | '/recursos/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -131,8 +171,12 @@ export interface FileRouteTypes {
     | '/nosotros'
     | '/proceso'
     | '/servicios'
+    | '/cobertura/$slug'
     | '/materiales/$slug'
+    | '/recursos/$slug'
+    | '/cobertura'
     | '/materiales'
+    | '/recursos'
   id:
     | '__root__'
     | '/'
@@ -143,8 +187,12 @@ export interface FileRouteTypes {
     | '/nosotros'
     | '/proceso'
     | '/servicios'
+    | '/cobertura/$slug'
     | '/materiales/$slug'
+    | '/recursos/$slug'
+    | '/cobertura/'
     | '/materiales/'
+    | '/recursos/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -156,8 +204,12 @@ export interface RootRouteChildren {
   NosotrosRoute: typeof NosotrosRoute
   ProcesoRoute: typeof ProcesoRoute
   ServiciosRoute: typeof ServiciosRoute
+  CoberturaSlugRoute: typeof CoberturaSlugRoute
   MaterialesSlugRoute: typeof MaterialesSlugRoute
+  RecursosSlugRoute: typeof RecursosSlugRoute
+  CoberturaIndexRoute: typeof CoberturaIndexRoute
   MaterialesIndexRoute: typeof MaterialesIndexRoute
+  RecursosIndexRoute: typeof RecursosIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -218,6 +270,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServiciosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cobertura/': {
+      id: '/cobertura/'
+      path: '/cobertura'
+      fullPath: '/cobertura/'
+      preLoaderRoute: typeof CoberturaIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cobertura/$slug': {
+      id: '/cobertura/$slug'
+      path: '/cobertura/$slug'
+      fullPath: '/cobertura/$slug'
+      preLoaderRoute: typeof CoberturaSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/materiales/': {
       id: '/materiales/'
       path: '/materiales'
@@ -232,6 +298,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MaterialesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/recursos/': {
+      id: '/recursos/'
+      path: '/recursos'
+      fullPath: '/recursos/'
+      preLoaderRoute: typeof RecursosIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recursos/$slug': {
+      id: '/recursos/$slug'
+      path: '/recursos/$slug'
+      fullPath: '/recursos/$slug'
+      preLoaderRoute: typeof RecursosSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -244,8 +324,12 @@ const rootRouteChildren: RootRouteChildren = {
   NosotrosRoute: NosotrosRoute,
   ProcesoRoute: ProcesoRoute,
   ServiciosRoute: ServiciosRoute,
+  CoberturaSlugRoute: CoberturaSlugRoute,
   MaterialesSlugRoute: MaterialesSlugRoute,
+  RecursosSlugRoute: RecursosSlugRoute,
+  CoberturaIndexRoute: CoberturaIndexRoute,
   MaterialesIndexRoute: MaterialesIndexRoute,
+  RecursosIndexRoute: RecursosIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
