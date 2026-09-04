@@ -9,7 +9,7 @@ import { CONTACT } from "@/lib/i18n";
 export const Route = createFileRoute("/contacto")({
   staticData: { sitemap: true },
   validateSearch: (search: Record<string, unknown>) => ({
-    material: typeof search.material === "string" ? search.material.slice(0, 120) : undefined,
+    material: typeof search["material"] === "string" ? search["material"].slice(0, 120) : undefined,
   }),
   head: () =>
     pageHead({

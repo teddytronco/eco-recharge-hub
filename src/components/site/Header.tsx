@@ -68,6 +68,7 @@ export function Header() {
           </a>
           <Link
             to="/contacto"
+            search={{ material: undefined }}
             className="hidden rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 sm:inline-flex"
           >
             {t.cta.quote}
@@ -106,6 +107,7 @@ export function Header() {
             ))}
             <Link
               to="/contacto"
+              search={{ material: undefined }}
               onClick={() => setOpen(false)}
               className="mt-2 rounded-md bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground"
             >
