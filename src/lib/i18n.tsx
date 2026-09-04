@@ -195,6 +195,10 @@ const es = {
       "Baterías en combustión o con riesgo térmico activo",
     ],
     alt: "Imagen de referencia: celdas y módulos de batería clasificados sobre mesa de trabajo",
+    valorizationTitle: "¿Busca compra de baterías usadas?",
+    valorizationBody:
+      "Algunos lotes conservan valor recuperable según su química, estado y volumen; otros implican un costo de disposición. Evaluamos su caso con datos reales y le confirmamos por escrito la ruta viable.",
+    valorizationCta: "Ver cómo funciona la valorización",
   },
   compliance: {
     title: "Cumplimiento",
@@ -563,6 +567,10 @@ const en: Dict = {
       "Batteries in combustion or with active thermal risk",
     ],
     alt: "Reference image: sorted battery cells and modules on a workbench",
+    valorizationTitle: "Looking for used battery purchase?",
+    valorizationBody:
+      "Some lots retain recoverable value depending on chemistry, condition and volume; others carry a disposal cost. We assess your case with real data and confirm the viable route in writing.",
+    valorizationCta: "See how valuation works",
   },
   compliance: {
     title: "Compliance",
