@@ -15,6 +15,7 @@ import { I18nProvider } from "../lib/i18n";
 import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
 import { FloatingWhatsApp } from "../components/site/FloatingWhatsApp";
+import { MobileActionBar } from "../components/site/MobileActionBar";
 
 function NotFoundComponent() {
   return (
