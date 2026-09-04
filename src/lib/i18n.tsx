@@ -15,8 +15,8 @@ type Dict = typeof es;
 
 const es = {
   brand: {
-    name: "Reciclaje de Baterías Latinoamérica",
-    short: "RBL",
+    name: "Recyc Latam",
+    short: "Recyc Latam",
     tagline: "Gestión responsable de baterías de litio para la industria",
   },
   nav: {
@@ -269,7 +269,7 @@ const es = {
     subtitle:
       "Un equipo enfocado en resolver un problema industrial concreto: qué hacer con las baterías de litio cuando terminan su vida útil.",
     body1:
-      "Reciclaje de Baterías Latinoamérica nace para atender la creciente necesidad de gestión responsable de baterías de litio en la región. Trabajamos con empresas que requieren un manejo trazable, ordenado y compatible con sus políticas internas de seguridad y cumplimiento.",
+      "Recyc Latam nace para atender la creciente necesidad de gestión responsable de baterías de litio en la región. Trabajamos con empresas que requieren un manejo trazable, ordenado y compatible con sus políticas internas de seguridad y cumplimiento.",
     body2:
       "Nuestro enfoque es conservador: preferimos rechazar un movimiento antes que ejecutarlo sin las condiciones adecuadas. Cada proyecto inicia con una evaluación técnica y termina con evidencia documental entregada al generador.",
     valuesTitle: "Cómo trabajamos",
@@ -341,7 +341,7 @@ const es = {
     sections: [
       {
         t: "Responsable",
-        d: "Reciclaje de Baterías Latinoamérica es responsable del tratamiento de los datos personales que usted proporciona a través de este sitio. Contacto: christianrecio91@gmail.com.",
+        d: "Recyc Latam es responsable del tratamiento de los datos personales que usted proporciona a través de este sitio. Contacto: christianrecio91@gmail.com.",
       },
       {
         t: "Datos que recabamos",
@@ -388,8 +388,8 @@ const es = {
 
 const en: Dict = {
   brand: {
-    name: "Reciclaje de Baterías Latinoamérica",
-    short: "RBL",
+    name: "Recyc Latam",
+    short: "Recyc Latam",
     tagline: "Responsible lithium battery management for industry",
   },
   nav: {
@@ -642,7 +642,7 @@ const en: Dict = {
     subtitle:
       "A team focused on one concrete industrial problem: what to do with lithium batteries at the end of their useful life.",
     body1:
-      "Reciclaje de Baterías Latinoamérica was created to address the growing need for responsible lithium battery management in the region. We work with companies that require traceable, orderly handling compatible with their internal safety and compliance policies.",
+      "Recyc Latam was created to address the growing need for responsible lithium battery management in the region. We work with companies that require traceable, orderly handling compatible with their internal safety and compliance policies.",
     body2:
       "Our approach is conservative: we would rather decline a movement than execute it without the right conditions. Every project starts with a technical assessment and ends with documentary evidence delivered to the generator.",
     valuesTitle: "How we work",
@@ -713,7 +713,7 @@ const en: Dict = {
     sections: [
       {
         t: "Data controller",
-        d: "Reciclaje de Baterías Latinoamérica is responsible for processing the personal data you provide through this site. Contact: christianrecio91@gmail.com.",
+        d: "Recyc Latam is responsible for processing the personal data you provide through this site. Contact: christianrecio91@gmail.com.",
       },
       {
         t: "Data we collect",

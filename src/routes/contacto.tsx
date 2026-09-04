@@ -14,7 +14,7 @@ export const Route = createFileRoute("/contacto")({
   head: () =>
     pageHead({
       path: "/contacto",
-      title: "Contacto y cotización de reciclaje de baterías | Reciclaje de Baterías Latinoamérica",
+      title: "Contacto y cotización de reciclaje de baterías | Recyc Latam",
       description: "Solicite una evaluación para el reciclaje o la disposición de sus baterías de litio. Respuesta por WhatsApp, teléfono o correo desde Monterrey, Nuevo León.",
     }),
   component: ContactPage,

@@ -11,7 +11,7 @@ export const Route = createFileRoute("/recursos/")({
   head: () =>
     pageHead({
       path: "/recursos",
-      title: "Recursos técnicos sobre disposición de baterías de litio | Reciclaje de Baterías Latinoamérica",
+      title: "Recursos técnicos sobre disposición de baterías de litio | Recyc Latam",
       description:
         "Guías prácticas sobre clasificación, empaque, documentación y exportación de baterías de litio al final de su vida útil en México y Latinoamérica.",
       jsonLd: breadcrumbLd([

@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import { CONTACT, useI18n, whatsappUrl } from "@/lib/i18n";
-import logo from "@/assets/logo-placeholder.png";
+import logo from "@/assets/recyc-latam-mark.png";
 import { ui } from "@/content/ui";
 
 
@@ -28,13 +28,14 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
           <div className="flex items-center gap-3">
-            <img src={logo} alt="" width={512} height={512} loading="lazy" className="h-9 w-9" />
-            <span className="text-sm leading-tight font-semibold">
-              Reciclaje de Baterías
-              <span className="block text-[11px] tracking-[0.18em] text-muted-foreground uppercase">
-                Latinoamérica
+            <img src={logo} alt="" width={1024} height={1024} loading="lazy" className="h-9 w-9" />
+            <span className="text-base leading-none font-semibold tracking-tight">
+              RECYC
+              <span className="block text-[11px] tracking-[0.32em] text-accent uppercase">
+                Latam
               </span>
             </span>
+
           </div>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">{t.footer.about}</p>
         </div>
@@ -108,7 +109,7 @@ export function Footer() {
 
       <div className="border-t border-border">
         <div className="mx-auto max-w-7xl px-5 py-6 text-xs text-muted-foreground lg:px-8">
-          © {year} Reciclaje de Baterías Latinoamérica. {t.footer.rights}
+          © {year} Recyc Latam. {t.footer.rights}
         </div>
       </div>
     </footer>

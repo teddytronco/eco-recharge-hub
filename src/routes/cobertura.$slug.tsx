@@ -27,7 +27,7 @@ export const Route = createFileRoute("/cobertura/$slug")({
     }
     const path = `/cobertura/${place.slug}`;
     const name = place.name.es;
-    const title = `${seoTitle(place.slug, name)} | Reciclaje de Baterías Latinoamérica`;
+    const title = `${seoTitle(place.slug, name)} | Recyc Latam`;
     const description =
       place.slug === "nuevo-leon"
         ? "Reciclaje de baterías de litio en Monterrey y Nuevo León: retiro coordinado, empaque conforme, transporte con operadores autorizados y expediente documental para el generador."
