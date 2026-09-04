@@ -326,9 +326,10 @@ const es = {
     review: "Revisión",
     reviewNote:
       "Verifique la información antes de enviar. Al enviar se abrirá su cliente de correo con el resumen; los archivos se solicitarán por un canal seguro en la respuesta.",
-    successTitle: "Solicitud preparada",
+    successTitle: "Solicitud recibida",
     successBody:
-      "Se generó el resumen de su solicitud. Si su cliente de correo no se abrió, escriba directamente a nuestro correo o contáctenos por WhatsApp.",
+      "Registramos su solicitud y nuestro equipo la revisará. Si desea acelerar el contacto, escríbanos por WhatsApp o llámenos directamente.",
+
     fileSecurity:
       "Los archivos se validan en su navegador y no se transmiten desde este formulario. Tras su solicitud, coordinamos un canal seguro para recibirlos.",
     selected: "Archivos seleccionados",
