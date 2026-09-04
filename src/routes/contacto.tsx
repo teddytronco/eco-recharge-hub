@@ -28,7 +28,7 @@ function ContactPage() {
       <PageHero eyebrow={t.brand.tagline} title={t.contact.title} subtitle={t.contact.subtitle} />
       <Section>
         <div className="grid gap-10 lg:grid-cols-[1.4fr_0.6fr] lg:items-start">
-          <QuoteForm initialChemistry={material} />
+          <QuoteForm {...(material ? { initialChemistry: material } : {})} />
           <aside className="space-y-6 lg:sticky lg:top-24">
             <EmergencyNotice />
             <div className="rounded-lg border border-border bg-card p-7">

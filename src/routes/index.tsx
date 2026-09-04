@@ -53,8 +53,9 @@ function Index() {
               {t.home.subtitle}
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <Link
-                to="/contacto"
+                <Link
+                  to="/contacto"
+                  search={{ material: undefined }}
                 className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
               >
                 {t.cta.quote}
