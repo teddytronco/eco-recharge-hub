@@ -3,7 +3,7 @@ import { useI18n } from "@/lib/i18n";
 import { BulletList, CtaBand, EmergencyNotice, PageHero, Section } from "@/components/site/blocks";
 import materials from "@/assets/materials.jpg";
 
-export const Route = createFileRoute("/materiales")({
+export const Route = createFileRoute("/materiales/")({
   head: () => ({
     meta: [
       { title: "Materiales aceptados | Reciclaje de Baterías Latinoamérica" },

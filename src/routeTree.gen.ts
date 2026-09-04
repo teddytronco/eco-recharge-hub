@@ -14,10 +14,10 @@ import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as CumplimientoRouteImport } from './routes/cumplimiento'
 import { Route as LegalRouteImport } from './routes/legal'
 import { Route as LogisticaRouteImport } from './routes/logistica'
-import { Route as MaterialesRouteImport } from './routes/materiales'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as ProcesoRouteImport } from './routes/proceso'
 import { Route as ServiciosRouteImport } from './routes/servicios'
+import { Route as MaterialesIndexRouteImport } from './routes/materiales.index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -44,11 +44,6 @@ const LogisticaRoute = LogisticaRouteImport.update({
   path: '/logistica',
   getParentRoute: () => rootRouteImport,
 } as any)
-const MaterialesRoute = MaterialesRouteImport.update({
-  id: '/materiales',
-  path: '/materiales',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const NosotrosRoute = NosotrosRouteImport.update({
   id: '/nosotros',
   path: '/nosotros',
@@ -64,6 +59,11 @@ const ServiciosRoute = ServiciosRouteImport.update({
   path: '/servicios',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MaterialesIndexRoute = MaterialesIndexRouteImport.update({
+  id: '/materiales/',
+  path: '/materiales/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -71,10 +71,10 @@ export interface FileRoutesByFullPath {
   '/cumplimiento': typeof CumplimientoRoute
   '/legal': typeof LegalRoute
   '/logistica': typeof LogisticaRoute
-  '/materiales': typeof MaterialesRoute
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
   '/servicios': typeof ServiciosRoute
+  '/materiales/': typeof MaterialesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -82,10 +82,10 @@ export interface FileRoutesByTo {
   '/cumplimiento': typeof CumplimientoRoute
   '/legal': typeof LegalRoute
   '/logistica': typeof LogisticaRoute
-  '/materiales': typeof MaterialesRoute
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
   '/servicios': typeof ServiciosRoute
+  '/materiales': typeof MaterialesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -94,10 +94,10 @@ export interface FileRoutesById {
   '/cumplimiento': typeof CumplimientoRoute
   '/legal': typeof LegalRoute
   '/logistica': typeof LogisticaRoute
-  '/materiales': typeof MaterialesRoute
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
   '/servicios': typeof ServiciosRoute
+  '/materiales/': typeof MaterialesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -107,10 +107,10 @@ export interface FileRouteTypes {
     | '/cumplimiento'
     | '/legal'
     | '/logistica'
-    | '/materiales'
     | '/nosotros'
     | '/proceso'
     | '/servicios'
+    | '/materiales/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -118,10 +118,10 @@ export interface FileRouteTypes {
     | '/cumplimiento'
     | '/legal'
     | '/logistica'
-    | '/materiales'
     | '/nosotros'
     | '/proceso'
     | '/servicios'
+    | '/materiales'
   id:
     | '__root__'
     | '/'
@@ -129,10 +129,10 @@ export interface FileRouteTypes {
     | '/cumplimiento'
     | '/legal'
     | '/logistica'
-    | '/materiales'
     | '/nosotros'
     | '/proceso'
     | '/servicios'
+    | '/materiales/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -141,10 +141,10 @@ export interface RootRouteChildren {
   CumplimientoRoute: typeof CumplimientoRoute
   LegalRoute: typeof LegalRoute
   LogisticaRoute: typeof LogisticaRoute
-  MaterialesRoute: typeof MaterialesRoute
   NosotrosRoute: typeof NosotrosRoute
   ProcesoRoute: typeof ProcesoRoute
   ServiciosRoute: typeof ServiciosRoute
+  MaterialesIndexRoute: typeof MaterialesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -184,13 +184,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LogisticaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/materiales': {
-      id: '/materiales'
-      path: '/materiales'
-      fullPath: '/materiales'
-      preLoaderRoute: typeof MaterialesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/nosotros': {
       id: '/nosotros'
       path: '/nosotros'
@@ -212,6 +205,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServiciosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/materiales/': {
+      id: '/materiales/'
+      path: '/materiales'
+      fullPath: '/materiales/'
+      preLoaderRoute: typeof MaterialesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -221,10 +221,10 @@ const rootRouteChildren: RootRouteChildren = {
   CumplimientoRoute: CumplimientoRoute,
   LegalRoute: LegalRoute,
   LogisticaRoute: LogisticaRoute,
-  MaterialesRoute: MaterialesRoute,
   NosotrosRoute: NosotrosRoute,
   ProcesoRoute: ProcesoRoute,
   ServiciosRoute: ServiciosRoute,
+  MaterialesIndexRoute: MaterialesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
