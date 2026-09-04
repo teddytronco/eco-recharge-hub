@@ -1,7 +1,10 @@
 import * as React from "react";
 import { Check, Paperclip, ShieldCheck, X } from "lucide-react";
+import { useServerFn } from "@tanstack/react-start";
 import { CONTACT, useI18n } from "@/lib/i18n";
+import { submitQuoteLead } from "@/lib/leads.functions";
 import { cn } from "@/lib/utils";
+
 
 type FormState = {
   company: string;
@@ -63,6 +66,9 @@ export function QuoteForm({ initialChemistry }: { initialChemistry?: string }) {
   const [files, setFiles] = React.useState<File[]>([]);
   const [fileError, setFileError] = React.useState<string | null>(null);
   const [sent, setSent] = React.useState(false);
+  const [sending, setSending] = React.useState(false);
+  const saveLead = useServerFn(submitQuoteLead);
+
 
   const set = <K extends keyof FormState>(key: K, value: FormState[K]) => {
     setValues((v) => ({ ...v, [key]: value }));
@@ -140,15 +146,48 @@ export function QuoteForm({ initialChemistry }: { initialChemistry?: string }) {
     return lines.join("\n");
   };
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateStep(2)) return;
-    const subject = `Solicitud de cotización — ${values.company || "Nuevo contacto"}`;
-    window.location.href = `mailto:${CONTACT.email}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(summary())}`;
+    setSending(true);
+    let saved = false;
+    try {
+      const res = await saveLead({
+        data: {
+          company: values.company,
+          contactName: values.contactName,
+          role: values.role,
+          email: values.email,
+          phone: values.phone,
+          country: values.country,
+          city: values.city,
+          chemistry: values.chemistry,
+          format: values.format,
+          quantity: values.quantity,
+          condition: values.condition,
+          frequency: values.frequency,
+          pickup: values.pickup,
+          notes: values.notes,
+          urgent: values.urgent,
+          fileNames: files.map((f) => f.name),
+          sourcePage: document.referrer || window.location.href,
+          lang,
+        },
+      });
+      saved = res.ok;
+    } catch {
+      saved = false;
+    }
+    setSending(false);
+    if (!saved) {
+      const subject = `Solicitud de cotización — ${values.company || "Nuevo contacto"}`;
+      window.location.href = `mailto:${CONTACT.email}?subject=${encodeURIComponent(
+        subject,
+      )}&body=${encodeURIComponent(summary())}`;
+    }
     setSent(true);
   };
+
 
   if (sent) {
     return (
@@ -438,10 +477,12 @@ export function QuoteForm({ initialChemistry }: { initialChemistry?: string }) {
         ) : (
           <button
             type="submit"
-            className="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
+            disabled={sending}
+            className="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 disabled:opacity-50"
           >
-            {t.cta.send}
+            {sending ? "…" : t.cta.send}
           </button>
+
         )}
       </div>
     </form>
