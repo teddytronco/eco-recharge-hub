@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { I18nProvider } from "../lib/i18n";
 import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
+import { FloatingWhatsApp } from "../components/site/FloatingWhatsApp";
 
 function NotFoundComponent() {
   return (
@@ -134,6 +135,7 @@ function RootComponent() {
             <Outlet />
           </main>
           <Footer />
+          <FloatingWhatsApp />
         </div>
       </I18nProvider>
     </QueryClientProvider>
