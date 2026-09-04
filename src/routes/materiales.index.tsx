@@ -60,6 +60,20 @@ function MaterialsPage() {
           </div>
         </div>
 
+        <div className="mt-10 rounded-lg border border-border bg-card p-7">
+          <h2 className="text-lg font-semibold">{t.materials.valorizationTitle}</h2>
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            {t.materials.valorizationBody}
+          </p>
+          <Link
+            to="/compra-de-baterias-usadas"
+            className="mt-5 inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            {t.materials.valorizationCta}
+            <ArrowRight className="size-4" aria-hidden />
+          </Link>
+        </div>
+
         <div className="mt-10">
           <EmergencyNotice />
         </div>

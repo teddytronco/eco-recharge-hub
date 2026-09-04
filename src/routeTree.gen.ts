@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CompraDeBateriasUsadasRouteImport } from './routes/compra-de-baterias-usadas'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as CumplimientoRouteImport } from './routes/cumplimiento'
 import { Route as LegalRouteImport } from './routes/legal'
@@ -28,6 +29,11 @@ import { Route as RecursosSlugRouteImport } from './routes/recursos.$slug'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompraDeBateriasUsadasRoute = CompraDeBateriasUsadasRouteImport.update({
+  id: '/compra-de-baterias-usadas',
+  path: '/compra-de-baterias-usadas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactoRoute = ContactoRouteImport.update({
@@ -103,6 +109,7 @@ const RecursosSlugRoute = RecursosSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/compra-de-baterias-usadas': typeof CompraDeBateriasUsadasRoute
   '/contacto': typeof ContactoRoute
   '/cumplimiento': typeof CumplimientoRoute
   '/legal': typeof LegalRoute
@@ -120,6 +127,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/compra-de-baterias-usadas': typeof CompraDeBateriasUsadasRoute
   '/contacto': typeof ContactoRoute
   '/cumplimiento': typeof CumplimientoRoute
   '/legal': typeof LegalRoute
@@ -138,6 +146,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/compra-de-baterias-usadas': typeof CompraDeBateriasUsadasRoute
   '/contacto': typeof ContactoRoute
   '/cumplimiento': typeof CumplimientoRoute
   '/legal': typeof LegalRoute
@@ -157,6 +166,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/compra-de-baterias-usadas'
     | '/contacto'
     | '/cumplimiento'
     | '/legal'
@@ -174,6 +184,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/compra-de-baterias-usadas'
     | '/contacto'
     | '/cumplimiento'
     | '/legal'
@@ -191,6 +202,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/compra-de-baterias-usadas'
     | '/contacto'
     | '/cumplimiento'
     | '/legal'
@@ -209,6 +221,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CompraDeBateriasUsadasRoute: typeof CompraDeBateriasUsadasRoute
   ContactoRoute: typeof ContactoRoute
   CumplimientoRoute: typeof CumplimientoRoute
   LegalRoute: typeof LegalRoute
@@ -232,6 +245,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compra-de-baterias-usadas': {
+      id: '/compra-de-baterias-usadas'
+      path: '/compra-de-baterias-usadas'
+      fullPath: '/compra-de-baterias-usadas'
+      preLoaderRoute: typeof CompraDeBateriasUsadasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contacto': {
@@ -337,6 +357,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CompraDeBateriasUsadasRoute: CompraDeBateriasUsadasRoute,
   ContactoRoute: ContactoRoute,
   CumplimientoRoute: CumplimientoRoute,
   LegalRoute: LegalRoute,
