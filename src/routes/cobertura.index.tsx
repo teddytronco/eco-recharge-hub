@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { CtaBand, PageHero, Section } from "@/components/site/blocks";
+import { CoverageMap } from "@/components/site/CoverageMap";
 import { places, regionOrder } from "@/content/coverage";
 import { ui } from "@/content/ui";
 import { breadcrumbLd, pageHead, serviceLd } from "@/lib/seo";
@@ -41,6 +42,8 @@ function CoverageHub() {
         subtitle={ui.coverage.intro[lang]}
       />
       <Section>
+        <CoverageMap />
+        <div className="mt-14" />
         {regionOrder.map((region) => {
           const list = places.filter((p) => p.region === region.key);
           if (!list.length) return null;
