@@ -478,7 +478,7 @@ export function QuoteForm({ initialChemistry }: { initialChemistry?: string }) {
           <button
             type="submit"
             disabled={sending}
-            className="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 disabled:opacity-50"
+            className="min-h-12 rounded-md bg-accent px-6 py-2.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 disabled:opacity-50"
           >
             {sending ? "…" : t.cta.send}
           </button>
