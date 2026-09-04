@@ -1,31 +1,17 @@
+import { pageHead } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { CONTACT, useI18n } from "@/lib/i18n";
 import { PageHero, Section } from "@/components/site/blocks";
 
 export const Route = createFileRoute("/legal")({
-  head: () => ({
-    meta: [
-      { title: "Aviso legal y privacidad | Reciclaje de Baterías Latinoamérica" },
-      {
-        name: "description",
-        content:
-          "Aviso de privacidad y términos de uso: datos que recabamos, finalidades, transferencias, conservación y derechos del titular.",
-      },
-      {
-        property: "og:title",
-        content: "Aviso legal y privacidad | Reciclaje de Baterías Latinoamérica",
-      },
-      {
-        property: "og:description",
-        content: "Tratamiento de datos personales y condiciones de uso del sitio.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/legal" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "robots", content: "noindex" },
-    ],
-    links: [{ rel: "canonical", href: "/legal" }],
-  }),
+  staticData: { sitemap: false },
+  head: () =>
+    pageHead({
+      path: "/legal",
+      title: "Aviso legal y privacidad | Reciclaje de Bater\u00edas Latinoam\u00e9rica",
+      description: "Tratamiento de datos personales y condiciones de uso del sitio.",
+      robots: "noindex",
+    }),
   component: LegalPage,
 });
 

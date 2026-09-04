@@ -1,32 +1,17 @@
+import { pageHead } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { BulletList, Card, CtaBand, PageHero, Section, SectionTitle } from "@/components/site/blocks";
 import logistics from "@/assets/logistics.jpg";
 
 export const Route = createFileRoute("/logistica")({
-  head: () => ({
-    meta: [
-      { title: "Logística y transporte | Reciclaje de Baterías Latinoamérica" },
-      {
-        name: "description",
-        content:
-          "Empaque según condición, segregación, documentación de embarque y coordinación regional para el transporte de baterías de litio.",
-      },
-      {
-        property: "og:title",
-        content: "Logística y transporte | Reciclaje de Baterías Latinoamérica",
-      },
-      {
-        property: "og:description",
-        content:
-          "Planeación de embarques de baterías de litio como mercancía peligrosa, con documentación previa a cada movimiento.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/logistica" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/logistica" }],
-  }),
+  staticData: { sitemap: true },
+  head: () =>
+    pageHead({
+      path: "/logistica",
+      title: "Log\u00edstica y transporte de bater\u00edas de litio | Reciclaje de Bater\u00edas Latinoam\u00e9rica",
+      description: "Empaque, unidades da\u00f1adas o defectuosas, consolidaci\u00f3n regional y coordinaci\u00f3n de transporte de bater\u00edas de litio en M\u00e9xico y Latinoam\u00e9rica.",
+    }),
   component: LogisticsPage,
 });
 

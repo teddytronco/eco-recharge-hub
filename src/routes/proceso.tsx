@@ -1,28 +1,16 @@
+import { pageHead } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { CtaBand, EmergencyNotice, PageHero, Section } from "@/components/site/blocks";
 
 export const Route = createFileRoute("/proceso")({
-  head: () => ({
-    meta: [
-      { title: "Proceso | Reciclaje de Baterías Latinoamérica" },
-      {
-        name: "description",
-        content:
-          "Cinco etapas con puntos de control: solicitud, evaluación de riesgo, propuesta, embarque y expediente documental del material.",
-      },
-      { property: "og:title", content: "Proceso | Reciclaje de Baterías Latinoamérica" },
-      {
-        property: "og:description",
-        content:
-          "Proceso verificable y documentado para el manejo de baterías de litio al final de su vida útil.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/proceso" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/proceso" }],
-  }),
+  staticData: { sitemap: true },
+  head: () =>
+    pageHead({
+      path: "/proceso",
+      title: "Proceso de disposici\u00f3n de bater\u00edas de litio paso a paso | Reciclaje de Bater\u00edas Latinoam\u00e9rica",
+      description: "Del diagn\u00f3stico del material al expediente de destino: c\u00f3mo se ejecuta un proyecto de disposici\u00f3n de bater\u00edas de litio, etapa por etapa.",
+    }),
   component: ProcessPage,
 });
 

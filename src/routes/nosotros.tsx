@@ -1,28 +1,16 @@
+import { pageHead } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { CONTACT, useI18n } from "@/lib/i18n";
 import { Card, ContactActions, CtaBand, PageHero, Section, SectionTitle } from "@/components/site/blocks";
 
 export const Route = createFileRoute("/nosotros")({
-  head: () => ({
-    meta: [
-      { title: "Nosotros | Reciclaje de Baterías Latinoamérica" },
-      {
-        name: "description",
-        content:
-          "Equipo enfocado en la gestión responsable de baterías de litio en Latinoamérica: prudencia técnica, transparencia y servicio bilingüe.",
-      },
-      { property: "og:title", content: "Nosotros | Reciclaje de Baterías Latinoamérica" },
-      {
-        property: "og:description",
-        content:
-          "Quiénes somos y cómo trabajamos con clientes industriales en la gestión de baterías de litio.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/nosotros" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/nosotros" }],
-  }),
+  staticData: { sitemap: true },
+  head: () =>
+    pageHead({
+      path: "/nosotros",
+      title: "Nosotros | Reciclaje de Bater\u00edas Latinoam\u00e9rica",
+      description: "Equipo con base en Monterrey enfocado en la gesti\u00f3n de bater\u00edas al final de su vida \u00fatil para clientes industriales en M\u00e9xico y Latinoam\u00e9rica.",
+    }),
   component: AboutPage,
 });
 

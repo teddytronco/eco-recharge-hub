@@ -1,3 +1,4 @@
+import { pageHead } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { EmergencyNotice, PageHero, Section } from "@/components/site/blocks";
@@ -6,29 +7,13 @@ import { ContactActions } from "@/components/site/blocks";
 import { CONTACT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/contacto")({
-  head: () => ({
-    meta: [
-      { title: "Contacto y cotización | Reciclaje de Baterías Latinoamérica" },
-      {
-        name: "description",
-        content:
-          "Solicite la evaluación de su material: formulario técnico en tres pasos, atención telefónica, correo y WhatsApp para clientes industriales.",
-      },
-      {
-        property: "og:title",
-        content: "Contacto y cotización | Reciclaje de Baterías Latinoamérica",
-      },
-      {
-        property: "og:description",
-        content:
-          "Formulario de solicitud para evaluación de baterías de litio y canales de contacto directo.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/contacto" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/contacto" }],
-  }),
+  staticData: { sitemap: true },
+  head: () =>
+    pageHead({
+      path: "/contacto",
+      title: "Contacto y cotizaci\u00f3n de reciclaje de bater\u00edas | Reciclaje de Bater\u00edas Latinoam\u00e9rica",
+      description: "Solicite una evaluaci\u00f3n para el reciclaje o la disposici\u00f3n de sus bater\u00edas de litio. Respuesta por WhatsApp, tel\u00e9fono o correo desde Monterrey, Nuevo Le\u00f3n.",
+    }),
   component: ContactPage,
 });
 
