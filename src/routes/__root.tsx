@@ -129,7 +129,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <I18nProvider>
-        <div className="flex min-h-screen flex-col">
+        <div className="flex min-h-screen flex-col pb-[4.5rem] lg:pb-0">
           <Header />
           <main className="flex-1">
             {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
@@ -137,6 +137,7 @@ function RootComponent() {
           </main>
           <Footer />
           <FloatingWhatsApp />
+          <MobileActionBar />
         </div>
       </I18nProvider>
     </QueryClientProvider>
