@@ -47,9 +47,9 @@ export function CoverageMap() {
     <figure className="overflow-hidden rounded-lg border border-border bg-card">
       <ComposableMap
         projection="geoEqualEarth"
-        projectionConfig={{ rotate: [72, -6, 0], scale: 330 }}
+        projectionConfig={{ rotate: [75, 12, 0], scale: 470 }}
         width={1000}
-        height={780}
+        height={700}
         className="h-auto w-full"
         role="img"
         aria-label={
