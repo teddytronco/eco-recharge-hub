@@ -46,13 +46,13 @@ function Index() {
             <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
               {t.home.eyebrow}
             </p>
-            <h1 className="mt-5 text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 text-3xl font-semibold tracking-tight text-balance sm:mt-5 sm:text-5xl lg:text-6xl">
               {t.home.title}
             </h1>
-            <p className="mt-6 max-w-xl text-base text-primary-foreground/80 lg:text-lg">
+            <p className="mt-4 max-w-xl text-[15px] text-primary-foreground/80 sm:mt-6 sm:text-base lg:text-lg">
               {t.home.subtitle}
             </p>
-            <div className="mt-9 flex flex-wrap gap-3">
+            <div className="mt-7 grid gap-3 sm:mt-9 sm:flex sm:flex-wrap">
                 <Link
                   to="/contacto"
                   search={{ material: undefined }}
