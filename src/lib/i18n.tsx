@@ -16,7 +16,7 @@ type Dict = typeof es;
 const es = {
   brand: {
     name: "Recyc Latam",
-    short: "RBL",
+    short: "Recyc Latam",
     tagline: "Gestión responsable de baterías de litio para la industria",
   },
   nav: {
@@ -389,7 +389,7 @@ const es = {
 const en: Dict = {
   brand: {
     name: "Recyc Latam",
-    short: "RBL",
+    short: "Recyc Latam",
     tagline: "Responsible lithium battery management for industry",
   },
   nav: {

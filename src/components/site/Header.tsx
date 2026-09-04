@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { CONTACT } from "@/lib/i18n";
-import logo from "@/assets/logo-placeholder.png";
+import logo from "@/assets/recyc-latam-mark.png";
 import { LanguageToggle } from "./LanguageToggle";
 import { ui } from "@/content/ui";
 

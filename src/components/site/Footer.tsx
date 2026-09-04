@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import { CONTACT, useI18n, whatsappUrl } from "@/lib/i18n";
-import logo from "@/assets/logo-placeholder.png";
+import logo from "@/assets/recyc-latam-mark.png";
 import { ui } from "@/content/ui";
 
 
