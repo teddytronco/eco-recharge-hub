@@ -460,7 +460,7 @@ export function QuoteForm({ initialChemistry }: { initialChemistry?: string }) {
           type="button"
           disabled={step === 0}
           onClick={() => setStep((s) => Math.max(0, s - 1))}
-          className="rounded-md border border-border px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-secondary disabled:opacity-40"
+          className="min-h-12 rounded-md border border-border px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-secondary disabled:opacity-40"
         >
           {t.cta.back}
         </button>
