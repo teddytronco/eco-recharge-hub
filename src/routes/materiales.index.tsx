@@ -22,7 +22,7 @@ export const Route = createFileRoute("/materiales/")({
 });
 
 function MaterialsPage() {
-  const { t } = useI18n();
+  const { lang, t } = useI18n();
   return (
     <>
       <PageHero
@@ -31,6 +31,34 @@ function MaterialsPage() {
         subtitle={t.materials.subtitle}
       />
       <Section>
+        <SectionTitle
+          title={ui.materials.categoriesTitle[lang]}
+          subtitle={ui.materials.categoriesSubtitle[lang]}
+        />
+        <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {materialList.map((m) => (
+            <li key={m.slug}>
+              <Link
+                to="/materiales/$slug"
+                params={{ slug: m.slug }}
+                className="group flex h-full flex-col justify-between gap-4 rounded-lg border border-border bg-card p-6 transition-colors hover:border-accent"
+              >
+                <div>
+                  <h3 className="text-base font-semibold">{m.name[lang]}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {m.description[lang]}
+                  </p>
+                </div>
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-accent-foreground/80">
+                  {ui.materials.seeAll[lang].split(" ").slice(0, 1)[0]}
+                  <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </Section>
+      <Section muted>
         <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
           <img
             src={materials}
