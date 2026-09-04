@@ -15,7 +15,7 @@ export function Section({
 }) {
   return (
     <section className={cn(muted && "bg-secondary/40", className)}>
-      <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">{children}</div>
+      <div className="mx-auto max-w-7xl px-5 py-12 sm:py-16 lg:px-8 lg:py-24">{children}</div>
     </section>
   );
 }
