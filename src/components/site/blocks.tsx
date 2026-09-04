@@ -31,15 +31,15 @@ export function PageHero({
 }) {
   return (
     <section className="border-b border-border bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+      <div className="mx-auto max-w-7xl px-5 py-12 sm:py-16 lg:px-8 lg:py-20">
         {eyebrow && (
           <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">{eyebrow}</p>
         )}
-        <h1 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl">
+        <h1 className="mt-3 max-w-3xl text-2xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl">
           {title}
         </h1>
         {subtitle && (
-          <p className="mt-5 max-w-2xl text-base text-primary-foreground/75 lg:text-lg">
+          <p className="mt-4 max-w-2xl text-[15px] text-primary-foreground/75 sm:mt-5 sm:text-base lg:text-lg">
             {subtitle}
           </p>
         )}
