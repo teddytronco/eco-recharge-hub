@@ -325,7 +325,7 @@ const es = {
     },
     review: "Revisión",
     reviewNote:
-      "Verifique la información antes de enviar. Al enviar se abrirá su cliente de correo con el resumen; los archivos se solicitarán por un canal seguro en la respuesta.",
+      "Verifique la información antes de enviar. Su solicitud se registra de forma segura; los archivos se solicitarán por un canal seguro en la respuesta.",
     successTitle: "Solicitud recibida",
     successBody:
       "Registramos su solicitud y nuestro equipo la revisará. Si desea acelerar el contacto, escríbanos por WhatsApp o llámenos directamente.",
