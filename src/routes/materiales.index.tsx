@@ -50,7 +50,7 @@ function MaterialsPage() {
                   </p>
                 </div>
                 <span className="inline-flex items-center gap-2 text-sm font-semibold text-accent-foreground/80">
-                  {ui.materials.seeAll[lang].split(" ").slice(0, 1)[0]}
+                  {ui.materials.viewMaterial[lang]}
                   <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
                 </span>
               </Link>

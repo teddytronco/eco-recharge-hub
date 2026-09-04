@@ -11,6 +11,7 @@ export const ui = {
       es: "Cada tipo de batería exige un criterio distinto de diagnóstico, empaque y documentación. Elija el material que genera su operación para ver los requisitos aplicables.",
       en: "Each battery type demands a different diagnosis, packaging and documentation criterion. Choose the material your operation generates to see the applicable requirements.",
     },
+    viewMaterial: { es: "Ver detalles", en: "View details" },
     risks: { es: "Riesgos y condiciones a vigilar", en: "Risks and conditions to watch" },
     packaging: { es: "Requisitos de empaque y manejo", en: "Packaging and handling requirements" },
     documentation: { es: "Documentación que entregamos", en: "Documentation we deliver" },
