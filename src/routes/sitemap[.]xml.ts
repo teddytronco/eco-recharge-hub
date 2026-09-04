@@ -9,6 +9,7 @@ const staticPaths = [
   "/servicios",
   "/proceso",
   "/materiales",
+  "/compra-de-baterias-usadas",
   "/cobertura",
   "/cumplimiento",
   "/logistica",
