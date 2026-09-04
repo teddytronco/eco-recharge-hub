@@ -18,6 +18,7 @@ import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as ProcesoRouteImport } from './routes/proceso'
 import { Route as ServiciosRouteImport } from './routes/servicios'
 import { Route as MaterialesIndexRouteImport } from './routes/materiales.index'
+import { Route as MaterialesSlugRouteImport } from './routes/materiales.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -64,6 +65,11 @@ const MaterialesIndexRoute = MaterialesIndexRouteImport.update({
   path: '/materiales/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MaterialesSlugRoute = MaterialesSlugRouteImport.update({
+  id: '/materiales/$slug',
+  path: '/materiales/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -74,6 +80,7 @@ export interface FileRoutesByFullPath {
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
   '/servicios': typeof ServiciosRoute
+  '/materiales/$slug': typeof MaterialesSlugRoute
   '/materiales/': typeof MaterialesIndexRoute
 }
 export interface FileRoutesByTo {
@@ -85,6 +92,7 @@ export interface FileRoutesByTo {
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
   '/servicios': typeof ServiciosRoute
+  '/materiales/$slug': typeof MaterialesSlugRoute
   '/materiales': typeof MaterialesIndexRoute
 }
 export interface FileRoutesById {
@@ -97,6 +105,7 @@ export interface FileRoutesById {
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
   '/servicios': typeof ServiciosRoute
+  '/materiales/$slug': typeof MaterialesSlugRoute
   '/materiales/': typeof MaterialesIndexRoute
 }
 export interface FileRouteTypes {
@@ -110,6 +119,7 @@ export interface FileRouteTypes {
     | '/nosotros'
     | '/proceso'
     | '/servicios'
+    | '/materiales/$slug'
     | '/materiales/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -121,6 +131,7 @@ export interface FileRouteTypes {
     | '/nosotros'
     | '/proceso'
     | '/servicios'
+    | '/materiales/$slug'
     | '/materiales'
   id:
     | '__root__'
@@ -132,6 +143,7 @@ export interface FileRouteTypes {
     | '/nosotros'
     | '/proceso'
     | '/servicios'
+    | '/materiales/$slug'
     | '/materiales/'
   fileRoutesById: FileRoutesById
 }
@@ -144,6 +156,7 @@ export interface RootRouteChildren {
   NosotrosRoute: typeof NosotrosRoute
   ProcesoRoute: typeof ProcesoRoute
   ServiciosRoute: typeof ServiciosRoute
+  MaterialesSlugRoute: typeof MaterialesSlugRoute
   MaterialesIndexRoute: typeof MaterialesIndexRoute
 }
 
@@ -212,6 +225,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MaterialesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/materiales/$slug': {
+      id: '/materiales/$slug'
+      path: '/materiales/$slug'
+      fullPath: '/materiales/$slug'
+      preLoaderRoute: typeof MaterialesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -224,6 +244,7 @@ const rootRouteChildren: RootRouteChildren = {
   NosotrosRoute: NosotrosRoute,
   ProcesoRoute: ProcesoRoute,
   ServiciosRoute: ServiciosRoute,
+  MaterialesSlugRoute: MaterialesSlugRoute,
   MaterialesIndexRoute: MaterialesIndexRoute,
 }
 export const routeTree = rootRouteImport
