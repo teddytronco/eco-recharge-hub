@@ -59,6 +59,13 @@ export function Header() {
             <Phone className="size-4" aria-hidden />
             {CONTACT.phoneDisplay}
           </a>
+          <a
+            href={`tel:${CONTACT.phoneHref}`}
+            aria-label={lang === "es" ? "Llamar ahora" : "Call now"}
+            className="inline-flex size-10 items-center justify-center rounded-md border border-border transition-colors hover:bg-secondary xl:hidden"
+          >
+            <Phone className="size-5" aria-hidden />
+          </a>
           <Link
             to="/contacto"
             className="hidden rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 sm:inline-flex"
@@ -104,6 +111,13 @@ export function Header() {
             >
               {t.cta.quote}
             </Link>
+            <a
+              href={`tel:${CONTACT.phoneHref}`}
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-md border border-border px-4 py-3 text-sm font-semibold transition-colors hover:bg-secondary"
+            >
+              <Phone className="size-4" aria-hidden />
+              {CONTACT.phoneDisplay}
+            </a>
           </nav>
         </div>
       )}
