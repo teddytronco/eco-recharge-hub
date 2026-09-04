@@ -96,6 +96,16 @@ function MaterialDetail() {
           </div>
         </div>
 
+        <div className="mt-5 rounded-lg border border-border bg-card p-7">
+          <h2 className="text-lg font-semibold">{ui.materials.brands[lang]}</h2>
+          <div className="mt-5">
+            <BulletList items={material.brands[lang]} />
+          </div>
+          <p className="mt-5 text-xs leading-relaxed text-muted-foreground/80">
+            {ui.materials.brandsNote[lang]}
+          </p>
+        </div>
+
         <div className="mt-10">
           <EmergencyNotice />
         </div>

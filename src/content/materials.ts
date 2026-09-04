@@ -11,6 +11,7 @@ export type Material = {
   packaging: LL;
   documentation: LL;
   who: LL;
+  brands: LL;
 };
 
 export const materials: Material[] = [
@@ -85,6 +86,20 @@ export const materials: Material[] = [
         "OEMs and tier 1 suppliers with process scrap",
       ],
     },
+    brands: {
+      es: [
+        "Tesla, Nissan (Leaf), Chevrolet (Bolt), BMW, Mercedes-Benz, Audi, Volkswagen",
+        "BYD, JAC, MG y otras marcas de origen asiático en flotas y distribuidores",
+        "Toyota, Honda, Ford y otras líneas híbridas (paquetes NiMH y litio)",
+        "Packs y módulos fuera de garantía, siniestrados o de programas de recompra",
+      ],
+      en: [
+        "Tesla, Nissan (Leaf), Chevrolet (Bolt), BMW, Mercedes-Benz, Audi, Volkswagen",
+        "BYD, JAC, MG and other Asian brands present in fleets and dealerships",
+        "Toyota, Honda, Ford and other hybrid lines (NiMH and lithium packs)",
+        "Out-of-warranty, crashed or buy-back programme packs and modules",
+      ],
+    },
   },
   {
     slug: "almacenamiento-energia",
@@ -155,6 +170,20 @@ export const materials: Material[] = [
         "Industrial plants with peak-shaving or demand-management schemes",
         "Data centres and telecom sites with backup banks",
         "Microgrid and off-grid system operators",
+      ],
+    },
+    brands: {
+      es: [
+        "Tesla (Powerwall, Powerpack, Megapack), LG Energy Solution, Samsung SDI",
+        "BYD, CATL, Pylontech, Dyness y otras líneas residenciales y comerciales",
+        "Sistemas de inversores como SolarEdge, Fronius, SMA, Growatt, Huawei",
+        "Racks y gabinetes de integradores, con o sin documentación de origen",
+      ],
+      en: [
+        "Tesla (Powerwall, Powerpack, Megapack), LG Energy Solution, Samsung SDI",
+        "BYD, CATL, Pylontech, Dyness and other residential and commercial lines",
+        "Systems tied to inverters such as SolarEdge, Fronius, SMA, Growatt, Huawei",
+        "Integrator racks and cabinets, with or without origin documentation",
       ],
     },
   },
@@ -229,6 +258,20 @@ export const materials: Material[] = [
         "Plants with in-house maintenance and battery-powered tools",
       ],
     },
+    brands: {
+      es: [
+        "DeWalt, Milwaukee, Makita, Bosch, Ryobi, Hilti",
+        "Stanley Black & Decker, Craftsman, Ridgid, Einhell",
+        "Packs de 12 V a 80 V, sueltos o dentro de la herramienta",
+        "Retornos de garantía, unidades obsoletas y remanentes de obra",
+      ],
+      en: [
+        "DeWalt, Milwaukee, Makita, Bosch, Ryobi, Hilti",
+        "Stanley Black & Decker, Craftsman, Ridgid, Einhell",
+        "12 V to 80 V packs, loose or inside the tool",
+        "Warranty returns, obsolete units and job-site leftovers",
+      ],
+    },
   },
   {
     slug: "electrodomesticos",
@@ -299,6 +342,20 @@ export const materials: Material[] = [
         "Retailers with a returns and warranty programme",
         "Authorised service centres and repair workshops",
         "Reverse-logistics operators and distribution centres",
+      ],
+    },
+    brands: {
+      es: [
+        "Dyson, iRobot (Roomba), Shark, Ecovacs y robots de limpieza en general",
+        "Samsung, LG, Mabe, Whirlpool y línea blanca conectada con batería integrada",
+        "Aspiradoras inalámbricas, regaderas eléctricas portátiles y pequeño electrodoméstico",
+        "Devoluciones de retail y producto fuera de garantía con celda integrada",
+      ],
+      en: [
+        "Dyson, iRobot (Roomba), Shark, Ecovacs and cleaning robots in general",
+        "Samsung, LG, Mabe, Whirlpool and connected white goods with built-in batteries",
+        "Cordless vacuums, portable devices and small appliances",
+        "Retail returns and out-of-warranty product with an integrated cell",
       ],
     },
   },
@@ -373,6 +430,20 @@ export const materials: Material[] = [
         "Consumer electronics distributors and service centres",
       ],
     },
+    brands: {
+      es: [
+        "Apple (MacBook, iPhone, iPad), Dell, HP, Lenovo, ASUS, Acer",
+        "Samsung, Xiaomi, Motorola y telefonía celular en general",
+        "Power banks, tablets, wearables, drones y bocinas inalámbricas",
+        "Baterías de UPS (APC, CyberPower, Tripp Lite, Vertiv) de plomo y litio",
+      ],
+      en: [
+        "Apple (MacBook, iPhone, iPad), Dell, HP, Lenovo, ASUS, Acer",
+        "Samsung, Xiaomi, Motorola and mobile phones in general",
+        "Power banks, tablets, wearables, drones and wireless speakers",
+        "UPS batteries (APC, CyberPower, Tripp Lite, Vertiv), lead and lithium",
+      ],
+    },
   },
   {
     slug: "industriales-plomo-niquel",
@@ -443,6 +514,20 @@ export const materials: Material[] = [
         "Distribution centres and automated warehouses",
         "Sites with stationary backup banks",
         "Workshops and fleets with starter batteries",
+      ],
+    },
+    brands: {
+      es: [
+        "Baterías de montacargas Crown, EnerSys, Exide, Hoppecke, East Penn",
+        "Bancos estacionarios Trojan, Rolls/Surrette, Discover, Victron",
+        "Baterías de arranque LTH, AC Delco, Interstate y otras líneas automotrices",
+        "Cualquier química industrial identificada: plomo-ácido, NiCd, NiMH, litio",
+      ],
+      en: [
+        "Forklift batteries from Crown, EnerSys, Exide, Hoppecke, East Penn",
+        "Stationary banks from Trojan, Rolls/Surrette, Discover, Victron",
+        "Starter batteries from LTH, AC Delco, Interstate and other automotive lines",
+        "Any identified industrial chemistry: lead-acid, NiCd, NiMH, lithium",
       ],
     },
   },
