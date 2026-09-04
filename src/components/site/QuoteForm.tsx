@@ -48,10 +48,17 @@ const MAX_FILES = 5;
 const fieldClass =
   "mt-1.5 w-full rounded-md border border-input bg-background px-3 py-2.5 text-sm outline-none transition-colors focus:border-ring focus:ring-2 focus:ring-ring/30";
 
-export function QuoteForm() {
-  const { t } = useI18n();
+export function QuoteForm({ initialChemistry }: { initialChemistry?: string }) {
+  const { t, lang } = useI18n();
   const [step, setStep] = React.useState(0);
-  const [values, setValues] = React.useState<FormState>(initial);
+  const [values, setValues] = React.useState<FormState>(() => ({
+    ...initial,
+    notes: initialChemistry
+      ? lang === "es"
+        ? `Material de interés: ${initialChemistry}`
+        : `Material of interest: ${initialChemistry}`
+      : "",
+  }));
   const [errors, setErrors] = React.useState<Partial<Record<keyof FormState, string>>>({});
   const [files, setFiles] = React.useState<File[]>([]);
   const [fileError, setFileError] = React.useState<string | null>(null);
@@ -127,6 +134,8 @@ export function QuoteForm() {
       `${f.urgent}: ${values.urgent ? "Sí / Yes" : "No"}`,
       "",
       `${t.contact.selected}: ${files.map((x) => x.name).join(", ") || "-"}`,
+      "",
+      `Página de origen / Source page: ${document.referrer || window.location.href}`,
     ];
     return lines.join("\n");
   };

@@ -1,7 +1,9 @@
-import { pageHead } from "@/lib/seo";
+import { faqLd, pageHead } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { BulletList, CtaBand, EmergencyNotice, PageHero, Section } from "@/components/site/blocks";
+import { Faq } from "@/components/site/Faq";
+import { faqItems } from "@/content/faq";
 import materials from "@/assets/materials.jpg";
 
 export const Route = createFileRoute("/materiales/")({
@@ -9,8 +11,9 @@ export const Route = createFileRoute("/materiales/")({
   head: () =>
     pageHead({
       path: "/materiales",
-      title: "Materiales aceptados: bater\u00edas de litio, EV, almacenamiento y m\u00e1s | Reciclaje de Bater\u00edas Latinoam\u00e9rica",
-      description: "Celdas, m\u00f3dulos, packs de EV, sistemas de almacenamiento, herramientas el\u00e9ctricas, electrodom\u00e9sticos y electr\u00f3nicos. Aceptaci\u00f3n sujeta a evaluaci\u00f3n t\u00e9cnica previa.",
+      title: "Materiales aceptados: baterías de litio, EV, almacenamiento y más | Reciclaje de Baterías Latinoamérica",
+      description: "Celdas, módulos, packs de EV, sistemas de almacenamiento, herramientas eléctricas, electrodomésticos y electrónicos. Aceptación sujeta a evaluación técnica previa.",
+      jsonLd: faqLd(faqItems.map((i) => ({ q: i.q.es, a: i.a.es }))),
     }),
   component: MaterialsPage,
 });
@@ -61,6 +64,7 @@ function MaterialsPage() {
           <EmergencyNotice />
         </div>
       </Section>
+      <Faq />
       <CtaBand />
     </>
   );

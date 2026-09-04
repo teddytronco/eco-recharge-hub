@@ -58,6 +58,16 @@ function MaterialDetail() {
         <p className="max-w-3xl text-base leading-relaxed text-muted-foreground">
           {material.intro[lang]}
         </p>
+        <Link
+          to="/contacto"
+          search={{ material: material.name[lang] }}
+          className="mt-6 inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          {lang === "es"
+            ? `Cotizar disposición de ${material.name.es}`
+            : `Get a quote for ${material.name.en}`}
+          <ArrowRight className="size-4" aria-hidden />
+        </Link>
 
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           <div className="rounded-lg border border-border bg-card p-7">

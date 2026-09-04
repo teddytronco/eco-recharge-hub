@@ -8,23 +8,27 @@ import { CONTACT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/contacto")({
   staticData: { sitemap: true },
+  validateSearch: (search: Record<string, unknown>) => ({
+    material: typeof search["material"] === "string" ? search["material"].slice(0, 120) : undefined,
+  }),
   head: () =>
     pageHead({
       path: "/contacto",
-      title: "Contacto y cotizaci\u00f3n de reciclaje de bater\u00edas | Reciclaje de Bater\u00edas Latinoam\u00e9rica",
-      description: "Solicite una evaluaci\u00f3n para el reciclaje o la disposici\u00f3n de sus bater\u00edas de litio. Respuesta por WhatsApp, tel\u00e9fono o correo desde Monterrey, Nuevo Le\u00f3n.",
+      title: "Contacto y cotización de reciclaje de baterías | Reciclaje de Baterías Latinoamérica",
+      description: "Solicite una evaluación para el reciclaje o la disposición de sus baterías de litio. Respuesta por WhatsApp, teléfono o correo desde Monterrey, Nuevo León.",
     }),
   component: ContactPage,
 });
 
 function ContactPage() {
   const { t } = useI18n();
+  const { material } = Route.useSearch();
   return (
     <>
       <PageHero eyebrow={t.brand.tagline} title={t.contact.title} subtitle={t.contact.subtitle} />
       <Section>
         <div className="grid gap-10 lg:grid-cols-[1.4fr_0.6fr] lg:items-start">
-          <QuoteForm />
+          <QuoteForm {...(material ? { initialChemistry: material } : {})} />
           <aside className="space-y-6 lg:sticky lg:top-24">
             <EmergencyNotice />
             <div className="rounded-lg border border-border bg-card p-7">

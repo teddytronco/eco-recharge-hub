@@ -1,4 +1,4 @@
-import { pageHead } from "@/lib/seo";
+import { faqLd, pageHead } from "@/lib/seo";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, FileCheck2, Truck, Recycle } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
@@ -10,6 +10,8 @@ import {
   ContactActions,
   CtaBand,
 } from "@/components/site/blocks";
+import { Faq } from "@/components/site/Faq";
+import { faqItems } from "@/content/faq";
 import hero from "@/assets/hero-facility.jpg";
 
 export const Route = createFileRoute("/")({
@@ -17,8 +19,9 @@ export const Route = createFileRoute("/")({
   head: () =>
     pageHead({
       path: "/",
-      title: "Reciclaje de bater\u00edas de litio en M\u00e9xico | Gesti\u00f3n y disposici\u00f3n B2B",
-      description: "Reciclaje de bater\u00edas y gesti\u00f3n de disposici\u00f3n de bater\u00edas de litio para industria en M\u00e9xico y Latinoam\u00e9rica: retiro coordinado, empaque conforme y expediente documental.",
+      title: "Reciclaje de baterías de litio en México | Gestión y disposición B2B",
+      description: "Reciclaje de baterías y gestión de disposición de baterías de litio para industria en México y Latinoamérica: retiro coordinado, empaque conforme y expediente documental.",
+      jsonLd: faqLd(faqItems.map((i) => ({ q: i.q.es, a: i.a.es }))),
     }),
   component: Index,
 });
@@ -50,8 +53,9 @@ function Index() {
               {t.home.subtitle}
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <Link
-                to="/contacto"
+                <Link
+                  to="/contacto"
+                  search={{ material: undefined }}
                 className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
               >
                 {t.cta.quote}
@@ -172,6 +176,8 @@ function Index() {
           </div>
         </div>
       </Section>
+
+      <Faq />
 
       <CtaBand />
     </>
