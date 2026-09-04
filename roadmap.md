@@ -31,3 +31,5 @@ Deben aparecer en títulos, descripciones y H1/H2 de las páginas indicadas:
 | disposición de baterías de litio | /materiales y /recursos |
 | gestión de baterías | /servicios |
 | gestión de disposición de baterías en México | /cobertura |
+
+- [x] Experiencia móvil: barra fija de acciones (llamar/WhatsApp/cotizar), hero y secciones compactas, campos de formulario sin zoom en iOS

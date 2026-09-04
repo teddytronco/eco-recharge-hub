@@ -15,6 +15,7 @@ import { I18nProvider } from "../lib/i18n";
 import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
 import { FloatingWhatsApp } from "../components/site/FloatingWhatsApp";
+import { MobileActionBar } from "../components/site/MobileActionBar";
 
 function NotFoundComponent() {
   return (
@@ -80,7 +81,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
+      { name: "theme-color", content: "#101820" },
+      { name: "format-detection", content: "telephone=yes" },
+      { name: "mobile-web-app-capable", content: "yes" },
       { title: "Reciclaje de Baterías Latinoamérica" },
       {
         name: "description",
@@ -128,7 +132,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <I18nProvider>
-        <div className="flex min-h-screen flex-col">
+        <div className="flex min-h-screen flex-col pb-[4.5rem] lg:pb-0">
           <Header />
           <main className="flex-1">
             {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
@@ -136,6 +140,7 @@ function RootComponent() {
           </main>
           <Footer />
           <FloatingWhatsApp />
+          <MobileActionBar />
         </div>
       </I18nProvider>
     </QueryClientProvider>

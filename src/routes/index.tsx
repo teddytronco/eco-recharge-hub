@@ -41,29 +41,29 @@ function Index() {
           height={1080}
           className="absolute inset-0 size-full object-cover opacity-20"
         />
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8 lg:py-28">
+        <div className="relative mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:gap-12 sm:py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8 lg:py-28">
           <div>
             <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
               {t.home.eyebrow}
             </p>
-            <h1 className="mt-5 text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 text-3xl font-semibold tracking-tight text-balance sm:mt-5 sm:text-5xl lg:text-6xl">
               {t.home.title}
             </h1>
-            <p className="mt-6 max-w-xl text-base text-primary-foreground/80 lg:text-lg">
+            <p className="mt-4 max-w-xl text-[15px] text-primary-foreground/80 sm:mt-6 sm:text-base lg:text-lg">
               {t.home.subtitle}
             </p>
-            <div className="mt-9 flex flex-wrap gap-3">
+            <div className="mt-7 grid gap-3 sm:mt-9 sm:flex sm:flex-wrap">
                 <Link
                   to="/contacto"
                   search={{ material: undefined }}
-                className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-5 py-3.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
               >
                 {t.cta.quote}
                 <ArrowRight className="size-4" aria-hidden />
               </Link>
               <Link
                 to="/servicios"
-                className="inline-flex items-center rounded-md border border-primary-foreground/30 px-5 py-3 text-sm font-semibold transition-colors hover:bg-primary-foreground/10"
+                className="inline-flex items-center justify-center rounded-md border border-primary-foreground/30 px-5 py-3.5 text-sm font-semibold transition-colors hover:bg-primary-foreground/10"
               >
                 {t.cta.learn}
               </Link>

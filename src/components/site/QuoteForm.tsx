@@ -49,7 +49,7 @@ const MAX_SIZE = 10 * 1024 * 1024;
 const MAX_FILES = 5;
 
 const fieldClass =
-  "mt-1.5 w-full rounded-md border border-input bg-background px-3 py-2.5 text-sm outline-none transition-colors focus:border-ring focus:ring-2 focus:ring-ring/30";
+  "mt-1.5 w-full rounded-md border border-input bg-background px-3 py-3 text-base outline-none transition-colors focus:border-ring focus:ring-2 focus:ring-ring/30 sm:py-2.5 sm:text-sm";
 
 export function QuoteForm({ initialChemistry }: { initialChemistry?: string }) {
   const { t, lang } = useI18n();
@@ -460,7 +460,7 @@ export function QuoteForm({ initialChemistry }: { initialChemistry?: string }) {
           type="button"
           disabled={step === 0}
           onClick={() => setStep((s) => Math.max(0, s - 1))}
-          className="rounded-md border border-border px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-secondary disabled:opacity-40"
+          className="min-h-12 rounded-md border border-border px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-secondary disabled:opacity-40"
         >
           {t.cta.back}
         </button>
@@ -470,7 +470,7 @@ export function QuoteForm({ initialChemistry }: { initialChemistry?: string }) {
             onClick={() => {
               if (validateStep(step)) setStep((s) => s + 1);
             }}
-            className="rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            className="min-h-12 rounded-md bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
             {t.cta.next}
           </button>
@@ -478,7 +478,7 @@ export function QuoteForm({ initialChemistry }: { initialChemistry?: string }) {
           <button
             type="submit"
             disabled={sending}
-            className="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 disabled:opacity-50"
+            className="min-h-12 rounded-md bg-accent px-6 py-2.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 disabled:opacity-50"
           >
             {sending ? "…" : t.cta.send}
           </button>
