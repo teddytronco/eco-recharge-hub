@@ -697,7 +697,7 @@ const en: Dict = {
     },
     review: "Review",
     reviewNote:
-      "Check the information before sending. On submit your email client opens with the summary; files will be requested through a secure channel in our reply.",
+      "Check the information before sending. Your request is stored securely; files will be requested through a secure channel in our reply.",
     successTitle: "Request received",
     successBody:
       "We recorded your request and our team will review it. To speed things up, message us on WhatsApp or call us directly.",
