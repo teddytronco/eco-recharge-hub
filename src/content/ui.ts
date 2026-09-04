@@ -15,6 +15,16 @@ export const ui = {
     packaging: { es: "Requisitos de empaque y manejo", en: "Packaging and handling requirements" },
     documentation: { es: "Documentación que entregamos", en: "Documentation we deliver" },
     who: { es: "Quién genera este material", en: "Who generates this material" },
+    brands: { es: "Marcas y equipos con los que trabajamos", en: "Brands and equipment we work with" },
+    brandsNote: {
+      es: "Ejemplos de marcas habituales en los materiales que recibimos. La lista no es exhaustiva: cualquier marca puede evaluarse — indíquenos el modelo en su solicitud.",
+      en: "Examples of brands commonly seen in the materials we receive. The list is not exhaustive: any brand can be evaluated — state the model in your request.",
+    },
+    categoriesTitle: { es: "¿Qué necesita retirar?", en: "What do you need removed?" },
+    categoriesSubtitle: {
+      es: "Elija su tipo de material: cada uno tiene requisitos propios de manejo, empaque y documentación.",
+      en: "Choose your material type: each has its own handling, packaging and documentation requirements.",
+    },
     seeAll: { es: "Ver todos los materiales", en: "See all materials" },
   },
   coverage: {
