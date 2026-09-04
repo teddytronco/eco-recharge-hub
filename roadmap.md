@@ -14,7 +14,7 @@
 - [x] Material precargado en el formulario vía /contacto?material= (CTA en cada página de material)
 - [x] Página de origen incluida en el cuerpo del correo de cotización
 - [x] Botón de llamada directa visible en header móvil y menú móvil
-- [ ] Formulario con guardado real en base de datos + notificación por correo (Lovable Cloud falló al activarse; reintentar)
+- [x] Formulario con guardado real en base de datos (Lovable Cloud activo; tabla quote_leads). Notificación por correo pendiente: requiere dominio propio de envío
 - [x] Página /compra-de-baterias-usadas (~1,000 búsquedas/mes MX): valorización con redacción prudente, FAQ + FAQPage JSON-LD, enlazada desde /materiales y sitemap
 
 ## Keywords objetivo solicitadas por el cliente
