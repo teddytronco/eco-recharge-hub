@@ -49,12 +49,16 @@ const fieldClass =
   "mt-1.5 w-full rounded-md border border-input bg-background px-3 py-2.5 text-sm outline-none transition-colors focus:border-ring focus:ring-2 focus:ring-ring/30";
 
 export function QuoteForm({ initialChemistry }: { initialChemistry?: string }) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [step, setStep] = React.useState(0);
-  const [values, setValues] = React.useState<FormState>({
+  const [values, setValues] = React.useState<FormState>(() => ({
     ...initial,
-    chemistry: initialChemistry ?? "",
-  });
+    notes: initialChemistry
+      ? lang === "es"
+        ? `Material de interés: ${initialChemistry}`
+        : `Material of interest: ${initialChemistry}`
+      : "",
+  }));
   const [errors, setErrors] = React.useState<Partial<Record<keyof FormState, string>>>({});
   const [files, setFiles] = React.useState<File[]>([]);
   const [fileError, setFileError] = React.useState<string | null>(null);
