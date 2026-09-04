@@ -5,19 +5,24 @@ import { useI18n } from "@/lib/i18n";
 import { CONTACT } from "@/lib/i18n";
 import logo from "@/assets/logo-placeholder.png";
 import { LanguageToggle } from "./LanguageToggle";
+import { ui } from "@/content/ui";
+
 
 export function Header() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [open, setOpen] = React.useState(false);
 
   const links = [
     { to: "/servicios", label: t.nav.services },
     { to: "/proceso", label: t.nav.process },
     { to: "/materiales", label: t.nav.materials },
+    { to: "/cobertura", label: ui.nav[lang].coverage },
     { to: "/cumplimiento", label: t.nav.compliance },
     { to: "/logistica", label: t.nav.logistics },
+    { to: "/recursos", label: ui.nav[lang].resources },
     { to: "/nosotros", label: t.nav.about },
   ] as const;
+
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur">

@@ -2,9 +2,11 @@ import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import { CONTACT, useI18n, whatsappUrl } from "@/lib/i18n";
 import logo from "@/assets/logo-placeholder.png";
+import { ui } from "@/content/ui";
+
 
 export function Footer() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const year = new Date().getFullYear();
 
   const links = [
@@ -12,11 +14,14 @@ export function Footer() {
     { to: "/servicios", label: t.nav.services },
     { to: "/proceso", label: t.nav.process },
     { to: "/materiales", label: t.nav.materials },
+    { to: "/cobertura", label: ui.nav[lang].coverage },
     { to: "/cumplimiento", label: t.nav.compliance },
     { to: "/logistica", label: t.nav.logistics },
+    { to: "/recursos", label: ui.nav[lang].resources },
     { to: "/nosotros", label: t.nav.about },
     { to: "/contacto", label: t.nav.contact },
   ] as const;
+
 
   return (
     <footer className="border-t border-border bg-secondary/50">

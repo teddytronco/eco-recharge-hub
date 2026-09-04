@@ -1,3 +1,4 @@
+import { pageHead } from "@/lib/seo";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, FileCheck2, Truck, Recycle } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
@@ -12,31 +13,13 @@ import {
 import hero from "@/assets/hero-facility.jpg";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      {
-        title: "Reciclaje de Baterías Latinoamérica | Gestión de baterías de litio B2B",
-      },
-      {
-        name: "description",
-        content:
-          "Acopio, clasificación, empaque y transporte documentado de baterías de litio para clientes industriales en Latinoamérica. Servicio bilingüe español/inglés.",
-      },
-      {
-        property: "og:title",
-        content: "Reciclaje de Baterías Latinoamérica | Gestión de baterías de litio",
-      },
-      {
-        property: "og:description",
-        content:
-          "Gestión responsable y trazable de baterías de litio al final de su vida útil para la industria en Latinoamérica.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-  }),
+  staticData: { sitemap: true },
+  head: () =>
+    pageHead({
+      path: "/",
+      title: "Reciclaje de bater\u00edas de litio en M\u00e9xico | Gesti\u00f3n y disposici\u00f3n B2B",
+      description: "Reciclaje de bater\u00edas y gesti\u00f3n de disposici\u00f3n de bater\u00edas de litio para industria en M\u00e9xico y Latinoam\u00e9rica: retiro coordinado, empaque conforme y expediente documental.",
+    }),
   component: Index,
 });
 

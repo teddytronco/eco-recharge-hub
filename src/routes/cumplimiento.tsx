@@ -1,3 +1,4 @@
+import { pageHead } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { FileClock } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
@@ -11,26 +12,13 @@ import {
 } from "@/components/site/blocks";
 
 export const Route = createFileRoute("/cumplimiento")({
-  head: () => ({
-    meta: [
-      { title: "Cumplimiento | Reciclaje de Baterías Latinoamérica" },
-      {
-        name: "description",
-        content:
-          "Permisos, autorizaciones y certificaciones publicados únicamente cuando son vigentes y verificables. Verificación por proyecto.",
-      },
-      { property: "og:title", content: "Cumplimiento | Reciclaje de Baterías Latinoamérica" },
-      {
-        property: "og:description",
-        content:
-          "Nuestro criterio de cumplimiento: solo información verificable y documentación entregada al generador.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/cumplimiento" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/cumplimiento" }],
-  }),
+  staticData: { sitemap: true },
+  head: () =>
+    pageHead({
+      path: "/cumplimiento",
+      title: "Cumplimiento y documentaci\u00f3n de residuos peligrosos | Reciclaje de Bater\u00edas Latinoam\u00e9rica",
+      description: "Manifiestos, bit\u00e1coras y evidencia de destino: qu\u00e9 documentaci\u00f3n recibe el generador en cada proyecto de disposici\u00f3n de bater\u00edas de litio.",
+    }),
   component: CompliancePage,
 });
 

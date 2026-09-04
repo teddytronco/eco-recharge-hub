@@ -1,32 +1,17 @@
+import { pageHead } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { BulletList, CtaBand, EmergencyNotice, PageHero, Section } from "@/components/site/blocks";
 import materials from "@/assets/materials.jpg";
 
-export const Route = createFileRoute("/materiales")({
-  head: () => ({
-    meta: [
-      { title: "Materiales aceptados | Reciclaje de Baterías Latinoamérica" },
-      {
-        name: "description",
-        content:
-          "Celdas, módulos, packs, chatarra de proceso y material fuera de especificación. Aceptación sujeta a evaluación técnica previa.",
-      },
-      {
-        property: "og:title",
-        content: "Materiales aceptados | Reciclaje de Baterías Latinoamérica",
-      },
-      {
-        property: "og:description",
-        content:
-          "Qué materiales de baterías de litio evaluamos y qué condiciones requieren manejo especial.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/materiales" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/materiales" }],
-  }),
+export const Route = createFileRoute("/materiales/")({
+  staticData: { sitemap: true },
+  head: () =>
+    pageHead({
+      path: "/materiales",
+      title: "Materiales aceptados: bater\u00edas de litio, EV, almacenamiento y m\u00e1s | Reciclaje de Bater\u00edas Latinoam\u00e9rica",
+      description: "Celdas, m\u00f3dulos, packs de EV, sistemas de almacenamiento, herramientas el\u00e9ctricas, electrodom\u00e9sticos y electr\u00f3nicos. Aceptaci\u00f3n sujeta a evaluaci\u00f3n t\u00e9cnica previa.",
+    }),
   component: MaterialsPage,
 });
 

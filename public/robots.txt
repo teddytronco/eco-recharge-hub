@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://eco-recharge-hub.lovable.app/sitemap.xml

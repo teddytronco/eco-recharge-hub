@@ -1,28 +1,16 @@
+import { pageHead } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { Card, CtaBand, PageHero, Section, SectionTitle } from "@/components/site/blocks";
 
 export const Route = createFileRoute("/servicios")({
-  head: () => ({
-    meta: [
-      { title: "Servicios | Reciclaje de Baterías Latinoamérica" },
-      {
-        name: "description",
-        content:
-          "Diagnóstico, empaque técnico, transporte coordinado, logística inversa y expediente documental para baterías de litio industriales.",
-      },
-      { property: "og:title", content: "Servicios | Reciclaje de Baterías Latinoamérica" },
-      {
-        property: "og:description",
-        content:
-          "Servicios de gestión de baterías de litio para operaciones industriales en Latinoamérica.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/servicios" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/servicios" }],
-  }),
+  staticData: { sitemap: true },
+  head: () =>
+    pageHead({
+      path: "/servicios",
+      title: "Gesti\u00f3n de bater\u00edas: servicios de recolecci\u00f3n y disposici\u00f3n | Reciclaje de Bater\u00edas Latinoam\u00e9rica",
+      description: "Servicios de gesti\u00f3n de bater\u00edas para industria: evaluaci\u00f3n del material, empaque, retiro, transporte con operadores autorizados y documentaci\u00f3n de destino final.",
+    }),
   component: ServicesPage,
 });
 
