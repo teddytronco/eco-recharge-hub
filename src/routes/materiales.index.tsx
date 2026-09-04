@@ -1,5 +1,6 @@
 import { faqLd, pageHead } from "@/lib/seo";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { BulletList, CtaBand, EmergencyNotice, PageHero, Section } from "@/components/site/blocks";
 import { Faq } from "@/components/site/Faq";
