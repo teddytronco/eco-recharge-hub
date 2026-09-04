@@ -470,7 +470,7 @@ export function QuoteForm({ initialChemistry }: { initialChemistry?: string }) {
             onClick={() => {
               if (validateStep(step)) setStep((s) => s + 1);
             }}
-            className="rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            className="min-h-12 rounded-md bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
             {t.cta.next}
           </button>
