@@ -8,6 +8,15 @@
 - [x] Artículos /recursos
 - [ ] Publicar y dar de alta en Search Console (requiere acción del usuario)
 
+## Mejoras de conversión (2026-09)
+
+- [x] FAQ con FAQPage JSON-LD en Inicio y /materiales
+- [x] Material precargado en el formulario vía /contacto?material= (CTA en cada página de material)
+- [x] Página de origen incluida en el cuerpo del correo de cotización
+- [x] Botón de llamada directa visible en header móvil y menú móvil
+- [ ] Formulario con guardado real en base de datos + notificación por correo (Lovable Cloud falló al activarse; reintentar)
+- [ ] Evaluar página/sección para "compra de baterías usadas" (~1,000 búsquedas/mes MX, dificultad baja)
+
 ## Keywords objetivo solicitadas por el cliente
 
 Deben aparecer en títulos, descripciones y H1/H2 de las páginas indicadas:
