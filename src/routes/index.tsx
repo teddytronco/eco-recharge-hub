@@ -56,14 +56,14 @@ function Index() {
                 <Link
                   to="/contacto"
                   search={{ material: undefined }}
-                className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-5 py-3.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
               >
                 {t.cta.quote}
                 <ArrowRight className="size-4" aria-hidden />
               </Link>
               <Link
                 to="/servicios"
-                className="inline-flex items-center rounded-md border border-primary-foreground/30 px-5 py-3 text-sm font-semibold transition-colors hover:bg-primary-foreground/10"
+                className="inline-flex items-center justify-center rounded-md border border-primary-foreground/30 px-5 py-3.5 text-sm font-semibold transition-colors hover:bg-primary-foreground/10"
               >
                 {t.cta.learn}
               </Link>
