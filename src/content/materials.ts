@@ -11,6 +11,7 @@ export type Material = {
   packaging: LL;
   documentation: LL;
   who: LL;
+  brands: LL;
 };
 
 export const materials: Material[] = [
