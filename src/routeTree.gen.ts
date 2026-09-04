@@ -17,6 +17,7 @@ import { Route as LogisticaRouteImport } from './routes/logistica'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as ProcesoRouteImport } from './routes/proceso'
 import { Route as ServiciosRouteImport } from './routes/servicios'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as CoberturaIndexRouteImport } from './routes/cobertura.index'
 import { Route as CoberturaSlugRouteImport } from './routes/cobertura.$slug'
 import { Route as MaterialesIndexRouteImport } from './routes/materiales.index'
@@ -64,6 +65,11 @@ const ServiciosRoute = ServiciosRouteImport.update({
   path: '/servicios',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CoberturaIndexRoute = CoberturaIndexRouteImport.update({
   id: '/cobertura/',
   path: '/cobertura/',
@@ -104,6 +110,7 @@ export interface FileRoutesByFullPath {
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
   '/servicios': typeof ServiciosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/cobertura/$slug': typeof CoberturaSlugRoute
   '/materiales/$slug': typeof MaterialesSlugRoute
   '/recursos/$slug': typeof RecursosSlugRoute
@@ -120,6 +127,7 @@ export interface FileRoutesByTo {
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
   '/servicios': typeof ServiciosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/cobertura/$slug': typeof CoberturaSlugRoute
   '/materiales/$slug': typeof MaterialesSlugRoute
   '/recursos/$slug': typeof RecursosSlugRoute
@@ -137,6 +145,7 @@ export interface FileRoutesById {
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
   '/servicios': typeof ServiciosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/cobertura/$slug': typeof CoberturaSlugRoute
   '/materiales/$slug': typeof MaterialesSlugRoute
   '/recursos/$slug': typeof RecursosSlugRoute
@@ -155,6 +164,7 @@ export interface FileRouteTypes {
     | '/nosotros'
     | '/proceso'
     | '/servicios'
+    | '/sitemap.xml'
     | '/cobertura/$slug'
     | '/materiales/$slug'
     | '/recursos/$slug'
@@ -171,6 +181,7 @@ export interface FileRouteTypes {
     | '/nosotros'
     | '/proceso'
     | '/servicios'
+    | '/sitemap.xml'
     | '/cobertura/$slug'
     | '/materiales/$slug'
     | '/recursos/$slug'
@@ -187,6 +198,7 @@ export interface FileRouteTypes {
     | '/nosotros'
     | '/proceso'
     | '/servicios'
+    | '/sitemap.xml'
     | '/cobertura/$slug'
     | '/materiales/$slug'
     | '/recursos/$slug'
@@ -204,6 +216,7 @@ export interface RootRouteChildren {
   NosotrosRoute: typeof NosotrosRoute
   ProcesoRoute: typeof ProcesoRoute
   ServiciosRoute: typeof ServiciosRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   CoberturaSlugRoute: typeof CoberturaSlugRoute
   MaterialesSlugRoute: typeof MaterialesSlugRoute
   RecursosSlugRoute: typeof RecursosSlugRoute
@@ -270,6 +283,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServiciosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/cobertura/': {
       id: '/cobertura/'
       path: '/cobertura'
@@ -324,6 +344,7 @@ const rootRouteChildren: RootRouteChildren = {
   NosotrosRoute: NosotrosRoute,
   ProcesoRoute: ProcesoRoute,
   ServiciosRoute: ServiciosRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   CoberturaSlugRoute: CoberturaSlugRoute,
   MaterialesSlugRoute: MaterialesSlugRoute,
   RecursosSlugRoute: RecursosSlugRoute,
