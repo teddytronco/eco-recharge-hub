@@ -128,15 +128,15 @@ const es = {
     },
     trustTitle: "Con quién trabajamos",
     trustSubtitle:
-      "Atendemos a empresas del sector automotriz Tier 1, compañías aseguradoras y centros de acopio de electrónicos en Centroamérica y Sudamérica.",
+      "Fabricantes automotrices Tier 1, aseguradoras de vehículos y redes de acopio de electrónicos en Centroamérica y Sudamérica nos contactan cuando necesitan certeza documental.",
     trust: [
       {
         t: "Automotriz Tier 1",
-        d: "Proveedores y plantas del sector automotriz que requieren retiro trazable de baterías y material de proceso.",
+        d: "Proveedores y plantas automotrices que requieren retiro trazable de baterías y residuos de manufactura.",
       },
       {
         t: "Compañías aseguradoras",
-        d: "Gestión de baterías provenientes de siniestros y unidades siniestradas, con evidencia documental del destino.",
+        d: "Retiro y disposición de baterías de vehículos siniestrados o dados de baja, con evidencia documental del destino.",
       },
       {
         t: "Centros de acopio de electrónicos",
