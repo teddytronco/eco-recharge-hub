@@ -128,7 +128,7 @@ export function EmergencyNotice() {
 }
 
 export function ContactActions({ className }: { className?: string }) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   return (
     <div className={cn("flex flex-wrap gap-3", className)}>
       <a
@@ -146,7 +146,7 @@ export function ContactActions({ className }: { className?: string }) {
         {t.cta.email}
       </a>
       <a
-        href={whatsappUrl()}
+        href={whatsappUrl(lang)}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2 rounded-md bg-accent px-4 py-2.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
@@ -159,7 +159,7 @@ export function ContactActions({ className }: { className?: string }) {
 }
 
 export function CtaBand() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   return (
     <section className="border-t border-border bg-primary text-primary-foreground">
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-14 lg:flex-row lg:items-center lg:justify-between lg:px-8">
@@ -176,7 +176,7 @@ export function CtaBand() {
             {t.cta.quote}
           </Link>
           <a
-            href={whatsappUrl()}
+            href={whatsappUrl(lang)}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center rounded-md border border-primary-foreground/30 px-5 py-3 text-sm font-semibold transition-colors hover:bg-primary-foreground/10"
