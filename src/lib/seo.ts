@@ -1,4 +1,4 @@
-export const SITE_URL = "https://eco-recharge-hub.lovable.app";
+export const SITE_URL = "https://batteryrecyclinglatam.com";
 
 export const OG_IMAGE = `${SITE_URL}/og-cover.jpg`;
 

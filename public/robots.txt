@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://eco-recharge-hub.lovable.app/sitemap.xml
+Sitemap: https://batteryrecyclinglatam.com/sitemap.xml

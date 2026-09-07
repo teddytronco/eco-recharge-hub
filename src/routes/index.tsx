@@ -75,7 +75,7 @@ function Index() {
                 to="/servicios"
                 className="inline-flex items-center justify-center rounded-md border border-primary-foreground/30 px-5 py-3.5 text-sm font-semibold transition-colors hover:bg-primary-foreground/10"
               >
-                {t.cta.learn}
+                {t.cta.learnServices}
               </Link>
             </div>
             <p className="mt-4 text-xs font-semibold tracking-[0.14em] text-accent uppercase">
@@ -147,7 +147,7 @@ function Index() {
           to="/servicios"
           className="mt-8 inline-flex items-center gap-2 text-sm font-semibold hover:underline"
         >
-          {t.cta.learn}
+          {t.cta.learnServices}
           <ArrowRight className="size-4" aria-hidden />
         </Link>
       </Section>
@@ -189,7 +189,7 @@ function Index() {
               to="/cumplimiento"
               className="mt-6 inline-flex items-center gap-2 text-sm font-semibold hover:underline"
             >
-              {t.cta.learn}
+              {t.cta.learnCompliance}
               <ArrowRight className="size-4" aria-hidden />
             </Link>
             <div className="mt-8 border-t border-border pt-6">

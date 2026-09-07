@@ -41,6 +41,8 @@ const es = {
     whatsapp: "WhatsApp",
     talk: "Hablar con un especialista",
     learn: "Conocer más",
+    learnServices: "Ver nuestros servicios",
+    learnCompliance: "Ver nuestro marco de cumplimiento",
     back: "Atrás",
     next: "Continuar",
     send: "Enviar solicitud",
@@ -176,6 +178,7 @@ const es = {
         d: "Entrega de expediente por embarque: inventario, fotografías, guía y constancia de recepción en destino.",
       },
     ],
+    itemsTitle: "Servicios de gestión de baterías",
     notIncludedTitle: "Alcance y límites",
     notIncluded:
       "El alcance específico, los tiempos y las condiciones comerciales se definen por proyecto tras la evaluación del material. No ofrecemos servicios que no puedan ejecutarse con la documentación y las autorizaciones correspondientes.",
@@ -287,6 +290,7 @@ const es = {
         d: "Planeación de rutas en Latinoamérica con operadores habilitados y validación de requisitos según origen y destino.",
       },
     ],
+    blocksTitle: "Capacidades logísticas",
     checklistTitle: "Antes de programar un retiro",
     checklist: [
       "Identificar la química y el formato del material",
@@ -444,6 +448,8 @@ const en: Dict = {
     whatsapp: "WhatsApp",
     talk: "Talk to a specialist",
     learn: "Learn more",
+    learnServices: "Explore our services",
+    learnCompliance: "Review our compliance framework",
     back: "Back",
     next: "Continue",
     send: "Send request",
@@ -579,6 +585,7 @@ const en: Dict = {
         d: "Shipment file delivery: inventory, photographs, waybill and proof of receipt at destination.",
       },
     ],
+    itemsTitle: "Battery management services",
     notIncludedTitle: "Scope per project",
     notIncluded:
       "Specific scope, timelines and commercial terms are defined per project after material assessment. We do not offer services that cannot be executed with the corresponding documentation and authorizations.",
@@ -690,6 +697,7 @@ const en: Dict = {
         d: "Route planning across Latin America with authorized operators and requirement validation by origin and destination.",
       },
     ],
+    blocksTitle: "Logistics capabilities",
     checklistTitle: "Before scheduling a pickup",
     checklist: [
       "Identify the chemistry and format of the material",
