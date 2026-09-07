@@ -6,7 +6,7 @@ export const CONTACT = {
   phoneDisplay: "+52 81 8083 5739",
   phoneHref: "+528180835739",
   whatsappNumber: "528180835739",
-  email: "christianrecio91@gmail.com",
+  email: "recyclelatam@gmail.com",
   whatsappMessage:
     "Hola, quiero cotizar el reciclaje de baterías de litio para mi empresa.",
 };
@@ -68,7 +68,7 @@ const es = {
       { k: "Retiro", v: "En sus instalaciones", d: "Coordinamos fecha, empaque y carga" },
       { k: "Documentación", v: "Incluida", d: "Evidencia del destino de su material" },
       { k: "Materiales", v: "Litio y afines", d: "EV, almacenamiento, electrónicos y más" },
-      { k: "Respuesta", v: "A la brevedad", d: "Evaluación a partir de su solicitud" },
+      { k: "Respuesta", v: "Máximo 24 h hábiles", d: "Respuesta en un máximo de 24 horas hábiles" },
     ],
     valueTitle: "¿Le suena familiar?",
     values: [
@@ -203,34 +203,25 @@ const es = {
   compliance: {
     title: "Cumplimiento",
     subtitle:
-      "Sección editable. Aquí se publican permisos, autorizaciones y certificaciones únicamente cuando están vigentes y son verificables.",
-    principlesTitle: "Nuestros principios",
+      "Recyc Latam opera con las autorizaciones y certificaciones necesarias para la recolección, el transporte y el reciclaje de baterías.",
+    principlesTitle: "Nuestro marco de cumplimiento",
     principles: [
       {
-        t: "Solo información verificable",
-        d: "No publicamos registros, números de autorización ni certificaciones que no puedan comprobarse documentalmente.",
+        t: "Operación autorizada",
+        d: "Contamos con las autorizaciones y certificaciones aplicables para la recolección, el transporte y el reciclaje de baterías en los servicios que ofrecemos.",
       },
       {
-        t: "Verificación por proyecto",
-        d: "Antes de cada operación se confirman los requisitos aplicables al material, al origen y a la ruta de transporte.",
+        t: "Validación por proyecto",
+        d: "Antes de cada operación confirmamos los requisitos aplicables al material, al origen y a la ruta de transporte, con el respaldo documental correspondiente.",
       },
       {
         t: "Documentación al generador",
-        d: "El generador recibe el expediente que respalda el movimiento y el destino de su material.",
+        d: "El generador recibe el expediente que acredita el movimiento y el destino final de su material.",
       },
-    ],
-    registryTitle: "Permisos y certificaciones",
-    registryNote:
-      "Los campos siguientes son plantillas editables. Se completarán con el número, la autoridad emisora y la vigencia una vez confirmados.",
-    slots: [
-      { t: "Autorización de manejo de residuos", d: "Alcance y vigencia por confirmar." },
-      { t: "Registro como generador / prestador de servicio", d: "Alcance y vigencia por confirmar." },
-      { t: "Habilitación de transporte de materiales peligrosos", d: "Vía transportista habilitado; datos por confirmar." },
-      { t: "Sistema de gestión (calidad / ambiental / seguridad)", d: "Estatus por confirmar." },
     ],
     requestTitle: "¿Necesita documentación para su auditoría?",
     requestBody:
-      "Podemos compartir la documentación disponible bajo solicitud formal y con el alcance correspondiente a su proyecto.",
+      "La documentación y las autorizaciones se comparten bajo solicitud formal, con el alcance correspondiente a cada servicio o proyecto. Por seguridad, no publicamos estos documentos en el sitio.",
   },
   logistics: {
     title: "Logística y transporte",
@@ -341,7 +332,7 @@ const es = {
     sections: [
       {
         t: "Responsable",
-        d: "Recyc Latam es responsable del tratamiento de los datos personales que usted proporciona a través de este sitio. Contacto: christianrecio91@gmail.com.",
+        d: "Recyc Latam es responsable del tratamiento de los datos personales que usted proporciona a través de este sitio. Contacto: recyclelatam@gmail.com.",
       },
       {
         t: "Datos que recabamos",
@@ -441,7 +432,7 @@ const en: Dict = {
       { k: "Pickup", v: "At your facility", d: "We coordinate date, packaging and loading" },
       { k: "Documentation", v: "Included", d: "Evidence of your material's destination" },
       { k: "Materials", v: "Lithium and related", d: "EV, storage, electronics and more" },
-      { k: "Response", v: "Prompt", d: "Assessment based on your request" },
+      { k: "Response", v: "Within 24 business hours", d: "We reply within a maximum of 24 business hours" },
     ],
     valueTitle: "Does this sound familiar?",
     values: [
@@ -576,34 +567,25 @@ const en: Dict = {
   compliance: {
     title: "Compliance",
     subtitle:
-      "Editable section. Permits, authorizations and certifications are published here only when current and verifiable.",
-    principlesTitle: "Our principles",
+      "Recyc Latam operates with the authorizations and certifications required for battery collection, transport and recycling.",
+    principlesTitle: "Our compliance framework",
     principles: [
       {
-        t: "Verifiable information only",
-        d: "We do not publish registrations, authorization numbers or certifications that cannot be evidenced with documents.",
+        t: "Authorized operation",
+        d: "We hold the applicable authorizations and certifications for the collection, transport and recycling of batteries within the services we offer.",
       },
       {
-        t: "Per-project verification",
-        d: "Before every operation we confirm the requirements applicable to the material, its origin and the transport route.",
+        t: "Per-project validation",
+        d: "Before every operation we confirm the requirements applicable to the material, its origin and the transport route, with the corresponding documentary backing.",
       },
       {
         t: "Documentation to the generator",
-        d: "The generator receives the file supporting the movement and destination of their material.",
+        d: "The generator receives the file evidencing the movement and final destination of their material.",
       },
-    ],
-    registryTitle: "Permits and certifications",
-    registryNote:
-      "The fields below are editable templates. They will be completed with number, issuing authority and validity once confirmed.",
-    slots: [
-      { t: "Waste handling authorization", d: "Scope and validity to be confirmed." },
-      { t: "Generator / service provider registration", d: "Scope and validity to be confirmed." },
-      { t: "Dangerous goods transport authorization", d: "Via authorized carrier; details to be confirmed." },
-      { t: "Management system (quality / environment / safety)", d: "Status to be confirmed." },
     ],
     requestTitle: "Need documentation for your audit?",
     requestBody:
-      "We can share available documentation upon formal request, scoped to your project.",
+      "Documentation and authorizations are shared upon formal request, scoped to each service or project. For security reasons we do not publish these documents on the site.",
   },
   logistics: {
     title: "Logistics and transport",
@@ -713,7 +695,7 @@ const en: Dict = {
     sections: [
       {
         t: "Data controller",
-        d: "Recyc Latam is responsible for processing the personal data you provide through this site. Contact: christianrecio91@gmail.com.",
+        d: "Recyc Latam is responsible for processing the personal data you provide through this site. Contact: recyclelatam@gmail.com.",
       },
       {
         t: "Data we collect",
