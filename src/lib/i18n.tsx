@@ -55,28 +55,28 @@ const es = {
     pending: "Por documentar",
     reqTitle: "¿Listo para evaluar su material?",
     reqBody:
-      "Comparta el tipo de batería, cantidad estimada y ubicación. Respondemos con los siguientes pasos y los requisitos de manejo aplicables.",
+      "Comparta qué tiene. Le respondemos con los siguientes pasos y el alcance claro del servicio.",
     quickContact: "Contacto directo",
   },
   home: {
-    eyebrow: "Servicio integral de reciclaje de baterías",
-    title: "Retiramos sus baterías usadas y gestionamos su disposición",
+    eyebrow: "Gestión industrial de baterías de litio — México y Latinoamérica",
+    title: "Retiro y disposición documentada de baterías de litio, de principio a fin.",
     subtitle:
-      "Recolección, transporte y disposición documentada de baterías de litio para empresas en México y Latinoamérica. Usted nos dice qué tiene y dónde está; nosotros nos encargamos del resto.",
+      "Recolección, transporte y disposición documentada de baterías de litio para empresas en México y Latinoamérica. Un solo interlocutor para diagnóstico, logística y expediente completo.",
     heroAlt:
       "Imagen de referencia: módulos de batería embalados en pallets dentro de una instalación industrial",
     statsTitle: "Sin complicaciones para usted",
     stats: [
-      { k: "Retiro", v: "En sus instalaciones", d: "Coordinamos fecha, empaque y carga" },
+      { k: "Retiro", v: "En sus instalaciones", d: "Fecha, empaque y carga, coordinados." },
       { k: "Documentación", v: "Incluida", d: "Evidencia del destino de su material" },
       { k: "Materiales", v: "Litio y afines", d: "EV, almacenamiento, electrónicos y más" },
-      { k: "Respuesta", v: "Máximo 24 h hábiles", d: "Respuesta en un máximo de 24 horas hábiles" },
+      { k: "Respuesta", v: "Máximo 24 h hábiles", d: "Confirmamos sus próximos pasos" },
     ],
     valueTitle: "¿Le suena familiar?",
     values: [
       {
         t: "Baterías acumulándose en su almacén",
-        d: "El material usado ocupa espacio y nadie quiere hacerse cargo. Lo retiramos, con documentación.",
+        d: "El material acumulado ocupa espacio y genera responsabilidad que nadie quiere sostener. Lo retiramos con expediente completo.",
       },
       {
         t: "La responsabilidad sigue siendo suya",
@@ -93,9 +93,9 @@ const es = {
     ],
     servicesTitle: "Un solo servicio, de principio a fin",
     servicesSub: "Recolección, empaque, transporte y disposición documentada. Usted no coordina nada.",
-    processTitle: "Así de simple",
+    processTitle: "Cinco etapas, sin sorpresas",
     processSub: "Cinco etapas, evidencia en cada una y un solo punto de contacto.",
-    sectorsTitle: "¿Quiénes nos llaman?",
+    sectorsTitle: "Sectores que atendemos",
     sectors: [
       "Movilidad eléctrica y flotas",
       "Almacenamiento de energía",
@@ -107,7 +107,7 @@ const es = {
     responsePromise: "Respuesta en un máximo de 24 horas hábiles",
     quick: {
       title: "Cuéntenos qué tiene",
-      subtitle: "Tres datos y le respondemos en un máximo de 24 horas hábiles.",
+      subtitle: "Tres datos. Le respondemos en 24 horas hábiles.",
       type: "Tipo de batería",
       typeOptions: [
         "Vehículo eléctrico (EV)",
@@ -128,15 +128,15 @@ const es = {
     },
     trustTitle: "Con quién trabajamos",
     trustSubtitle:
-      "Atendemos a empresas del sector automotriz Tier 1, compañías aseguradoras y centros de acopio de electrónicos en Centroamérica y Sudamérica.",
+      "Fabricantes automotrices Tier 1, aseguradoras de vehículos y redes de acopio de electrónicos en Centroamérica y Sudamérica nos contactan cuando necesitan certeza documental.",
     trust: [
       {
         t: "Automotriz Tier 1",
-        d: "Proveedores y plantas del sector automotriz que requieren retiro trazable de baterías y material de proceso.",
+        d: "Proveedores y plantas automotrices que requieren retiro trazable de baterías y residuos de manufactura.",
       },
       {
         t: "Compañías aseguradoras",
-        d: "Gestión de baterías provenientes de siniestros y unidades siniestradas, con evidencia documental del destino.",
+        d: "Retiro y disposición de baterías de vehículos siniestrados o dados de baja, con evidencia documental del destino.",
       },
       {
         t: "Centros de acopio de electrónicos",
