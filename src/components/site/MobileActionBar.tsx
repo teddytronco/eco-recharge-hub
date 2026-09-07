@@ -3,7 +3,7 @@ import { MessageCircle, Phone, FileText } from "lucide-react";
 import { CONTACT, useI18n, whatsappUrl } from "@/lib/i18n";
 
 export function MobileActionBar() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 backdrop-blur lg:hidden">
@@ -19,7 +19,7 @@ export function MobileActionBar() {
           {t.cta.call}
         </a>
         <a
-          href={whatsappUrl()}
+          href={whatsappUrl(lang)}
           target="_blank"
           rel="noopener noreferrer"
           className="flex min-h-12 flex-col items-center justify-center gap-1 rounded-md text-[11px] font-semibold transition-colors active:bg-secondary"
