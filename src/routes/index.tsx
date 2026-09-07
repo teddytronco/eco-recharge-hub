@@ -101,7 +101,20 @@ function Index() {
         </dl>
       </div>
 
-      <div className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
+      <Section>
+        <SectionTitle title={t.home.trustTitle} subtitle={t.home.trustSubtitle} />
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
+          {t.home.trust.map((c) => (
+            <div key={c.t} className="rounded-lg border border-border bg-card p-6">
+              <ShieldCheck className="size-5 text-accent-foreground" aria-hidden />
+              <h3 className="mt-4 text-base font-semibold">{c.t}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.d}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <div className="mx-auto max-w-7xl px-5 pb-10 lg:px-8">
         <EmergencyNotice />
       </div>
 
