@@ -7,8 +7,10 @@ export const CONTACT = {
   phoneHref: "+528180835739",
   whatsappNumber: "528180835739",
   email: "recyclelatam@gmail.com",
-  whatsappMessage:
-    "Hola, quiero cotizar el reciclaje de baterías de litio para mi empresa.",
+  whatsappMessage: {
+    es: "Hola, quiero cotizar el reciclaje de baterías de litio para mi empresa.",
+    en: "Hello, I'd like to get a quote for lithium battery recycling for my company.",
+  },
 };
 
 type Dict = typeof es;
@@ -460,10 +462,10 @@ const en: Dict = {
     quickContact: "Direct contact",
   },
   home: {
-    eyebrow: "End-to-end battery recycling service",
-    title: "We remove your used batteries and manage their disposal",
+    eyebrow: "Industrial lithium battery management — Mexico & Latin America",
+    title: "Lithium battery removal and disposal, handled end to end",
     subtitle:
-      "Collection, transport and documented disposal of lithium batteries for companies across Mexico and Latin America. You tell us what you have and where it is; we handle the rest.",
+      "Collection, transport and documented disposal of lithium batteries for companies across Mexico and Latin America. One partner for assessment, logistics, and the full compliance record.",
     heroAlt:
       "Reference image: battery modules packed on pallets inside an industrial facility",
     statsTitle: "No hassle on your side",
