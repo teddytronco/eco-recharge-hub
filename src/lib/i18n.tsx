@@ -102,6 +102,45 @@ const es = {
       "Telecomunicaciones y respaldo",
       "Retail y logística inversa",
     ],
+    responsePromise: "Respuesta en un máximo de 24 horas hábiles",
+    quick: {
+      title: "Cuéntenos qué tiene",
+      subtitle: "Tres datos y le respondemos en un máximo de 24 horas hábiles.",
+      type: "Tipo de batería",
+      typeOptions: [
+        "Vehículo eléctrico (EV)",
+        "Almacenamiento / BESS",
+        "Herramienta eléctrica",
+        "Electrodomésticos",
+        "Electrónicos (laptops, tablets, powerbanks)",
+        "Industrial / otro",
+      ],
+      quantity: "Cantidad estimada (kg o unidades)",
+      contact: "Teléfono o correo",
+      send: "Solicitar contacto",
+      sending: "Enviando…",
+      done: "Gracias. Le contactamos en un máximo de 24 horas hábiles.",
+      error: "No se pudo enviar. Intente por WhatsApp o teléfono.",
+      invalid: "Indique un teléfono o correo válido y el tipo de batería.",
+      full: "¿Prefiere el formulario completo?",
+    },
+    trustTitle: "Con quién trabajamos",
+    trustSubtitle:
+      "Atendemos a empresas del sector automotriz Tier 1, compañías aseguradoras y centros de acopio de electrónicos en Centroamérica y Sudamérica.",
+    trust: [
+      {
+        t: "Automotriz Tier 1",
+        d: "Proveedores y plantas del sector automotriz que requieren retiro trazable de baterías y material de proceso.",
+      },
+      {
+        t: "Compañías aseguradoras",
+        d: "Gestión de baterías provenientes de siniestros y unidades siniestradas, con evidencia documental del destino.",
+      },
+      {
+        t: "Centros de acopio de electrónicos",
+        d: "Programas recurrentes de logística inversa para acopiadores y redes de servicio.",
+      },
+    ],
     complianceTeaser:
       "Publicamos únicamente permisos y certificaciones verificables. Esta sección se actualiza conforme se completa cada trámite.",
   },
@@ -465,6 +504,45 @@ const en: Dict = {
       "Service and aftersales centers",
       "Telecom and backup power",
       "Retail and reverse logistics",
+    ],
+    responsePromise: "Response within a maximum of 24 business hours",
+    quick: {
+      title: "Tell us what you have",
+      subtitle: "Three details and we reply within a maximum of 24 business hours.",
+      type: "Battery type",
+      typeOptions: [
+        "Electric vehicle (EV)",
+        "Storage / BESS",
+        "Power tools",
+        "Home appliances",
+        "Electronics (laptops, tablets, power banks)",
+        "Industrial / other",
+      ],
+      quantity: "Estimated quantity (kg or units)",
+      contact: "Phone or email",
+      send: "Request contact",
+      sending: "Sending…",
+      done: "Thank you. We will contact you within 24 business hours.",
+      error: "Could not send. Please try WhatsApp or phone.",
+      invalid: "Enter a valid phone or email and the battery type.",
+      full: "Prefer the full form?",
+    },
+    trustTitle: "Who we work with",
+    trustSubtitle:
+      "We serve Tier 1 automotive companies, insurance companies and electronics collection centers across Central and South America.",
+    trust: [
+      {
+        t: "Tier 1 automotive",
+        d: "Automotive suppliers and plants that need traceable removal of batteries and process material.",
+      },
+      {
+        t: "Insurance companies",
+        d: "Management of batteries from claims and damaged units, with documentary evidence of destination.",
+      },
+      {
+        t: "Electronics collection centers",
+        d: "Recurring reverse logistics programs for collectors and service networks.",
+      },
     ],
     complianceTeaser:
       "We publish only verifiable permits and certifications. This section is updated as each filing is completed.",

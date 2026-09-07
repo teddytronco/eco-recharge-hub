@@ -60,3 +60,43 @@ export const submitQuoteLead = createServerFn({ method: "POST" })
     }
     return { ok: true as const };
   });
+
+const quickSchema = z.object({
+  batteryType: z.string().min(1).max(200),
+  quantity: z.string().max(200).optional().default(""),
+  contact: z.string().min(5).max(200),
+  sourcePage: z.string().max(500).optional().default(""),
+  lang: z.string().max(5).optional().default("es"),
+});
+
+export const submitQuickLead = createServerFn({ method: "POST" })
+  .inputValidator((data: unknown) => quickSchema.parse(data))
+  .handler(async ({ data }) => {
+    const supabase = createClient<Database>(
+      process.env["SUPABASE_URL"]!,
+      process.env["SUPABASE_PUBLISHABLE_KEY"]!,
+      { auth: { persistSession: false, autoRefreshToken: false } },
+    );
+
+    const isEmail = data.contact.includes("@");
+
+    const { error } = await supabase.from("quote_leads").insert({
+      company: "—",
+      contact_name: "—",
+      email: isEmail ? data.contact : "",
+      phone: isEmail ? "" : data.contact,
+      country: "",
+      city: "",
+      chemistry: data.batteryType,
+      quantity: data.quantity,
+      notes: "Lead rápido (home hero)",
+      source_page: data.sourcePage,
+      lang: data.lang,
+    });
+
+    if (error) {
+      console.error("quick lead insert failed", error.message);
+      return { ok: false as const };
+    }
+    return { ok: true as const };
+  });
