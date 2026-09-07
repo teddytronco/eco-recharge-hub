@@ -142,7 +142,7 @@ const es = {
       },
     ],
     complianceTeaser:
-      "Publicamos únicamente permisos y certificaciones verificables. Esta sección se actualiza conforme se completa cada trámite.",
+      "Operamos con las autorizaciones y certificaciones necesarias para la recolección, el transporte y el reciclaje de baterías. La documentación se confirma según el servicio o proyecto.",
   },
   services: {
     title: "Servicios",
@@ -411,7 +411,7 @@ const es = {
     legalTitle: "Legal",
     legalLinks: ["Aviso de privacidad", "Términos de uso"],
     disclaimer:
-      "Las imágenes son de referencia. La información de permisos y certificaciones se publica únicamente cuando es verificable.",
+      "Las imágenes son de referencia. Las autorizaciones y certificaciones se comparten bajo solicitud formal, según el alcance de cada servicio.",
     rights: "Todos los derechos reservados.",
   },
 };
@@ -545,7 +545,7 @@ const en: Dict = {
       },
     ],
     complianceTeaser:
-      "We publish only verifiable permits and certifications. This section is updated as each filing is completed.",
+      "We operate with the authorizations and certifications required for battery collection, transport and recycling. Documentation is confirmed per service or project.",
   },
   services: {
     title: "Services",
@@ -813,7 +813,7 @@ const en: Dict = {
     legalTitle: "Legal",
     legalLinks: ["Privacy notice", "Terms of use"],
     disclaimer:
-      "Images are for reference. Permit and certification information is published only when verifiable.",
+      "Images are for reference. Authorizations and certifications are shared upon formal request, scoped to each service.",
     rights: "All rights reserved.",
   },
 };

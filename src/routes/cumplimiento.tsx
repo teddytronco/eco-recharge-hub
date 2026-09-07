@@ -1,6 +1,5 @@
 import { pageHead } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
-import { FileClock } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import {
   Card,
