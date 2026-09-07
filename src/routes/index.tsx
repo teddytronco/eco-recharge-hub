@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
 const icons = [Recycle, ShieldCheck, Truck, FileCheck2];
 
 function Index() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
 
   return (
     <>
@@ -55,7 +55,7 @@ function Index() {
             </p>
             <div className="mt-7 grid gap-3 sm:mt-9 sm:flex sm:flex-wrap">
               <a
-                href={whatsappUrl()}
+                href={whatsappUrl(lang)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] px-5 py-3.5 text-sm font-semibold text-[#05300f] shadow-lg transition-transform hover:scale-[1.02]"

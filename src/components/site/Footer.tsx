@@ -78,7 +78,7 @@ export function Footer() {
             </li>
             <li>
               <a
-                href={whatsappUrl()}
+                href={whatsappUrl(lang)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 transition-colors hover:text-foreground"

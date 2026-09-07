@@ -2,11 +2,11 @@ import { MessageCircle } from "lucide-react";
 import { useI18n, whatsappUrl } from "@/lib/i18n";
 
 export function FloatingWhatsApp() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
 
   return (
     <a
-      href={whatsappUrl()}
+      href={whatsappUrl(lang)}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={t.cta.whatsapp}
