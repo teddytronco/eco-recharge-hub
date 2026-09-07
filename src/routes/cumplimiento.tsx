@@ -1,6 +1,5 @@
 import { pageHead } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
-import { FileClock } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import {
   Card,
@@ -40,28 +39,6 @@ function CompliancePage() {
             </Card>
           ))}
         </div>
-      </Section>
-
-      <Section muted>
-        <SectionTitle title={t.compliance.registryTitle} subtitle={t.compliance.registryNote} />
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
-          {t.compliance.slots.map((s) => (
-            <div
-              key={s.t}
-              className="flex gap-4 rounded-lg border border-dashed border-border bg-card p-6"
-            >
-              <FileClock className="size-5 shrink-0 text-muted-foreground" aria-hidden />
-              <div>
-                <h3 className="text-base font-semibold">{s.t}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{s.d}</p>
-                <span className="mt-3 inline-flex rounded-full border border-border px-2.5 py-1 text-[11px] font-semibold tracking-[0.12em] text-muted-foreground uppercase">
-                  {t.common.pending}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-        <p className="mt-8 max-w-3xl text-xs text-muted-foreground">{t.common.editableNote}</p>
       </Section>
 
       <Section>
