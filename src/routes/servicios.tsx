@@ -20,7 +20,8 @@ function ServicesPage() {
     <>
       <PageHero eyebrow={t.brand.tagline} title={t.services.title} subtitle={t.services.subtitle} />
       <Section>
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <SectionTitle title={t.services.itemsTitle} />
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {t.services.items.map((s, i) => (
             <Card key={s.t} title={s.t} index={i + 1}>
               {s.d}

@@ -25,7 +25,8 @@ function LogisticsPage() {
         subtitle={t.logistics.subtitle}
       />
       <Section>
-        <div className="grid gap-5 md:grid-cols-2">
+        <SectionTitle title={t.logistics.blocksTitle} />
+        <div className="mt-10 grid gap-5 md:grid-cols-2">
           {t.logistics.blocks.map((b, i) => (
             <Card key={b.t} title={b.t} index={i + 1}>
               {b.d}
