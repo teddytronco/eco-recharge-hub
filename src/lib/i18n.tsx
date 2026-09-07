@@ -470,7 +470,7 @@ const en: Dict = {
       "Reference image: battery modules packed on pallets inside an industrial facility",
     statsTitle: "No hassle on your side",
     stats: [
-      { k: "Pickup", v: "At your facility", d: "We coordinate date, packaging and loading" },
+      { k: "Pickup", v: "At your facility", d: "Date, packaging and loading — coordinated." },
       { k: "Documentation", v: "Included", d: "Evidence of your material's destination" },
       { k: "Materials", v: "Lithium and related", d: "EV, storage, electronics and more" },
       { k: "Response", v: "Within 24 business hours", d: "We reply within a maximum of 24 business hours" },
@@ -479,14 +479,14 @@ const en: Dict = {
     values: [
       {
         t: "Batteries piling up in your warehouse",
-        d: "Used material takes up space and nobody wants to own it. We take it away, documented.",
+        d: "Used material takes up space and creates liability no one wants to hold. We remove it with a full paper trail.",
       },
       {
         t: "The liability is still yours",
         d: "A mishandled battery is a legal and safety risk. We remove it from your operation with a record that backs you up.",
       },
       {
-        t: "Unsure if your material has value or a cost",
+        t: "You don't know if your material has value or a disposal cost",
         d: "We assess it with real data and confirm the viable route in writing before anything moves.",
       },
       {
@@ -496,9 +496,9 @@ const en: Dict = {
     ],
     servicesTitle: "One service, end to end",
     servicesSub: "Collection, packaging, transport and documented disposal. You coordinate nothing.",
-    processTitle: "That simple",
+    processTitle: "Five steps, fully managed",
     processSub: "Five stages, evidence at each one, a single point of contact.",
-    sectorsTitle: "Who calls us?",
+    sectorsTitle: "Industries we serve",
     sectors: [
       "Electric mobility and fleets",
       "Energy storage",
@@ -509,8 +509,8 @@ const en: Dict = {
     ],
     responsePromise: "Response within a maximum of 24 business hours",
     quick: {
-      title: "Tell us what you have",
-      subtitle: "Three details and we reply within a maximum of 24 business hours.",
+      title: "Start your assessment",
+      subtitle: "Three details. We reply in 24 business hours.",
       type: "Battery type",
       typeOptions: [
         "Electric vehicle (EV)",
@@ -531,15 +531,15 @@ const en: Dict = {
     },
     trustTitle: "Who we work with",
     trustSubtitle:
-      "We serve Tier 1 automotive companies, insurance companies and electronics collection centers across Central and South America.",
+      "We serve Tier 1 automotive manufacturers, vehicle insurers and electronics collectors across Central and South America.",
     trust: [
       {
         t: "Tier 1 automotive",
-        d: "Automotive suppliers and plants that need traceable removal of batteries and process material.",
+        d: "Automotive suppliers and plants that need traceable removal of batteries and manufacturing scrap.",
       },
       {
         t: "Insurance companies",
-        d: "Management of batteries from claims and damaged units, with documentary evidence of destination.",
+        d: "Removal and disposal of batteries from total-loss vehicles and write-off events, with full evidence of destination.",
       },
       {
         t: "Electronics collection centers",
@@ -552,7 +552,7 @@ const en: Dict = {
   services: {
     title: "Services",
     subtitle:
-      "Management solutions for lithium batteries and related materials, designed for industrial operations.",
+      "Removal, transport and documented disposal of lithium batteries for industrial clients.",
     items: [
       {
         t: "Assessment and sorting",
@@ -579,7 +579,7 @@ const en: Dict = {
         d: "Shipment file delivery: inventory, photographs, waybill and proof of receipt at destination.",
       },
     ],
-    notIncludedTitle: "Scope and limits",
+    notIncludedTitle: "Scope per project",
     notIncluded:
       "Specific scope, timelines and commercial terms are defined per project after material assessment. We do not offer services that cannot be executed with the corresponding documentation and authorizations.",
   },
@@ -648,7 +648,7 @@ const en: Dict = {
     title: "Compliance",
     subtitle:
       "Recyc Latam operates with the authorizations and certifications required for battery collection, transport and recycling.",
-    principlesTitle: "Our compliance framework",
+    principlesTitle: "Our regulatory standing",
     principles: [
       {
         t: "Authorized operation",
@@ -660,7 +660,7 @@ const en: Dict = {
       },
       {
         t: "Documentation to the generator",
-        d: "The generator receives the file evidencing the movement and final destination of their material.",
+        d: "The generator receives a file documenting the movement and final destination of their material.",
       },
     ],
     requestTitle: "Need documentation for your audit?",
@@ -854,6 +854,6 @@ export function useI18n() {
   return React.useContext(I18nContext);
 }
 
-export function whatsappUrl() {
-  return `https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(CONTACT.whatsappMessage)}`;
+export function whatsappUrl(lang: Lang = "es") {
+  return `https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(CONTACT.whatsappMessage[lang])}`;
 }
