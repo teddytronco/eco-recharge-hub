@@ -1,7 +1,8 @@
 import { faqLd, pageHead } from "@/lib/seo";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, FileCheck2, Truck, Recycle } from "lucide-react";
-import { useI18n } from "@/lib/i18n";
+import { ArrowRight, ShieldCheck, FileCheck2, Truck, Recycle, MessageCircle } from "lucide-react";
+import { useI18n, whatsappUrl } from "@/lib/i18n";
+import { QuickLeadForm } from "@/components/site/QuickLeadForm";
 import {
   Section,
   SectionTitle,
@@ -53,9 +54,18 @@ function Index() {
               {t.home.subtitle}
             </p>
             <div className="mt-7 grid gap-3 sm:mt-9 sm:flex sm:flex-wrap">
-                <Link
-                  to="/contacto"
-                  search={{ material: undefined }}
+              <a
+                href={whatsappUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] px-5 py-3.5 text-sm font-semibold text-[#05300f] shadow-lg transition-transform hover:scale-[1.02]"
+              >
+                <MessageCircle className="size-4 fill-current" aria-hidden />
+                {t.cta.whatsapp}
+              </a>
+              <Link
+                to="/contacto"
+                search={{ material: undefined }}
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-5 py-3.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
               >
                 {t.cta.quote}
@@ -68,26 +78,28 @@ function Index() {
                 {t.cta.learn}
               </Link>
             </div>
+            <p className="mt-4 text-xs font-semibold tracking-[0.14em] text-accent uppercase">
+              {t.home.responsePromise}
+            </p>
           </div>
 
-          <div className="rounded-xl border border-primary-foreground/15 bg-primary-foreground/5 p-6 backdrop-blur-sm sm:p-8">
-            <h2 className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
-              {t.home.statsTitle}
-            </h2>
-            <dl className="mt-6 grid gap-6 sm:grid-cols-2">
-              {t.home.stats.map((s) => (
-                <div key={s.k}>
-                  <dt className="text-[11px] tracking-[0.16em] text-primary-foreground/60 uppercase">
-                    {s.k}
-                  </dt>
-                  <dd className="mt-1 text-lg font-semibold">{s.v}</dd>
-                  <p className="mt-1 text-xs text-primary-foreground/65">{s.d}</p>
-                </div>
-              ))}
-            </dl>
-          </div>
+          <QuickLeadForm />
         </div>
       </section>
+
+      <div className="border-b border-border bg-secondary/40">
+        <dl className="mx-auto grid max-w-7xl gap-6 px-5 py-8 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
+          {t.home.stats.map((s) => (
+            <div key={s.k}>
+              <dt className="text-[11px] tracking-[0.16em] text-muted-foreground uppercase">
+                {s.k}
+              </dt>
+              <dd className="mt-1 text-base font-semibold">{s.v}</dd>
+              <p className="mt-1 text-xs text-muted-foreground">{s.d}</p>
+            </div>
+          ))}
+        </dl>
+      </div>
 
       <div className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
         <EmergencyNotice />
