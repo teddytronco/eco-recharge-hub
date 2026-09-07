@@ -29,13 +29,12 @@ export const Route = createFileRoute("/sitemap.xml")({
           ...places.map((p) => `/cobertura/${p.slug}`),
           ...articles.map((a) => `/recursos/${a.slug}`),
         ];
-        const lastmod = new Date().toISOString().slice(0, 10);
         const body = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${paths
   .map(
     (p) =>
-      `  <url><loc>${SITE_URL}${p === "/" ? "/" : p}</loc><lastmod>${lastmod}</lastmod><changefreq>weekly</changefreq><priority>${p === "/" ? "1.0" : "0.7"}</priority></url>`,
+      `  <url><loc>${SITE_URL}${p === "/" ? "/" : p}</loc><changefreq>weekly</changefreq><priority>${p === "/" ? "1.0" : "0.7"}</priority></url>`,
   )
   .join("\n")}
 </urlset>
