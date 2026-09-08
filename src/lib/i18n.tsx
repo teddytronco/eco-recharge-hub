@@ -5,8 +5,10 @@ export type Lang = "es" | "en";
 export const CONTACT = {
   phoneDisplay: "+52 81 8083 5739",
   phoneHref: "+528180835739",
+  phoneDisplay2: "+52 81 2355 7991",
+  phoneHref2: "+528123557991",
   whatsappNumber: "528180835739",
-  email: "recyclelatam@gmail.com",
+  email: "crecio@xd-global.com",
   whatsappMessage: {
     es: "Hola, quiero cotizar el reciclaje de baterías de litio para mi empresa.",
     en: "Hello, I'd like to get a quote for lithium battery recycling for my company.",
