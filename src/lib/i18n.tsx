@@ -5,8 +5,10 @@ export type Lang = "es" | "en";
 export const CONTACT = {
   phoneDisplay: "+52 81 8083 5739",
   phoneHref: "+528180835739",
+  phoneDisplay2: "+52 81 2355 7991",
+  phoneHref2: "+528123557991",
   whatsappNumber: "528180835739",
-  email: "recyclelatam@gmail.com",
+  email: "crecio@xd-global.com",
   whatsappMessage: {
     es: "Hola, quiero cotizar el reciclaje de baterías de litio para mi empresa.",
     en: "Hello, I'd like to get a quote for lithium battery recycling for my company.",
@@ -377,7 +379,7 @@ const es = {
     sections: [
       {
         t: "Responsable",
-        d: "XD Materials es responsable del tratamiento de los datos personales que usted proporciona a través de este sitio. Contacto: recyclelatam@gmail.com.",
+        d: "XD Materials es responsable del tratamiento de los datos personales que usted proporciona a través de este sitio. Contacto: crecio@xd-global.com.",
       },
       {
         t: "Datos que recabamos",
@@ -783,7 +785,7 @@ const en: Dict = {
     sections: [
       {
         t: "Data controller",
-        d: "XD Materials is responsible for processing the personal data you provide through this site. Contact: recyclelatam@gmail.com.",
+        d: "XD Materials is responsible for processing the personal data you provide through this site. Contact: crecio@xd-global.com.",
       },
       {
         t: "Data we collect",

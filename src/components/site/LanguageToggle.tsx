@@ -13,20 +13,24 @@ export function LanguageToggle({ className }: { className?: string }) {
       role="group"
       aria-label="Language / Idioma"
     >
-      {(["es", "en"] as const).map((l) => (
+      {([
+        { code: "es", label: "ES", flag: "🇲🇽" },
+        { code: "en", label: "EN", flag: "🇺🇸" },
+      ] as const).map((l) => (
         <button
-          key={l}
+          key={l.code}
           type="button"
-          onClick={() => setLang(l)}
-          aria-pressed={lang === l}
+          onClick={() => setLang(l.code)}
+          aria-pressed={lang === l.code}
           className={cn(
-            "rounded-[5px] px-2.5 py-1.5 uppercase transition-colors",
-            lang === l
+            "inline-flex items-center gap-1.5 rounded-[5px] px-2.5 py-1.5 uppercase transition-colors",
+            lang === l.code
               ? "bg-primary text-primary-foreground"
               : "text-muted-foreground hover:text-foreground",
           )}
         >
-          {l}
+          <span aria-hidden="true">{l.flag}</span>
+          <span>{l.label}</span>
         </button>
       ))}
     </div>

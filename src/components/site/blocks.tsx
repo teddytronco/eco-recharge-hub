@@ -114,13 +114,22 @@ export function EmergencyNotice() {
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
             {t.common.emergencyBody}
           </p>
-          <a
-            href={`tel:${CONTACT.phoneHref}`}
-            className="mt-4 inline-flex items-center gap-2 rounded-md bg-destructive px-4 py-2 text-sm font-semibold text-destructive-foreground transition-opacity hover:opacity-90"
-          >
-            <Phone className="size-4" aria-hidden />
-            {t.common.emergencyCta}: {CONTACT.phoneDisplay}
-          </a>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <a
+              href={`tel:${CONTACT.phoneHref}`}
+              className="inline-flex items-center gap-2 rounded-md bg-destructive px-4 py-2 text-sm font-semibold text-destructive-foreground transition-opacity hover:opacity-90"
+            >
+              <Phone className="size-4" aria-hidden />
+              {CONTACT.phoneDisplay}
+            </a>
+            <a
+              href={`tel:${CONTACT.phoneHref2}`}
+              className="inline-flex items-center gap-2 rounded-md bg-destructive px-4 py-2 text-sm font-semibold text-destructive-foreground transition-opacity hover:opacity-90"
+            >
+              <Phone className="size-4" aria-hidden />
+              {CONTACT.phoneDisplay2}
+            </a>
+          </div>
         </div>
       </div>
     </div>

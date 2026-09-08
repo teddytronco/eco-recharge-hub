@@ -119,13 +119,22 @@ export function Header() {
             >
               {t.cta.quote}
             </Link>
-            <a
-              href={`tel:${CONTACT.phoneHref}`}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-md border border-border px-4 py-3 text-sm font-semibold transition-colors hover:bg-secondary"
-            >
-              <Phone className="size-4" aria-hidden />
-              {CONTACT.phoneDisplay}
-            </a>
+            <div className="mt-2 flex flex-col gap-2">
+              <a
+                href={`tel:${CONTACT.phoneHref}`}
+                className="inline-flex items-center justify-center gap-2 rounded-md border border-border px-4 py-3 text-sm font-semibold transition-colors hover:bg-secondary"
+              >
+                <Phone className="size-4" aria-hidden />
+                {CONTACT.phoneDisplay}
+              </a>
+              <a
+                href={`tel:${CONTACT.phoneHref2}`}
+                className="inline-flex items-center justify-center gap-2 rounded-md border border-border px-4 py-3 text-sm font-semibold transition-colors hover:bg-secondary"
+              >
+                <Phone className="size-4" aria-hidden />
+                {CONTACT.phoneDisplay2}
+              </a>
+            </div>
           </nav>
         </div>
       )}

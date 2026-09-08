@@ -13,6 +13,7 @@ export function MobileActionBar() {
       >
         <a
           href={`tel:${CONTACT.phoneHref}`}
+          aria-label={`${t.cta.call}: ${CONTACT.phoneDisplay}`}
           className="flex min-h-12 flex-col items-center justify-center gap-1 rounded-md text-[11px] font-semibold transition-colors active:bg-secondary"
         >
           <Phone className="size-5" aria-hidden />
