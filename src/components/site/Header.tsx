@@ -26,15 +26,15 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-5 lg:px-8">
+      <div className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-5 lg:px-8 xl:gap-4">
         <Link
           to="/"
-          className="flex items-center gap-3"
+          className="flex shrink-0 items-center gap-2.5 xl:gap-3"
           aria-label={lang === "es" ? "Inicio - XD Materials" : "Home - XD Materials"}
           onClick={() => setOpen(false)}
         >
-          <img src={logo.url} alt="" width={768} height={489} className="h-8 w-auto" />
-          <span className="hidden text-base leading-none font-semibold tracking-tight sm:block">
+          <img src={logo.url} alt="" width={768} height={489} className="h-8 w-auto shrink-0" />
+          <span className="hidden whitespace-nowrap text-base leading-none font-semibold tracking-tight sm:block">
             XD
             <span className="block text-[11px] font-medium tracking-[0.32em] text-muted-foreground uppercase">
               Materials
@@ -43,12 +43,12 @@ export function Header() {
 
         </Link>
 
-        <nav className="ml-auto hidden items-center gap-1 lg:flex">
+        <nav className="ml-auto hidden min-w-0 items-center gap-0.5 xl:flex 2xl:gap-1">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+              className="whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground 2xl:px-3"
               activeProps={{ className: "text-foreground bg-secondary" }}
             >
               {l.label}
@@ -56,11 +56,11 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="ml-auto flex items-center gap-2 lg:ml-0">
+        <div className="ml-auto flex shrink-0 items-center gap-2 xl:ml-0">
           <LanguageToggle />
           <a
             href={`tel:${CONTACT.phoneHref}`}
-            className="hidden items-center gap-2 rounded-md border border-border px-3 py-2 text-sm font-medium transition-colors hover:bg-secondary xl:inline-flex"
+            className="hidden items-center gap-2 rounded-md border border-border px-3 py-2 text-sm font-medium transition-colors hover:bg-secondary 2xl:inline-flex"
           >
             <Phone className="size-4" aria-hidden />
             {CONTACT.phoneDisplay}
@@ -68,7 +68,7 @@ export function Header() {
           <a
             href={`tel:${CONTACT.phoneHref}`}
             aria-label={lang === "es" ? "Llamar ahora" : "Call now"}
-            className="inline-flex size-10 items-center justify-center rounded-md border border-border transition-colors hover:bg-secondary xl:hidden"
+            className="hidden size-10 items-center justify-center rounded-md border border-border transition-colors hover:bg-secondary xl:inline-flex 2xl:hidden"
           >
             <Phone className="size-5" aria-hidden />
           </a>
@@ -84,7 +84,7 @@ export function Header() {
             aria-label={open ? t.nav.close : t.nav.menu}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex size-10 items-center justify-center rounded-md border border-border lg:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-md border border-border xl:hidden"
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -92,7 +92,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background lg:hidden">
+        <div className="border-t border-border bg-background xl:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col px-5 py-3">
             <Link
               to="/"
