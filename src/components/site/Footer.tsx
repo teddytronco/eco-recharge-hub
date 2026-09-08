@@ -28,11 +28,18 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
           <div className="flex items-center gap-3">
-            <img src={logo} alt="" width={1024} height={1024} loading="lazy" className="h-9 w-9" />
+            <img
+              src={logo.url}
+              alt=""
+              width={768}
+              height={489}
+              loading="lazy"
+              className="h-8 w-auto"
+            />
             <span className="text-base leading-none font-semibold tracking-tight">
-              RECYC
-              <span className="block text-[11px] tracking-[0.32em] text-accent uppercase">
-                Latam
+              XD
+              <span className="block text-[11px] tracking-[0.32em] text-muted-foreground uppercase">
+                Materials
               </span>
             </span>
 
