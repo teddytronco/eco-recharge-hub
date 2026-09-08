@@ -31,6 +31,7 @@ function AboutPage() {
             </h2>
             <p className="mt-4 text-lg font-semibold">{t.about.contactName}</p>
             <p className="mt-1 text-sm text-muted-foreground">{CONTACT.phoneDisplay}</p>
+            <p className="text-sm text-muted-foreground">{CONTACT.phoneDisplay2}</p>
             <p className="text-sm break-all text-muted-foreground">{CONTACT.email}</p>
             <ContactActions className="mt-6" />
           </div>
