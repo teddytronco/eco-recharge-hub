@@ -33,11 +33,11 @@ export function Header() {
           aria-label={lang === "es" ? "Inicio - XD Materials" : "Home - XD Materials"}
           onClick={() => setOpen(false)}
         >
-          <img src={logo} alt="" width={1024} height={1024} className="h-9 w-9" />
+          <img src={logo.url} alt="" width={768} height={489} className="h-8 w-auto" />
           <span className="hidden text-base leading-none font-semibold tracking-tight sm:block">
-            RECYC
-            <span className="block text-[11px] font-medium tracking-[0.32em] text-accent uppercase">
-              Latam
+            XD
+            <span className="block text-[11px] font-medium tracking-[0.32em] text-muted-foreground uppercase">
+              Materials
             </span>
           </span>
 
