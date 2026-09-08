@@ -3,6 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { BulletList, CtaBand, EmergencyNotice, PageHero, Section, SectionTitle } from "@/components/site/blocks";
+import { ChemistryGuide } from "@/components/site/ChemistryGuide";
 import { Faq } from "@/components/site/Faq";
 import { faqItems } from "@/content/faq";
 import { materials as materialList } from "@/content/materials";
@@ -58,6 +59,7 @@ function MaterialsPage() {
           ))}
         </ul>
       </Section>
+      <ChemistryGuide />
       <Section muted>
         <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
           <img
