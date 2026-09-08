@@ -379,7 +379,7 @@ const es = {
     sections: [
       {
         t: "Responsable",
-        d: "XD Materials es responsable del tratamiento de los datos personales que usted proporciona a través de este sitio. Contacto: recyclelatam@gmail.com.",
+        d: "XD Materials es responsable del tratamiento de los datos personales que usted proporciona a través de este sitio. Contacto: crecio@xd-global.com.",
       },
       {
         t: "Datos que recabamos",
