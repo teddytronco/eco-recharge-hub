@@ -36,6 +36,7 @@ function ContactPage() {
                 {t.common.quickContact}
               </h2>
               <p className="mt-4 text-sm font-semibold">{CONTACT.phoneDisplay}</p>
+              <p className="text-sm font-semibold">{CONTACT.phoneDisplay2}</p>
               <p className="text-sm break-all text-muted-foreground">{CONTACT.email}</p>
               <ContactActions className="mt-5" />
             </div>
