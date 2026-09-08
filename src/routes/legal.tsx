@@ -34,7 +34,7 @@ function LegalPage() {
             </article>
           ))}
           <p className="border-t border-border pt-8 text-sm text-muted-foreground">
-            {CONTACT.email} · {CONTACT.phoneDisplay}
+            {CONTACT.email} · {CONTACT.phoneDisplay} · {CONTACT.phoneDisplay2}
           </p>
         </div>
       </Section>
