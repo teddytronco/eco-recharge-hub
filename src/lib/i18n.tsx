@@ -785,7 +785,7 @@ const en: Dict = {
     sections: [
       {
         t: "Data controller",
-        d: "XD Materials is responsible for processing the personal data you provide through this site. Contact: recyclelatam@gmail.com.",
+        d: "XD Materials is responsible for processing the personal data you provide through this site. Contact: crecio@xd-global.com.",
       },
       {
         t: "Data we collect",
