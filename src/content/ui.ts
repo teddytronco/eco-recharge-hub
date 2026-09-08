@@ -27,6 +27,18 @@ export const ui = {
       en: "Choose your material type: each has its own handling, packaging and documentation requirements.",
     },
     seeAll: { es: "Ver todos los materiales", en: "See all materials" },
+    chemTitle: { es: "Detalle por química y formato", en: "Detail by chemistry and format" },
+    chemSubtitle: {
+      es: "Guía de referencia para identificar y separar el material antes del retiro. Despliegue cada química para ver cómo se reconoce, qué incluye normalmente y cómo conviene prepararla.",
+      en: "Reference guide to identify and separate material before pickup. Expand each chemistry to see how it is recognised, what it usually includes and how best to prepare it.",
+    },
+    chemIdentify: { es: "Cómo se identifica", en: "How to identify it" },
+    chemIncludes: { es: "Normalmente incluye", en: "Commonly includes" },
+    chemHandling: { es: "Recomendación de manejo", en: "Handling recommendation" },
+    chemNote: {
+      es: "Imágenes ilustrativas de referencia. Si su material no encaja claramente en una categoría o llega mezclado, indíquelo en su solicitud: lo revisamos con usted antes de definir el alcance.",
+      en: "Illustrative reference images. If your material does not clearly fit one category or arrives mixed, say so in your request: we review it with you before defining scope.",
+    },
   },
   coverage: {
     title: {
