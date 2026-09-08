@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { CONTACT } from "@/lib/i18n";
-import logo from "@/assets/recyc-latam-mark.png";
+import logo from "@/assets/xd-materials-logo.png.asset.json";
 import { LanguageToggle } from "./LanguageToggle";
 import { ui } from "@/content/ui";
 
@@ -30,14 +30,14 @@ export function Header() {
         <Link
           to="/"
           className="flex items-center gap-3"
-          aria-label={lang === "es" ? "Inicio - Recyc Latam" : "Home - Recyc Latam"}
+          aria-label={lang === "es" ? "Inicio - XD Materials" : "Home - XD Materials"}
           onClick={() => setOpen(false)}
         >
-          <img src={logo} alt="" width={1024} height={1024} className="h-9 w-9" />
+          <img src={logo.url} alt="" width={768} height={489} className="h-8 w-auto" />
           <span className="hidden text-base leading-none font-semibold tracking-tight sm:block">
-            RECYC
-            <span className="block text-[11px] font-medium tracking-[0.32em] text-accent uppercase">
-              Latam
+            XD
+            <span className="block text-[11px] font-medium tracking-[0.32em] text-muted-foreground uppercase">
+              Materials
             </span>
           </span>
 

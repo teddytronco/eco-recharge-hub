@@ -14,7 +14,7 @@ export const Route = createFileRoute("/materiales/")({
   head: () =>
     pageHead({
       path: "/materiales",
-      title: "Materiales aceptados: baterías de litio, EV, almacenamiento y más | Recyc Latam",
+      title: "Materiales aceptados: baterías de litio, EV, almacenamiento y más | XD Materials",
       description: "Celdas, módulos, packs de EV, sistemas de almacenamiento, herramientas eléctricas, electrodomésticos y electrónicos. Aceptación sujeta a evaluación técnica previa.",
       jsonLd: faqLd(faqItems.map((i) => ({ q: i.q.es, a: i.a.es }))),
     }),

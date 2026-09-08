@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import { CONTACT, useI18n, whatsappUrl } from "@/lib/i18n";
-import logo from "@/assets/recyc-latam-mark.png";
+import logo from "@/assets/xd-materials-logo.png.asset.json";
 import { ui } from "@/content/ui";
 
 
@@ -28,11 +28,18 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
           <div className="flex items-center gap-3">
-            <img src={logo} alt="" width={1024} height={1024} loading="lazy" className="h-9 w-9" />
+            <img
+              src={logo.url}
+              alt=""
+              width={768}
+              height={489}
+              loading="lazy"
+              className="h-8 w-auto"
+            />
             <span className="text-base leading-none font-semibold tracking-tight">
-              RECYC
-              <span className="block text-[11px] tracking-[0.32em] text-accent uppercase">
-                Latam
+              XD
+              <span className="block text-[11px] tracking-[0.32em] text-muted-foreground uppercase">
+                Materials
               </span>
             </span>
 
@@ -109,7 +116,7 @@ export function Footer() {
 
       <div className="border-t border-border">
         <div className="mx-auto max-w-7xl px-5 py-6 text-xs text-muted-foreground lg:px-8">
-          © {year} Recyc Latam. {t.footer.rights}
+          © {year} XD Materials. {t.footer.rights}
         </div>
       </div>
     </footer>

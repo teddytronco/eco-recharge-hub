@@ -8,7 +8,7 @@ export const Route = createFileRoute("/proceso")({
   head: () =>
     pageHead({
       path: "/proceso",
-      title: "Proceso de disposici\u00f3n de bater\u00edas de litio paso a paso | Recyc Latam",
+      title: "Proceso de disposici\u00f3n de bater\u00edas de litio paso a paso | XD Materials",
       description: "Del diagn\u00f3stico del material al expediente de destino: c\u00f3mo se ejecuta un proyecto de disposici\u00f3n de bater\u00edas de litio, etapa por etapa.",
     }),
   component: ProcessPage,

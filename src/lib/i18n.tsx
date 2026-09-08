@@ -17,8 +17,8 @@ type Dict = typeof es;
 
 const es = {
   brand: {
-    name: "Recyc Latam",
-    short: "Recyc Latam",
+    name: "XD Materials",
+    short: "XD Materials",
     tagline: "Gestión responsable de baterías de litio para la industria",
   },
   nav: {
@@ -247,7 +247,7 @@ const es = {
   compliance: {
     title: "Cumplimiento",
     subtitle:
-      "Recyc Latam opera con las autorizaciones y certificaciones necesarias para la recolección, el transporte y el reciclaje de baterías.",
+      "XD Materials opera con las autorizaciones y certificaciones necesarias para la recolección, el transporte y el reciclaje de baterías.",
     principlesTitle: "Nuestro marco de cumplimiento",
     principles: [
       {
@@ -305,7 +305,7 @@ const es = {
     subtitle:
       "Un equipo enfocado en resolver un problema industrial concreto: qué hacer con las baterías de litio cuando terminan su vida útil.",
     body1:
-      "Recyc Latam nace para atender la creciente necesidad de gestión responsable de baterías de litio en la región. Trabajamos con empresas que requieren un manejo trazable, ordenado y compatible con sus políticas internas de seguridad y cumplimiento.",
+      "XD Materials nace para atender la creciente necesidad de gestión responsable de baterías de litio en la región. Trabajamos con empresas que requieren un manejo trazable, ordenado y compatible con sus políticas internas de seguridad y cumplimiento.",
     body2:
       "Nuestro enfoque es conservador: preferimos rechazar un movimiento antes que ejecutarlo sin las condiciones adecuadas. Cada proyecto inicia con una evaluación técnica y termina con evidencia documental entregada al generador.",
     valuesTitle: "Cómo trabajamos",
@@ -377,7 +377,7 @@ const es = {
     sections: [
       {
         t: "Responsable",
-        d: "Recyc Latam es responsable del tratamiento de los datos personales que usted proporciona a través de este sitio. Contacto: recyclelatam@gmail.com.",
+        d: "XD Materials es responsable del tratamiento de los datos personales que usted proporciona a través de este sitio. Contacto: recyclelatam@gmail.com.",
       },
       {
         t: "Datos que recabamos",
@@ -424,8 +424,8 @@ const es = {
 
 const en: Dict = {
   brand: {
-    name: "Recyc Latam",
-    short: "Recyc Latam",
+    name: "XD Materials",
+    short: "XD Materials",
     tagline: "Responsible lithium battery management for industry",
   },
   nav: {
@@ -654,7 +654,7 @@ const en: Dict = {
   compliance: {
     title: "Compliance",
     subtitle:
-      "Recyc Latam operates with the authorizations and certifications required for battery collection, transport and recycling.",
+      "XD Materials operates with the authorizations and certifications required for battery collection, transport and recycling.",
     principlesTitle: "Our regulatory standing",
     principles: [
       {
@@ -712,7 +712,7 @@ const en: Dict = {
     subtitle:
       "A team focused on one concrete industrial problem: what to do with lithium batteries at the end of their useful life.",
     body1:
-      "Recyc Latam was created to address the growing need for responsible lithium battery management in the region. We work with companies that require traceable, orderly handling compatible with their internal safety and compliance policies.",
+      "XD Materials was created to address the growing need for responsible lithium battery management in the region. We work with companies that require traceable, orderly handling compatible with their internal safety and compliance policies.",
     body2:
       "Our approach is conservative: we would rather decline a movement than execute it without the right conditions. Every project starts with a technical assessment and ends with documentary evidence delivered to the generator.",
     valuesTitle: "How we work",
@@ -783,7 +783,7 @@ const en: Dict = {
     sections: [
       {
         t: "Data controller",
-        d: "Recyc Latam is responsible for processing the personal data you provide through this site. Contact: recyclelatam@gmail.com.",
+        d: "XD Materials is responsible for processing the personal data you provide through this site. Contact: recyclelatam@gmail.com.",
       },
       {
         t: "Data we collect",
