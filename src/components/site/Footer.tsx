@@ -65,13 +65,20 @@ export function Footer() {
             {t.footer.contactTitle}
           </h2>
           <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-            <li>
+            <li className="flex flex-col gap-1">
               <a
                 href={`tel:${CONTACT.phoneHref}`}
                 className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
               >
                 <Phone className="size-4" aria-hidden />
                 {CONTACT.phoneDisplay}
+              </a>
+              <a
+                href={`tel:${CONTACT.phoneHref2}`}
+                className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
+              >
+                <Phone className="size-4" aria-hidden />
+                {CONTACT.phoneDisplay2}
               </a>
             </li>
             <li>
