@@ -27,7 +27,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-5 lg:px-8">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+        <Link
+          to="/"
+          className="flex items-center gap-3"
+          aria-label={lang === "es" ? "Inicio - Recyc Latam" : "Home - Recyc Latam"}
+          onClick={() => setOpen(false)}
+        >
           <img src={logo} alt="" width={1024} height={1024} className="h-9 w-9" />
           <span className="hidden text-base leading-none font-semibold tracking-tight sm:block">
             RECYC
