@@ -8,7 +8,7 @@ export const Route = createFileRoute("/servicios")({
   head: () =>
     pageHead({
       path: "/servicios",
-      title: "Gesti\u00f3n de bater\u00edas: servicios de recolecci\u00f3n y disposici\u00f3n | Recyc Latam",
+      title: "Gesti\u00f3n de bater\u00edas: servicios de recolecci\u00f3n y disposici\u00f3n | XD Materials",
       description: "Servicios de gesti\u00f3n de bater\u00edas para industria: evaluaci\u00f3n del material, empaque, retiro, transporte con operadores autorizados y documentaci\u00f3n de destino final.",
     }),
   component: ServicesPage,

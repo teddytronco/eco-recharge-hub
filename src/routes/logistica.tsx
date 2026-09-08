@@ -9,7 +9,7 @@ export const Route = createFileRoute("/logistica")({
   head: () =>
     pageHead({
       path: "/logistica",
-      title: "Log\u00edstica y transporte de bater\u00edas de litio | Recyc Latam",
+      title: "Log\u00edstica y transporte de bater\u00edas de litio | XD Materials",
       description: "Empaque, unidades da\u00f1adas o defectuosas, consolidaci\u00f3n regional y coordinaci\u00f3n de transporte de bater\u00edas de litio en M\u00e9xico y Latinoam\u00e9rica.",
     }),
   component: LogisticsPage,

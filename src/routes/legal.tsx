@@ -8,7 +8,7 @@ export const Route = createFileRoute("/legal")({
   head: () =>
     pageHead({
       path: "/legal",
-      title: "Aviso legal y privacidad | Recyc Latam",
+      title: "Aviso legal y privacidad | XD Materials",
       description: "Tratamiento de datos personales y condiciones de uso del sitio.",
       robots: "noindex",
     }),

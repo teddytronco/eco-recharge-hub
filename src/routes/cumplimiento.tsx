@@ -15,7 +15,7 @@ export const Route = createFileRoute("/cumplimiento")({
   head: () =>
     pageHead({
       path: "/cumplimiento",
-      title: "Cumplimiento y documentaci\u00f3n de residuos peligrosos | Recyc Latam",
+      title: "Cumplimiento y documentaci\u00f3n de residuos peligrosos | XD Materials",
       description: "Manifiestos, bit\u00e1coras y evidencia de destino: qu\u00e9 documentaci\u00f3n recibe el generador en cada proyecto de disposici\u00f3n de bater\u00edas de litio.",
     }),
   component: CompliancePage,

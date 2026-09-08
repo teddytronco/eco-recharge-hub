@@ -30,7 +30,7 @@ export function Header() {
         <Link
           to="/"
           className="flex items-center gap-3"
-          aria-label={lang === "es" ? "Inicio - Recyc Latam" : "Home - Recyc Latam"}
+          aria-label={lang === "es" ? "Inicio - XD Materials" : "Home - XD Materials"}
           onClick={() => setOpen(false)}
         >
           <img src={logo} alt="" width={1024} height={1024} className="h-9 w-9" />

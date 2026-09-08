@@ -109,7 +109,7 @@ export function Footer() {
 
       <div className="border-t border-border">
         <div className="mx-auto max-w-7xl px-5 py-6 text-xs text-muted-foreground lg:px-8">
-          © {year} Recyc Latam. {t.footer.rights}
+          © {year} XD Materials. {t.footer.rights}
         </div>
       </div>
     </footer>

@@ -21,7 +21,7 @@ export const Route = createFileRoute("/recursos/$slug")({
     const path = `/recursos/${article.slug}`;
     return pageHead({
       path,
-      title: `${article.title.es} | Recyc Latam`,
+      title: `${article.title.es} | XD Materials`,
       description: article.description.es,
       type: "article",
       jsonLd: [
@@ -34,11 +34,11 @@ export const Route = createFileRoute("/recursos/$slug")({
           mainEntityOfPage: absoluteUrl(path),
           author: {
             "@type": "Organization",
-            name: "Recyc Latam",
+            name: "XD Materials",
           },
           publisher: {
             "@type": "Organization",
-            name: "Recyc Latam",
+            name: "XD Materials",
           },
         },
         breadcrumbLd([

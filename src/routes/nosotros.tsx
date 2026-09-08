@@ -8,7 +8,7 @@ export const Route = createFileRoute("/nosotros")({
   head: () =>
     pageHead({
       path: "/nosotros",
-      title: "Nosotros | Recyc Latam",
+      title: "Nosotros | XD Materials",
       description: "Equipo con base en Monterrey enfocado en la gesti\u00f3n de bater\u00edas al final de su vida \u00fatil para clientes industriales en M\u00e9xico y Latinoam\u00e9rica.",
     }),
   component: AboutPage,

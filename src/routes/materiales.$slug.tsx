@@ -21,7 +21,7 @@ export const Route = createFileRoute("/materiales/$slug")({
     const path = `/materiales/${material.slug}`;
     return pageHead({
       path,
-      title: `${material.title.es} | Recyc Latam`,
+      title: `${material.title.es} | XD Materials`,
       description: material.description.es,
       jsonLd: [
         serviceLd({
