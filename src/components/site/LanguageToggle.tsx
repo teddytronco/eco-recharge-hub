@@ -23,13 +23,15 @@ export function LanguageToggle({ className }: { className?: string }) {
           onClick={() => setLang(l.code)}
           aria-pressed={lang === l.code}
           className={cn(
-            "inline-flex items-center gap-1.5 rounded-[5px] px-2.5 py-1.5 uppercase transition-colors",
+            "inline-flex items-center gap-1 rounded-[5px] px-1.5 py-1.5 uppercase transition-colors 2xl:gap-1.5 2xl:px-2.5",
             lang === l.code
               ? "bg-primary text-primary-foreground"
               : "text-muted-foreground hover:text-foreground",
           )}
         >
-          <span aria-hidden="true">{l.flag}</span>
+          <span aria-hidden="true" className="hidden 2xl:inline">
+            {l.flag}
+          </span>
           <span>{l.label}</span>
         </button>
       ))}
