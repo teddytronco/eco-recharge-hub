@@ -34,7 +34,7 @@ export function Header() {
           onClick={() => setOpen(false)}
         >
           <img src={logo.url} alt="" width={768} height={489} className="h-8 w-auto shrink-0" />
-          <span className="hidden whitespace-nowrap text-base leading-none font-semibold tracking-tight sm:block">
+          <span className="hidden whitespace-nowrap text-base leading-none font-semibold tracking-tight lg:block">
             XD
             <span className="block text-[11px] font-medium tracking-[0.32em] text-muted-foreground uppercase">
               Materials
