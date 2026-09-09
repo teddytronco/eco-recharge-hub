@@ -26,10 +26,10 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-5 lg:px-8 xl:gap-4">
+      <div className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-5 lg:px-8 2xl:max-w-[1536px] 2xl:gap-4 2xl:px-6">
         <Link
           to="/"
-          className="flex shrink-0 items-center gap-2.5 xl:gap-3"
+          className="flex shrink-0 items-center gap-2.5 2xl:gap-3"
           aria-label={lang === "es" ? "Inicio - XD Materials" : "Home - XD Materials"}
           onClick={() => setOpen(false)}
         >
@@ -43,12 +43,12 @@ export function Header() {
 
         </Link>
 
-        <nav className="ml-auto hidden min-w-0 items-center gap-0.5 xl:flex 2xl:gap-1">
+        <nav className="ml-auto hidden min-w-0 items-center gap-0.5 2xl:flex">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              className="whitespace-nowrap rounded-md px-2 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground 2xl:px-2.5"
+              className="whitespace-nowrap rounded-md px-2 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
               activeProps={{ className: "text-foreground bg-secondary" }}
             >
               {l.label}
@@ -56,7 +56,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="ml-auto flex shrink-0 items-center gap-1.5 xl:ml-0 xl:gap-2">
+        <div className="ml-auto flex shrink-0 items-center gap-1.5 2xl:ml-0 2xl:gap-2">
           <LanguageToggle />
           <a
             href={`tel:${CONTACT.phoneHref}`}
@@ -68,7 +68,7 @@ export function Header() {
           <a
             href={`tel:${CONTACT.phoneHref}`}
             aria-label={lang === "es" ? "Llamar ahora" : "Call now"}
-            className="hidden size-10 items-center justify-center rounded-md border border-border transition-colors hover:bg-secondary xl:inline-flex 2xl:hidden"
+            className="hidden size-10 items-center justify-center rounded-md border border-border transition-colors hover:bg-secondary"
           >
             <Phone className="size-5" aria-hidden />
           </a>
@@ -84,7 +84,7 @@ export function Header() {
             aria-label={open ? t.nav.close : t.nav.menu}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex size-10 items-center justify-center rounded-md border border-border xl:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-md border border-border 2xl:hidden"
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -92,7 +92,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background xl:hidden">
+        <div className="border-t border-border bg-background 2xl:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col px-5 py-3">
             <Link
               to="/"
