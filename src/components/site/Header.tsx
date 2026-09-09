@@ -34,7 +34,7 @@ export function Header() {
           onClick={() => setOpen(false)}
         >
           <img src={logo.url} alt="" width={768} height={489} className="h-8 w-auto shrink-0" />
-          <span className="hidden whitespace-nowrap text-base leading-none font-semibold tracking-tight sm:block">
+          <span className="hidden whitespace-nowrap text-base leading-none font-semibold tracking-tight lg:block">
             XD
             <span className="block text-[11px] font-medium tracking-[0.32em] text-muted-foreground uppercase">
               Materials
@@ -48,7 +48,7 @@ export function Header() {
             <Link
               key={l.to}
               to={l.to}
-              className="whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground 2xl:px-3"
+              className="whitespace-nowrap rounded-md px-2 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground 2xl:px-2.5"
               activeProps={{ className: "text-foreground bg-secondary" }}
             >
               {l.label}
@@ -56,11 +56,11 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="ml-auto flex shrink-0 items-center gap-2 xl:ml-0">
+        <div className="ml-auto flex shrink-0 items-center gap-1.5 xl:ml-0 xl:gap-2">
           <LanguageToggle />
           <a
             href={`tel:${CONTACT.phoneHref}`}
-            className="hidden items-center gap-2 rounded-md border border-border px-3 py-2 text-sm font-medium transition-colors hover:bg-secondary 2xl:inline-flex"
+            className="hidden items-center gap-2 rounded-md border border-border px-2.5 py-2 text-sm font-medium transition-colors hover:bg-secondary 2xl:inline-flex 2xl:px-3"
           >
             <Phone className="size-4" aria-hidden />
             {CONTACT.phoneDisplay}
@@ -75,7 +75,7 @@ export function Header() {
           <Link
             to="/contacto"
             search={{ material: undefined }}
-            className="hidden rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 sm:inline-flex"
+            className="hidden rounded-md bg-primary px-3 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 sm:inline-flex 2xl:px-4"
           >
             {t.cta.quote}
           </Link>
