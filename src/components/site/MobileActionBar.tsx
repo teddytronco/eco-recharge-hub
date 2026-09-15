@@ -29,8 +29,8 @@ export function MobileActionBar() {
           {t.cta.whatsapp}
         </a>
         <Link
-          to="/contacto"
-          search={{ material: undefined }}
+          to="/"
+          hash="evaluacion"
           className="flex min-h-12 flex-col items-center justify-center gap-1 rounded-md bg-primary px-2 text-center text-[11px] font-semibold text-primary-foreground"
         >
           <FileText className="size-5" aria-hidden />

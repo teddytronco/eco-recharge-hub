@@ -178,8 +178,8 @@ export function CtaBand() {
         </div>
         <div className="flex flex-wrap gap-3">
           <Link
-            to="/contacto"
-            search={{ material: undefined }}
+            to="/"
+            hash="evaluacion"
             className="inline-flex items-center rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
           >
             {t.cta.quote}

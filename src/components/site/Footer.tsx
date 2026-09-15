@@ -2,9 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import { CONTACT, useI18n, whatsappUrl } from "@/lib/i18n";
 import logo from "@/assets/xd-materials-logo.png.asset.json";
-import { ui } from "@/content/ui";
-
-
 export function Footer() {
   const { t, lang } = useI18n();
   const year = new Date().getFullYear();
@@ -12,14 +9,7 @@ export function Footer() {
   const links = [
     { to: "/", label: t.nav.home },
     { to: "/servicios", label: t.nav.services },
-    { to: "/proceso", label: t.nav.process },
-    { to: "/materiales", label: t.nav.materials },
-    { to: "/cobertura", label: ui.nav[lang].coverage },
-    { to: "/cumplimiento", label: t.nav.compliance },
-    { to: "/logistica", label: t.nav.logistics },
-    { to: "/recursos", label: ui.nav[lang].resources },
     { to: "/nosotros", label: t.nav.about },
-    { to: "/contacto", label: t.nav.contact },
   ] as const;
 
 
@@ -49,7 +39,7 @@ export function Footer() {
 
         <div>
           <h2 className="text-xs font-semibold tracking-[0.18em] uppercase">{t.footer.navTitle}</h2>
-          <ul className="mt-4 grid grid-cols-2 gap-y-2 text-sm text-muted-foreground md:grid-cols-1">
+          <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             {links.map((l) => (
               <li key={l.to}>
                 <Link to={l.to} className="transition-colors hover:text-foreground">

@@ -118,7 +118,7 @@ export function QuickLeadForm() {
 
       <p className="mt-3 text-xs text-primary-foreground/60">
         {q.full}{" "}
-        <Link to="/contacto" search={{ material: undefined }} className="font-semibold underline">
+        <Link to="/servicios" hash="evaluacion" className="font-semibold underline">
           {t.cta.quote}
         </Link>
       </p>

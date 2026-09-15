@@ -37,7 +37,7 @@ const es = {
     close: "Cerrar",
   },
   cta: {
-    quote: "Solicitar cotización",
+    quote: "Solicitar evaluación",
     call: "Llamar",
     email: "Correo",
     whatsapp: "WhatsApp",
@@ -444,7 +444,7 @@ const en: Dict = {
     close: "Close",
   },
   cta: {
-    quote: "Request a quote",
+    quote: "Request an assessment",
     call: "Call",
     email: "Email",
     whatsapp: "WhatsApp",
