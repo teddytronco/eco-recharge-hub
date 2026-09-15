@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 import { QuickLeadForm } from "@/components/site/QuickLeadForm";
 import { ContactActions, Section, SectionTitle } from "@/components/site/blocks";
-import evBatteryPlatform from "@/assets/ev-battery-platform.webp.asset.json";
+import evBatteryPlatform from "@/assets/ev-battery-platform-hd.jpg.asset.json";
 import { useI18n, whatsappUrl } from "@/lib/i18n";
 import { pageHead, serviceLd } from "@/lib/seo";
 
