@@ -26,8 +26,8 @@ export const chemistries: Chemistry[] = [
     id: "nmc-nca-lco-celdas",
     name: { es: "NMC / NCA / LCO — celdas", en: "NMC / NCA / LCO — cells" },
     short: {
-      es: "Celdas cilíndricas o prismáticas de ion-litio, sueltas o en charolas de fabricante.",
-      en: "Cylindrical or prismatic lithium-ion cells, loose or in manufacturer trays.",
+      es: "Celdas cilíndricas o prismáticas de ion-litio. Proceden de vehículos eléctricos e híbridos, electrónicos de alta energía y scrap de producción.",
+      en: "Cylindrical or prismatic lithium-ion cells. They come from electric and hybrid vehicles, high-energy electronics and production scrap.",
     },
     image: nmcCells,
     alt: {
@@ -141,8 +141,8 @@ export const chemistries: Chemistry[] = [
     id: "lfp",
     name: { es: "LFP (LiFePO₄)", en: "LFP (LiFePO₄)" },
     short: {
-      es: "Litio-ferrofosfato en celdas, módulos o packs; química distinta con ruta de proceso propia.",
-      en: "Lithium iron phosphate in cells, modules or packs; a distinct chemistry with its own processing route.",
+      es: "Litio-ferrofosfato en celdas, módulos o packs. Química habitual en vehículos eléctricos, montacargas y sistemas de almacenamiento (BESS).",
+      en: "Lithium iron phosphate in cells, modules or packs. A common chemistry in electric vehicles, forklifts and energy storage systems (BESS).",
     },
     image: lfp,
     alt: {
