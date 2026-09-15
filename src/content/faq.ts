@@ -33,16 +33,6 @@ export const faqItems: FaqItem[] = [
   },
   {
     q: {
-      es: "¿Pueden gestionar baterías de litio dañadas o siniestradas?",
-      en: "Can you manage damaged or salvaged lithium batteries?",
-    },
-    a: {
-      es: "Las baterías dañadas, hinchadas o siniestradas requieren empaque y manejo especiales. Evaluamos cada caso de forma individual antes de confirmar el retiro; si tiene un pack en estas condiciones, contáctenos de inmediato y no intente moverlo sin asesoría.",
-      en: "Damaged, swollen, or salvaged batteries require special packaging and handling. We assess each case individually before confirming pickup; if you have a pack in these conditions, contact us immediately and do not attempt to move it without guidance.",
-    },
-  },
-  {
-    q: {
       es: "¿Cuánto cuesta el servicio de gestión y disposición?",
       en: "How much does the battery management and disposal service cost?",
     },
