@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 import { QuickLeadForm } from "@/components/site/QuickLeadForm";
 import { ContactActions, Section, SectionTitle } from "@/components/site/blocks";
-import evBatteryPlatform from "@/assets/ev-battery-platform.webp.asset.json";
+import evBatteryPlatform from "@/assets/ev-battery-platform-hd.jpg.asset.json";
 import { useI18n, whatsappUrl } from "@/lib/i18n";
 import { pageHead, serviceLd } from "@/lib/seo";
 
@@ -128,8 +128,8 @@ function HomePage() {
         <img
           src={evBatteryPlatform.url}
           alt={c.heroAlt}
-          width={600}
-          height={333}
+          width={1376}
+          height={768}
           fetchPriority="high"
           className="absolute inset-0 size-full object-cover object-center opacity-50 sm:object-right"
         />
