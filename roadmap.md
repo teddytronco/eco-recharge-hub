@@ -35,10 +35,10 @@ Deben aparecer en títulos, descripciones y H1/H2 de las páginas indicadas:
 - [x] Experiencia móvil: barra fija de acciones (llamar/WhatsApp/cotizar), hero y secciones compactas, campos de formulario sin zoom en iOS
 
 ## Concise three-page redesign
-- [ ] Reduce primary navigation to Inicio, Servicios, Nosotros plus evaluation CTA
-- [ ] Consolidate key materials, clients, process, coverage, and compliance into Home and Services
-- [ ] Reduce visible copy by roughly 60–70% while preserving ES/EN and factual claims
-- [ ] Add compact inquiry/contact areas to Home and Services
-- [ ] Simplify About to credibility, operating region, and approach
-- [ ] Redirect obsolete content routes cleanly
+- [x] Reduce primary navigation to Inicio, Servicios, Nosotros plus evaluation CTA
+- [x] Consolidate key materials, clients, process, coverage, and compliance into Home and Services
+- [x] Reduce visible copy by roughly 60–70% while preserving ES/EN and factual claims
+- [x] Add compact inquiry/contact areas to Home and Services
+- [x] Simplify About to credibility, operating region, and approach
+- [x] Redirect obsolete content routes cleanly
 - [ ] Validate desktop/mobile, forms, metadata, and duplicate content
