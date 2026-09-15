@@ -41,4 +41,4 @@ Deben aparecer en títulos, descripciones y H1/H2 de las páginas indicadas:
 - [x] Add compact inquiry/contact areas to Home and Services
 - [x] Simplify About to credibility, operating region, and approach
 - [x] Redirect obsolete content routes cleanly
-- [ ] Validate desktop/mobile, forms, metadata, and duplicate content
+- [x] Validate desktop/mobile, forms, metadata, and duplicate content
