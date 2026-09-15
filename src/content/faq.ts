@@ -7,8 +7,8 @@ export const faqItems: FaqItem[] = [
       en: "What types of batteries do you accept for recycling and disposal?",
     },
     a: {
-      es: "Trabajamos con baterías de litio de vehículos eléctricos e híbridos, sistemas de almacenamiento de energía (BESS y peak-shaving), herramientas eléctricas, electrónicos, electrodomésticos y baterías industriales de plomo y níquel. La aceptación de cada lote está sujeta a una evaluación técnica previa.",
-      en: "We work with lithium batteries from electric and hybrid vehicles, energy storage systems (BESS and peak-shaving), power tools, electronics, home appliances, and industrial lead and nickel batteries. Acceptance of each lot is subject to a prior technical assessment.",
+      es: "Trabajamos con baterías de litio de vehículos eléctricos e híbridos, sistemas de almacenamiento de energía (BESS y peak-shaving), herramientas eléctricas, electrónicos y electrodomésticos. No gestionamos baterías de plomo. La aceptación de cada lote está sujeta a una evaluación técnica previa.",
+      en: "We work with lithium batteries from electric and hybrid vehicles, energy storage systems (BESS and peak-shaving), power tools, electronics and home appliances. We do not manage lead batteries. Acceptance of each lot is subject to a prior technical assessment.",
     },
   },
   {
