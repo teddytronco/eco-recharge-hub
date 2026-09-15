@@ -5,21 +5,13 @@ import { useI18n } from "@/lib/i18n";
 import { CONTACT } from "@/lib/i18n";
 import logo from "@/assets/xd-materials-logo.png.asset.json";
 import { LanguageToggle } from "./LanguageToggle";
-import { ui } from "@/content/ui";
-
-
 export function Header() {
   const { t, lang } = useI18n();
   const [open, setOpen] = React.useState(false);
 
   const links = [
+    { to: "/", label: t.nav.home },
     { to: "/servicios", label: t.nav.services },
-    { to: "/proceso", label: t.nav.process },
-    { to: "/materiales", label: t.nav.materials },
-    { to: "/cobertura", label: ui.nav[lang].coverage },
-    { to: "/cumplimiento", label: t.nav.compliance },
-    { to: "/logistica", label: t.nav.logistics },
-    { to: "/recursos", label: ui.nav[lang].resources },
     { to: "/nosotros", label: t.nav.about },
   ] as const;
 
@@ -43,7 +35,7 @@ export function Header() {
 
         </Link>
 
-        <nav className="ml-auto hidden min-w-0 items-center gap-0.5 2xl:flex">
+        <nav className="ml-auto hidden min-w-0 items-center gap-1 lg:flex">
           {links.map((l) => (
             <Link
               key={l.to}
@@ -56,11 +48,11 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="ml-auto flex shrink-0 items-center gap-1.5 2xl:ml-0 2xl:gap-2">
+        <div className="ml-auto flex shrink-0 items-center gap-1.5 lg:ml-0 lg:gap-2">
           <LanguageToggle />
           <a
             href={`tel:${CONTACT.phoneHref}`}
-            className="hidden items-center gap-2 rounded-md border border-border px-2.5 py-2 text-sm font-medium transition-colors hover:bg-secondary 2xl:inline-flex 2xl:px-3"
+            className="hidden items-center gap-2 rounded-md border border-border px-3 py-2 text-sm font-medium transition-colors hover:bg-secondary xl:inline-flex"
           >
             <Phone className="size-4" aria-hidden />
             {CONTACT.phoneDisplay}
@@ -73,9 +65,9 @@ export function Header() {
             <Phone className="size-5" aria-hidden />
           </a>
           <Link
-            to="/contacto"
-            search={{ material: undefined }}
-            className="hidden rounded-md bg-primary px-3 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 sm:inline-flex 2xl:px-4"
+            to="/"
+            hash="evaluacion"
+            className="hidden rounded-md bg-primary px-3 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 sm:inline-flex xl:px-4"
           >
             {t.cta.quote}
           </Link>
@@ -84,7 +76,7 @@ export function Header() {
             aria-label={open ? t.nav.close : t.nav.menu}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex size-10 items-center justify-center rounded-md border border-border 2xl:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-md border border-border lg:hidden"
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -92,15 +84,8 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background 2xl:hidden">
+        <div className="border-t border-border bg-background lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col px-5 py-3">
-            <Link
-              to="/"
-              onClick={() => setOpen(false)}
-              className="rounded-md px-2 py-3 text-sm font-medium"
-            >
-              {t.nav.home}
-            </Link>
             {links.map((l) => (
               <Link
                 key={l.to}
@@ -112,8 +97,8 @@ export function Header() {
               </Link>
             ))}
             <Link
-              to="/contacto"
-              search={{ material: undefined }}
+              to="/"
+              hash="evaluacion"
               onClick={() => setOpen(false)}
               className="mt-2 rounded-md bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground"
             >
