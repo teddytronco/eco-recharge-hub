@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BatteryCharging, Car, Factory, Laptop, Wrench, Zap } from "lucide-react";
 import { ChemistryGuide } from "@/components/site/ChemistryGuide";
-import { EmergencyNotice, PageHero, Section, SectionTitle } from "@/components/site/blocks";
+import { PageHero, Section, SectionTitle } from "@/components/site/blocks";
 import { useI18n } from "@/lib/i18n";
 import { pageHead } from "@/lib/seo";
 
@@ -59,6 +59,7 @@ function MaterialsPage() {
   return (
     <>
       <PageHero eyebrow={t.brand.tagline} title={c.title} subtitle={c.subtitle} />
+      <ChemistryGuide />
       <Section>
         <SectionTitle title={c.categoriesTitle} subtitle={c.categoriesSub} />
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -74,11 +75,9 @@ function MaterialsPage() {
           })}
         </div>
       </Section>
-      <ChemistryGuide />
       <Section muted>
         <div className="mx-auto max-w-3xl">
-          <EmergencyNotice />
-          <div className="mt-8 text-center">
+          <div className="text-center">
             <Link
               to="/"
               hash="evaluacion"
