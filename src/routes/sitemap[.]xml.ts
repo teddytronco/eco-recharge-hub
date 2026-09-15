@@ -3,6 +3,7 @@ import { SITE_URL } from "@/lib/seo";
 const staticPaths = [
   "/",
   "/servicios",
+  "/materiales",
   "/nosotros",
   "/legal",
 ];

@@ -9,6 +9,7 @@ export function Footer() {
   const links = [
     { to: "/", label: t.nav.home },
     { to: "/servicios", label: t.nav.services },
+    { to: "/materiales", label: t.nav.materials },
     { to: "/nosotros", label: t.nav.about },
   ] as const;
 
