@@ -9,7 +9,6 @@ import primary from "@/assets/chem-primary.jpg";
 import powertool from "@/assets/chem-powertool.jpg";
 import ev from "@/assets/chem-ev.jpg";
 import ess from "@/assets/chem-ess.jpg";
-import damaged from "@/assets/chem-damaged.jpg";
 
 export type Chemistry = {
   id: string;

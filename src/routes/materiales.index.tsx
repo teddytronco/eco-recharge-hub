@@ -22,7 +22,7 @@ const copy = {
     title: "Baterías y materiales que gestionamos",
     subtitle: "Identifique el tipo, formato y química de su material antes de solicitar una evaluación.",
     categoriesTitle: "Categorías principales",
-    categoriesSub: "Desde packs completos hasta celdas sueltas y material dañado.",
+    categoriesSub: "De dónde provienen las baterías que gestionamos y cómo identificarlas.",
     categories: [
       ["Vehículos eléctricos", "Packs y módulos de vehículos eléctricos e híbridos."],
       ["Almacenamiento BESS", "Módulos, racks y sistemas estacionarios."],
@@ -37,7 +37,7 @@ const copy = {
     title: "Batteries and materials we manage",
     subtitle: "Identify your material’s type, format and chemistry before requesting an assessment.",
     categoriesTitle: "Main categories",
-    categoriesSub: "From complete packs to loose cells and damaged material.",
+    categoriesSub: "Where the batteries we manage come from and how to identify them.",
     categories: [
       ["Electric vehicles", "Packs and modules from electric and hybrid vehicles."],
       ["BESS storage", "Modules, racks and stationary systems."],
