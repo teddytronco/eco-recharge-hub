@@ -43,3 +43,15 @@ Deben aparecer en títulos, descripciones y H1/H2 de las páginas indicadas:
 - [x] Redirect obsolete content routes cleanly
 - [x] Validate desktop/mobile, forms, metadata, and duplicate content
 - [x] Preserve the bilingual Materials page with its visual chemistry and battery-type guide
+
+## Boss feedback (Sep 15, Notas_sitio_XD.docx)
+- [x] Materials: photos/details always open (no accordion)
+- [x] Remove damaged-battery chemistry card
+- [x] Remove lead batteries everywhere (we don't take them)
+- [ ] Trust section: Tier 1 = OEM suppliers; add OEMs/armadoras + energy companies (backup/BESS)
+- [ ] Remove emergency/damaged-battery notice site-wide (can't support that now)
+- [ ] Remove "dañadas" wording from category descriptions; focus end-of-life/non-functional
+- [ ] Materiales: move chemistry detail section above categories
+- [ ] Chemistry cards: relate each chemistry to its origin (EV/HEV, BESS, laptops, tools)
+- [ ] Coverage: drop city detail, say all of Mexico (reública)
+- [ ] Publish
