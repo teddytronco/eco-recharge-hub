@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BatteryCharging, Car, Factory, Laptop, Wrench, Zap } from "lucide-react";
 import { ChemistryGuide } from "@/components/site/ChemistryGuide";
-import { EmergencyNotice, PageHero, Section, SectionTitle } from "@/components/site/blocks";
+import { PageHero, Section, SectionTitle } from "@/components/site/blocks";
 import { useI18n } from "@/lib/i18n";
 import { pageHead } from "@/lib/seo";
 
@@ -22,7 +22,7 @@ const copy = {
     title: "Baterías y materiales que gestionamos",
     subtitle: "Identifique el tipo, formato y química de su material antes de solicitar una evaluación.",
     categoriesTitle: "Categorías principales",
-    categoriesSub: "Desde packs completos hasta celdas sueltas y material dañado.",
+    categoriesSub: "De dónde provienen las baterías que gestionamos y cómo identificarlas.",
     categories: [
       ["Vehículos eléctricos", "Packs y módulos de vehículos eléctricos e híbridos."],
       ["Almacenamiento BESS", "Módulos, racks y sistemas estacionarios."],
@@ -37,7 +37,7 @@ const copy = {
     title: "Batteries and materials we manage",
     subtitle: "Identify your material’s type, format and chemistry before requesting an assessment.",
     categoriesTitle: "Main categories",
-    categoriesSub: "From complete packs to loose cells and damaged material.",
+    categoriesSub: "Where the batteries we manage come from and how to identify them.",
     categories: [
       ["Electric vehicles", "Packs and modules from electric and hybrid vehicles."],
       ["BESS storage", "Modules, racks and stationary systems."],
@@ -59,6 +59,7 @@ function MaterialsPage() {
   return (
     <>
       <PageHero eyebrow={t.brand.tagline} title={c.title} subtitle={c.subtitle} />
+      <ChemistryGuide />
       <Section>
         <SectionTitle title={c.categoriesTitle} subtitle={c.categoriesSub} />
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -74,11 +75,9 @@ function MaterialsPage() {
           })}
         </div>
       </Section>
-      <ChemistryGuide />
       <Section muted>
         <div className="mx-auto max-w-3xl">
-          <EmergencyNotice />
-          <div className="mt-8 text-center">
+          <div className="text-center">
             <Link
               to="/"
               hash="evaluacion"

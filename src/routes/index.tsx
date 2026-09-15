@@ -19,7 +19,7 @@ import {
   Zap,
 } from "lucide-react";
 import { QuickLeadForm } from "@/components/site/QuickLeadForm";
-import { ContactActions, EmergencyNotice, Section, SectionTitle } from "@/components/site/blocks";
+import { ContactActions, Section, SectionTitle } from "@/components/site/blocks";
 import hero from "@/assets/hero-facility.jpg";
 import { useI18n, whatsappUrl } from "@/lib/i18n";
 import { pageHead, serviceLd } from "@/lib/seo";
@@ -60,7 +60,7 @@ const copy = {
     materialsSub: "Evaluamos química, formato, condición y volumen antes de definir la solución.",
     materials: ["Vehículos eléctricos", "Almacenamiento BESS", "Herramientas eléctricas", "Electrónicos", "Electrodomésticos", "Baterías industriales"],
     clientsTitle: "Empresas que atendemos",
-    clients: ["Industria automotriz Tier 1", "Aseguradoras de vehículos", "Centros de acopio electrónico", "Fabricantes y operadores industriales"],
+    clients: ["Armadoras y OEM", "Proveedores automotrices Tier 1", "Aseguradoras de vehículos", "Centros de acopio de electrónicos", "Compañías de energía (BESS y respaldo)"],
     processTitle: "Cuatro pasos. Un responsable.",
     process: [
       ["Evaluación", "Identificamos material, volumen y condición."],
@@ -94,7 +94,7 @@ const copy = {
     materialsSub: "We assess chemistry, format, condition and volume before defining the solution.",
     materials: ["Electric vehicles", "BESS storage", "Power tools", "Electronics", "Home appliances", "Industrial batteries"],
     clientsTitle: "Companies we serve",
-    clients: ["Tier 1 automotive industry", "Vehicle insurers", "Electronics collection centers", "Manufacturers and industrial operators"],
+    clients: ["OEMs and vehicle assemblers", "Tier 1 automotive suppliers", "Vehicle insurers", "Electronics collection centers", "Energy companies (BESS and backup)"],
     processTitle: "Four steps. One accountable team.",
     process: [
       ["Assessment", "We identify material, volume and condition."],
@@ -115,7 +115,7 @@ const copy = {
 
 const valueIcons = [Recycle, ShieldCheck, MapPin];
 const materialIcons = [Car, BatteryCharging, Wrench, Laptop, Zap, Factory];
-const clientIcons = [Factory, ShieldCheck, Recycle, Building2];
+const clientIcons = [Car, Factory, ShieldCheck, Recycle, Zap];
 const processIcons = [ClipboardCheck, PackageCheck, Truck, Recycle];
 
 function HomePage() {
@@ -173,8 +173,6 @@ function HomePage() {
           <div><ul className="grid gap-3 sm:grid-cols-3">{c.trust.map((item) => <li key={item} className="rounded-md border border-border bg-card p-4 text-sm font-semibold"><CheckCircle2 className="mb-3 size-5 text-accent-foreground" aria-hidden />{item}</li>)}</ul><details className="mt-4 rounded-md border border-border bg-card p-5"><summary className="cursor-pointer text-sm font-semibold">{c.disclosure}</summary><p className="mt-3 text-sm text-muted-foreground">{c.disclosureBody}</p></details></div>
         </div>
       </Section>
-
-      <div className="mx-auto max-w-7xl px-5 py-10 lg:px-8"><EmergencyNotice /></div>
 
       <section id="evaluacion" className="scroll-mt-24 border-t border-border bg-primary text-primary-foreground">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 lg:grid-cols-[0.8fr_1.2fr] lg:px-8 lg:py-20">

@@ -7,8 +7,8 @@ export const faqItems: FaqItem[] = [
       en: "What types of batteries do you accept for recycling and disposal?",
     },
     a: {
-      es: "Trabajamos con baterías de litio de vehículos eléctricos e híbridos, sistemas de almacenamiento de energía (BESS y peak-shaving), herramientas eléctricas, electrónicos, electrodomésticos y baterías industriales de plomo y níquel. La aceptación de cada lote está sujeta a una evaluación técnica previa.",
-      en: "We work with lithium batteries from electric and hybrid vehicles, energy storage systems (BESS and peak-shaving), power tools, electronics, home appliances, and industrial lead and nickel batteries. Acceptance of each lot is subject to a prior technical assessment.",
+      es: "Trabajamos con baterías de litio de vehículos eléctricos e híbridos, sistemas de almacenamiento de energía (BESS y peak-shaving), herramientas eléctricas, electrónicos y electrodomésticos. No gestionamos baterías de plomo. La aceptación de cada lote está sujeta a una evaluación técnica previa.",
+      en: "We work with lithium batteries from electric and hybrid vehicles, energy storage systems (BESS and peak-shaving), power tools, electronics and home appliances. We do not manage lead batteries. Acceptance of each lot is subject to a prior technical assessment.",
     },
   },
   {
@@ -29,16 +29,6 @@ export const faqItems: FaqItem[] = [
     a: {
       es: "Cada proyecto incluye un expediente documental con la evidencia de retiro, transporte y destino del material, conforme al marco regulatorio aplicable en el país correspondiente. El alcance documental exacto se define en la evaluación de cada proyecto.",
       en: "Each project includes a documentary file with evidence of pickup, transport, and material destination, in line with the applicable regulatory framework in the corresponding country. The exact documentary scope is defined during each project's assessment.",
-    },
-  },
-  {
-    q: {
-      es: "¿Pueden gestionar baterías de litio dañadas o siniestradas?",
-      en: "Can you manage damaged or salvaged lithium batteries?",
-    },
-    a: {
-      es: "Las baterías dañadas, hinchadas o siniestradas requieren empaque y manejo especiales. Evaluamos cada caso de forma individual antes de confirmar el retiro; si tiene un pack en estas condiciones, contáctenos de inmediato y no intente moverlo sin asesoría.",
-      en: "Damaged, swollen, or salvaged batteries require special packaging and handling. We assess each case individually before confirming pickup; if you have a pack in these conditions, contact us immediately and do not attempt to move it without guidance.",
     },
   },
   {

@@ -16,14 +16,14 @@ export const valorizacion = {
   factorsTitle: { es: "Qué determina el valor de un lote usado", en: "What determines the value of a used lot" },
   factors: {
     es: [
-      "Química predominante: las químicas con cobalto y níquel suelen conservar más valor que LFP o plomo-ácido.",
+      "Química predominante: las químicas con cobalto y níquel suelen conservar más valor que LFP.",
       "Estado y condición: packs completos y sin daño térmico se valoran distinto que celdas sueltas o módulos siniestrados.",
       "Volumen y homogeneidad: lotes grandes y de un mismo tipo reducen costos logísticos por unidad.",
       "Ubicación y accesibilidad: la distancia al punto de consolidación influye en la viabilidad económica del retiro.",
       "Documentación disponible: fichas técnicas, historial y procedencia facilitan una cotización más precisa.",
     ],
     en: [
-      "Predominant chemistry: cobalt and nickel chemistries usually retain more value than LFP or lead-acid.",
+      "Predominant chemistry: cobalt and nickel chemistries usually retain more value than LFP.",
       "State and condition: complete, undamaged packs are valued differently than loose cells or crash-damaged modules.",
       "Volume and homogeneity: large lots of a single type reduce logistics cost per unit.",
       "Location and accessibility: distance to the consolidation point affects the economic viability of pickup.",
@@ -38,7 +38,7 @@ export const valorizacion = {
       "Baterías de electrónicos: laptops, celulares, tablets y UPS.",
       "Packs de herramientas eléctricas profesionales.",
       "Baterías de electrodomésticos y línea blanca.",
-      "Baterías industriales de plomo y níquel.",
+      "Módulos y celdas industriales de litio y scrap de producción.",
     ],
     en: [
       "Electric and hybrid vehicle batteries (packs, modules, cells).",
@@ -46,7 +46,7 @@ export const valorizacion = {
       "Electronics batteries: laptops, phones, tablets and UPS.",
       "Professional power tool packs.",
       "Appliance and white-goods batteries.",
-      "Industrial lead and nickel batteries.",
+      "Industrial lithium modules, cells and production scrap.",
     ],
   },
   honestyTitle: { es: "Una precisión importante", en: "An important clarification" },
@@ -81,8 +81,8 @@ export const valorizacion = {
     {
       q: { es: "¿Qué baterías tienen más valor?", en: "Which batteries hold the most value?" },
       a: {
-        es: "En general, las químicas con cobalto y níquel (como NMC) conservan más valor que LFP o plomo-ácido. Los packs completos, homogéneos y sin daño térmico se valoran mejor que celdas sueltas o módulos siniestrados.",
-        en: "In general, cobalt and nickel chemistries (such as NMC) retain more value than LFP or lead-acid. Complete, homogeneous, undamaged packs are valued better than loose cells or crash-damaged modules.",
+        es: "En general, las químicas con cobalto y níquel (como NMC) conservan más valor que LFP. Los packs completos, homogéneos y sin daño térmico se valoran mejor que celdas sueltas o módulos siniestrados.",
+        en: "In general, cobalt and nickel chemistries (such as NMC) retain more value than LFP. Complete, homogeneous, undamaged packs are valued better than loose cells or crash-damaged modules.",
       },
     },
     {

@@ -9,7 +9,6 @@ import primary from "@/assets/chem-primary.jpg";
 import powertool from "@/assets/chem-powertool.jpg";
 import ev from "@/assets/chem-ev.jpg";
 import ess from "@/assets/chem-ess.jpg";
-import damaged from "@/assets/chem-damaged.jpg";
 
 export type Chemistry = {
   id: string;
@@ -27,8 +26,8 @@ export const chemistries: Chemistry[] = [
     id: "nmc-nca-lco-celdas",
     name: { es: "NMC / NCA / LCO — celdas", en: "NMC / NCA / LCO — cells" },
     short: {
-      es: "Celdas cilíndricas o prismáticas de ion-litio, sueltas o en charolas de fabricante.",
-      en: "Cylindrical or prismatic lithium-ion cells, loose or in manufacturer trays.",
+      es: "Celdas cilíndricas o prismáticas de ion-litio. Proceden de vehículos eléctricos e híbridos, electrónicos de alta energía y scrap de producción.",
+      en: "Cylindrical or prismatic lithium-ion cells. They come from electric and hybrid vehicles, high-energy electronics and production scrap.",
     },
     image: nmcCells,
     alt: {
@@ -142,8 +141,8 @@ export const chemistries: Chemistry[] = [
     id: "lfp",
     name: { es: "LFP (LiFePO₄)", en: "LFP (LiFePO₄)" },
     short: {
-      es: "Litio-ferrofosfato en celdas, módulos o packs; química distinta con ruta de proceso propia.",
-      en: "Lithium iron phosphate in cells, modules or packs; a distinct chemistry with its own processing route.",
+      es: "Litio-ferrofosfato en celdas, módulos o packs. Química habitual en vehículos eléctricos, montacargas y sistemas de almacenamiento (BESS).",
+      en: "Lithium iron phosphate in cells, modules or packs. A common chemistry in electric vehicles, forklifts and energy storage systems (BESS).",
     },
     image: lfp,
     alt: {
@@ -362,45 +361,6 @@ export const chemistries: Chemistry[] = [
     handling: {
       es: "El desmantelamiento se coordina con el responsable del sitio: desenergización, retiro por módulo y maniobra se definen antes de la fecha.",
       en: "Decommissioning is coordinated with the site owner: de-energising, module-by-module removal and rigging are defined before the date.",
-    },
-  },
-  {
-    id: "danado",
-    name: { es: "Material dañado, quemado o inerte", en: "Damaged, burned or inert material" },
-    short: {
-      es: "Unidades con daño térmico, mecánico o por inmersión, de cualquier química.",
-      en: "Units with thermal, mechanical or immersion damage, of any chemistry.",
-    },
-    image: damaged,
-    alt: {
-      es: "Módulos de batería con daño térmico sobre tarima metálica en patio industrial",
-      en: "Thermally damaged battery modules on a metal pallet in an industrial yard",
-    },
-    identify: {
-      es: [
-        "Carcasa deformada, perforada, hinchada o con residuo de combustión.",
-        "Historial de incendio, impacto, inundación o inmersión.",
-        "Calor, olor dulce, humo o electrolito visible: atención inmediata.",
-      ],
-      en: [
-        "Deformed, punctured, swollen casing or combustion residue.",
-        "History of fire, impact, flooding or immersion.",
-        "Heat, sweet odour, smoke or visible electrolyte: immediate attention.",
-      ],
-    },
-    includes: {
-      es: [
-        "Unidades recuperadas de siniestros viales y de eventos de pérdida total.",
-        "Módulos de EV o de almacenamiento expuestos a fuego o daño térmico.",
-      ],
-      en: [
-        "Units recovered from road incidents and total-loss events.",
-        "EV or storage modules exposed to fire or thermal damage.",
-      ],
-    },
-    handling: {
-      es: "Aísle la unidad, restrinja el acceso y contáctenos antes de moverla: el empaque y el transporte son distintos a los de material íntegro.",
-      en: "Isolate the unit, restrict access and contact us before moving it: packaging and transport differ from intact material.",
     },
   },
 ];

@@ -6,7 +6,7 @@
 - [x] Páginas por material (/materiales/$slug)
 - [x] Hub /cobertura + estados de México, Centroamérica y Sudamérica
 - [x] Artículos /recursos
-- [ ] Publicar y dar de alta en Search Console (requiere acción del usuario)
+- [x] Publicar y dar de alta en Search Console (requiere acción del usuario)
 
 ## Mejoras de conversión (2026-09)
 
@@ -43,3 +43,15 @@ Deben aparecer en títulos, descripciones y H1/H2 de las páginas indicadas:
 - [x] Redirect obsolete content routes cleanly
 - [x] Validate desktop/mobile, forms, metadata, and duplicate content
 - [x] Preserve the bilingual Materials page with its visual chemistry and battery-type guide
+
+## Boss feedback (Sep 15, Notas_sitio_XD.docx)
+- [x] Materials: photos/details always open (no accordion)
+- [x] Remove damaged-battery chemistry card
+- [x] Remove lead batteries everywhere (we don't take them)
+- [x] Trust section: Tier 1 = OEM suppliers; add OEMs/armadoras + energy companies (backup/BESS)
+- [x] Remove emergency/damaged-battery notice site-wide (can't support that now)
+- [x] Remove "dañadas" wording from category descriptions; focus end-of-life/non-functional
+- [x] Materiales: move chemistry detail section above categories
+- [x] Chemistry cards: relate each chemistry to its origin (EV/HEV, BESS, laptops, tools)
+- [x] Coverage: drop city detail, say all of Mexico (reública)
+- [x] Publish

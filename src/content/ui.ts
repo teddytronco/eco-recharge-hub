@@ -29,8 +29,8 @@ export const ui = {
     seeAll: { es: "Ver todos los materiales", en: "See all materials" },
     chemTitle: { es: "Detalle por química y formato", en: "Detail by chemistry and format" },
     chemSubtitle: {
-      es: "Guía de referencia para identificar y separar el material antes del retiro. Despliegue cada química para ver cómo se reconoce, qué incluye normalmente y cómo conviene prepararla.",
-      en: "Reference guide to identify and separate material before pickup. Expand each chemistry to see how it is recognised, what it usually includes and how best to prepare it.",
+      es: "Guía de referencia para identificar y separar el material antes del retiro: cómo se reconoce cada química, qué incluye normalmente y cómo conviene prepararla.",
+      en: "Reference guide to identify and separate material before pickup: how to recognise each chemistry, what it usually includes and how best to prepare it.",
     },
     chemIdentify: { es: "Cómo se identifica", en: "How to identify it" },
     chemIncludes: { es: "Normalmente incluye", en: "Commonly includes" },

@@ -378,26 +378,26 @@ export const materials: Material[] = [
       es: [
         "Baterías hinchadas en laptops de varios años que deforman carcasa y touchpad.",
         "Cajas de acopio con celdas sueltas y terminales expuestas en almacén de TI.",
-        "Bancos de UPS con baterías de plomo y de litio mezcladas en el mismo lote.",
+        "Bancos de UPS retirados sin diagnóstico previo de su condición.",
         "Retiros sin inventario, que impiden reportar el destino del material.",
       ],
       en: [
         "Swollen batteries in multi-year-old laptops that deform the housing and touchpad.",
         "Collection boxes with loose cells and exposed terminals in the IT store room.",
-        "UPS banks with lead and lithium batteries mixed in the same batch.",
+        "UPS banks removed without a prior condition assessment.",
         "Retirements without inventory, which prevent reporting the material's destination.",
       ],
     },
     packaging: {
       es: [
         "Extracción de la batería en el mismo evento de baja del activo, cuando es posible.",
-        "Separación estricta entre química de plomo y química de litio.",
+        "Separación por formato y por química de litio identificada en el lote.",
         "Aislamiento de terminales y empaque en contenedor cerrado, sin celdas sueltas a granel.",
         "Contenedor específico para unidades hinchadas, retiradas del flujo normal.",
       ],
       en: [
         "Battery extraction during the same asset-retirement event, where possible.",
-        "Strict separation between lead and lithium chemistries.",
+        "Separation by format and by the lithium chemistry identified in the batch.",
         "Terminal isolation and packing in a closed container, no loose bulk cells.",
         "Dedicated container for swollen units, removed from the normal flow.",
       ],
@@ -435,99 +435,13 @@ export const materials: Material[] = [
         "Apple (MacBook, iPhone, iPad), Dell, HP, Lenovo, ASUS, Acer",
         "Samsung, Xiaomi, Motorola y telefonía celular en general",
         "Power banks, tablets, wearables, drones y bocinas inalámbricas",
-        "Baterías de UPS (APC, CyberPower, Tripp Lite, Vertiv) de plomo y litio",
+        "Baterías de litio de UPS (APC, CyberPower, Tripp Lite, Vertiv)",
       ],
       en: [
         "Apple (MacBook, iPhone, iPad), Dell, HP, Lenovo, ASUS, Acer",
         "Samsung, Xiaomi, Motorola and mobile phones in general",
         "Power banks, tablets, wearables, drones and wireless speakers",
-        "UPS batteries (APC, CyberPower, Tripp Lite, Vertiv), lead and lithium",
-      ],
-    },
-  },
-  {
-    slug: "industriales-plomo-niquel",
-    name: { es: "Industriales: plomo, níquel y otras químicas", en: "Industrial: lead, nickel and other chemistries" },
-    title: {
-      es: "Baterías industriales de plomo-ácido, níquel y otras químicas al final de su vida",
-      en: "End-of-life industrial lead-acid, nickel and other chemistry batteries",
-    },
-    description: {
-      es: "Retiro de baterías de montacargas, bancos estacionarios, arrancadores y equipos industriales, con separación por química y manejo diferenciado del litio.",
-      en: "Removal of forklift, stationary bank, starter and industrial equipment batteries, with chemistry separation and differentiated handling for lithium.",
-    },
-    intro: {
-      es: "Muchas plantas no tienen un solo tipo de batería: conviven montacargas de plomo, bancos estacionarios, arrancadores y, cada vez más, equipos migrados a litio. Cuando todo se acumula en el mismo patio de residuos, el manejo se vuelve incorrecto para las dos químicas: el plomo exige control de derrames y el litio exige control de energía. La separación por química es el primer entregable de este servicio.",
-      en: "Many plants do not have a single battery type: lead forklifts, stationary banks, starters and, increasingly, lithium-migrated equipment coexist. When everything piles up in the same waste yard, handling becomes wrong for both chemistries: lead requires spill control and lithium requires energy control. Chemistry separation is this service's first deliverable.",
-    },
-    risks: {
-      es: [
-        "Derrame de electrolito ácido por carcasas fisuradas o volteo durante la maniobra.",
-        "Mezcla de plomo y litio en el mismo lote, con requisitos de manejo incompatibles.",
-        "Bancos estacionarios con peso por unidad que exige maniobra mecánica.",
-        "Equipos convertidos a litio sin actualizar el procedimiento de retiro de la planta.",
-      ],
-      en: [
-        "Acid electrolyte spills from cracked housings or tipping during handling.",
-        "Lead and lithium mixed in the same batch, with incompatible handling requirements.",
-        "Stationary banks whose unit weight requires mechanical handling.",
-        "Equipment converted to lithium without updating the plant's removal procedure.",
-      ],
-    },
-    packaging: {
-      es: [
-        "Clasificación por química antes de cualquier movimiento fuera de la planta.",
-        "Tarimas con contención secundaria para unidades de plomo-ácido.",
-        "Posición vertical, tapones colocados y sujeción que impida volteo.",
-        "Ruta de manejo independiente para el material de litio identificado en el lote.",
-      ],
-      en: [
-        "Chemistry classification before any movement off the plant.",
-        "Pallets with secondary containment for lead-acid units.",
-        "Upright position, caps in place and strapping that prevents tipping.",
-        "Separate handling route for lithium material identified in the batch.",
-      ],
-    },
-    documentation: {
-      es: [
-        "Inventario por química, cantidad y peso.",
-        "Registro del área generadora dentro de la planta.",
-        "Documentación de embarque por lote y por química.",
-        "Evidencia de destino diferenciada para cada flujo de material.",
-      ],
-      en: [
-        "Inventory by chemistry, quantity and weight.",
-        "Record of the generating area within the plant.",
-        "Shipment documentation per batch and per chemistry.",
-        "Separate proof of destination for each material flow.",
-      ],
-    },
-    who: {
-      es: [
-        "Plantas de manufactura con flota de montacargas",
-        "Centros de distribución y almacenes automatizados",
-        "Sitios con bancos estacionarios de respaldo",
-        "Talleres y flotas con baterías de arranque",
-      ],
-      en: [
-        "Manufacturing plants with forklift fleets",
-        "Distribution centres and automated warehouses",
-        "Sites with stationary backup banks",
-        "Workshops and fleets with starter batteries",
-      ],
-    },
-    brands: {
-      es: [
-        "Baterías de montacargas Crown, EnerSys, Exide, Hoppecke, East Penn",
-        "Bancos estacionarios Trojan, Rolls/Surrette, Discover, Victron",
-        "Baterías de arranque LTH, AC Delco, Interstate y otras líneas automotrices",
-        "Cualquier química industrial identificada: plomo-ácido, NiCd, NiMH, litio",
-      ],
-      en: [
-        "Forklift batteries from Crown, EnerSys, Exide, Hoppecke, East Penn",
-        "Stationary banks from Trojan, Rolls/Surrette, Discover, Victron",
-        "Starter batteries from LTH, AC Delco, Interstate and other automotive lines",
-        "Any identified industrial chemistry: lead-acid, NiCd, NiMH, lithium",
+        "Lithium UPS batteries (APC, CyberPower, Tripp Lite, Vertiv)",
       ],
     },
   },
