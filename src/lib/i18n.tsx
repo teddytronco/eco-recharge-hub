@@ -344,12 +344,12 @@ const es = {
       notes: "Detalles adicionales",
       files: "Documentos o fotografías (PDF, JPG, PNG · máx. 10 MB c/u · hasta 5 archivos)",
       consent: "Acepto el tratamiento de mis datos conforme al aviso de privacidad *",
-      urgent: "Requiere atención prioritaria por material dañado",
+      urgent: "Requiere atención prioritaria",
     },
     options: {
       chemistry: ["Ion litio (Li-ion)", "LFP", "NMC / NCA", "Polímero de litio", "Litio primario", "Otra / por identificar"],
       format: ["Celdas", "Módulos", "Packs completos", "Chatarra de proceso", "Mixto"],
-      condition: ["Aparentemente en buen estado", "Fin de vida útil, sin daño visible", "Con daño mecánico", "Hinchadas o con fuga", "Desconocido"],
+      condition: ["Fin de vida útil, sin daño visible", "No funcionales", "Aparentemente en buen estado", "Desconocido"],
       frequency: ["Única vez", "Mensual", "Trimestral", "Por evento / según generación"],
     },
     errors: {
@@ -750,12 +750,12 @@ const en: Dict = {
       notes: "Additional details",
       files: "Documents or photos (PDF, JPG, PNG · max 10 MB each · up to 5 files)",
       consent: "I accept the processing of my data under the privacy notice *",
-      urgent: "Requires priority attention due to damaged material",
+      urgent: "Requires priority attention",
     },
     options: {
       chemistry: ["Lithium-ion (Li-ion)", "LFP", "NMC / NCA", "Lithium polymer", "Primary lithium", "Other / to be identified"],
       format: ["Cells", "Modules", "Complete packs", "Process scrap", "Mixed"],
-      condition: ["Apparently in good condition", "End of life, no visible damage", "Mechanical damage", "Swollen or leaking", "Unknown"],
+      condition: ["End of life, no visible damage", "Non-functional", "Apparently in good condition", "Unknown"],
       frequency: ["One time", "Monthly", "Quarterly", "Per event / as generated"],
     },
     errors: {
