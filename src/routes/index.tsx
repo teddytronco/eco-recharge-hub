@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 import { QuickLeadForm } from "@/components/site/QuickLeadForm";
 import { ContactActions, Section, SectionTitle } from "@/components/site/blocks";
-import hero from "@/assets/hero-facility.jpg";
+import evBatteryPlatform from "@/assets/ev-battery-platform.webp.asset.json";
 import { useI18n, whatsappUrl } from "@/lib/i18n";
 import { pageHead, serviceLd } from "@/lib/seo";
 
@@ -50,7 +50,7 @@ const copy = {
     primary: "Solicitar evaluación",
     secondary: "Conocer servicios",
     response: "Respuesta en un máximo de 24 horas hábiles",
-    heroAlt: "Instalación industrial para el manejo de baterías",
+    heroAlt: "Plataforma de vehículo eléctrico con batería de alto voltaje integrada",
     values: [
       ["Gestión integral", "Un solo equipo coordina el servicio completo."],
       ["Cumplimiento y trazabilidad", "Documentación y seguimiento según cada proyecto."],
@@ -84,7 +84,7 @@ const copy = {
     primary: "Request an assessment",
     secondary: "Explore services",
     response: "Response within a maximum of 24 business hours",
-    heroAlt: "Industrial battery handling facility",
+    heroAlt: "Electric vehicle platform with an integrated high-voltage battery",
     values: [
       ["End-to-end management", "One team coordinates the complete service."],
       ["Compliance and traceability", "Documentation and tracking for each project."],
@@ -125,7 +125,15 @@ function HomePage() {
   return (
     <>
       <section className="relative isolate overflow-hidden bg-primary text-primary-foreground">
-        <img src={hero} alt={c.heroAlt} width={1920} height={1080} className="absolute inset-0 size-full object-cover opacity-20" />
+        <img
+          src={evBatteryPlatform.url}
+          alt={c.heroAlt}
+          width={600}
+          height={333}
+          fetchPriority="high"
+          className="absolute inset-0 size-full object-cover object-center opacity-50 sm:object-right"
+        />
+        <div className="absolute inset-0 bg-primary/65" aria-hidden />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:py-20 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8 lg:py-24">
           <div>
             <p className="text-xs font-semibold tracking-[0.18em] text-accent uppercase">{c.eyebrow}</p>
