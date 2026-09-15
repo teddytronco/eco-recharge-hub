@@ -35,10 +35,11 @@ Deben aparecer en títulos, descripciones y H1/H2 de las páginas indicadas:
 - [x] Experiencia móvil: barra fija de acciones (llamar/WhatsApp/cotizar), hero y secciones compactas, campos de formulario sin zoom en iOS
 
 ## Concise three-page redesign
-- [x] Reduce primary navigation to Inicio, Servicios, Nosotros plus evaluation CTA
+- [x] Use a concise primary navigation with Inicio, Servicios, Materiales, Nosotros plus evaluation CTA
 - [x] Consolidate key materials, clients, process, coverage, and compliance into Home and Services
 - [x] Reduce visible copy by roughly 60–70% while preserving ES/EN and factual claims
 - [x] Add compact inquiry/contact areas to Home and Services
 - [x] Simplify About to credibility, operating region, and approach
 - [x] Redirect obsolete content routes cleanly
 - [x] Validate desktop/mobile, forms, metadata, and duplicate content
+- [x] Preserve the bilingual Materials page with its visual chemistry and battery-type guide
