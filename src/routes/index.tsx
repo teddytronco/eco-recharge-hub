@@ -128,8 +128,8 @@ function HomePage() {
         <img
           src={evBatteryPlatform.url}
           alt={c.heroAlt}
-          width={600}
-          height={333}
+          width={1376}
+          height={768}
           fetchPriority="high"
           className="absolute inset-0 size-full object-cover object-center opacity-50 sm:object-right"
         />
