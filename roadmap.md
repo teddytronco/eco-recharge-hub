@@ -55,3 +55,8 @@ Deben aparecer en títulos, descripciones y H1/H2 de las páginas indicadas:
 - [x] Chemistry cards: relate each chemistry to its origin (EV/HEV, BESS, laptops, tools)
 - [x] Coverage: drop city detail, say all of Mexico (reública)
 - [x] Publish
+
+## Customer presentation (Sep 21)
+- [x] Create a minimal, premium XD Materials PowerPoint for new customers and leads
+- [x] Use the current website logo, EV landing image, and battery-material photography
+- [x] Validate slide content, layout, embedded images, and PowerPoint compatibility
