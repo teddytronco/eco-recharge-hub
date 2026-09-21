@@ -57,6 +57,6 @@ Deben aparecer en títulos, descripciones y H1/H2 de las páginas indicadas:
 - [x] Publish
 
 ## Customer presentation (Sep 21)
-- [ ] Create a minimal, premium XD Materials PowerPoint for new customers and leads
-- [ ] Use the current website logo, EV landing image, and battery-material photography
-- [ ] Validate slide content, layout, embedded images, and PowerPoint compatibility
+- [x] Create a minimal, premium XD Materials PowerPoint for new customers and leads
+- [x] Use the current website logo, EV landing image, and battery-material photography
+- [x] Validate slide content, layout, embedded images, and PowerPoint compatibility
