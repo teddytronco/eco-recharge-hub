@@ -5,7 +5,7 @@ import ehsEn from "@/assets/careers-ehs-en.pdf.asset.json";
 
 export const careers = {
   es: {
-    tab: "Carreras", eyebrow: "Trabaja en XD Materials", title: "Las baterías de los autos eléctricos necesitan un destino. Constrúyelo con nosotros.",
+    tab: "Bolsa de Trabajo", eyebrow: "Trabaja en XD Materials", title: "Las baterías de los autos eléctricos necesitan un destino. Constrúyelo con nosotros.",
     intro: "Cada mes hay más vehículos eléctricos en México y casi nadie está resolviendo qué pasa con sus baterías. En XD Materials lo hacemos, y buscamos a quienes quieran construirlo desde el inicio.",
     principles: ["Impacto ambiental real", "Crecimiento profesional", "Una industria que apenas nace"],
     whyTitle: "Por qué importa", why: "Una batería de ion-litio al final de su vida útil es un residuo que debe manejarse con cuidado, y también una fuente de minerales que pueden volver a usarse. Nuestro trabajo es que llegue al lugar correcto, de forma segura y documentada.",
