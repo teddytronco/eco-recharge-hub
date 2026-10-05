@@ -62,6 +62,6 @@ Deben aparecer en títulos, descripciones y H1/H2 de las páginas indicadas:
 - [x] Validate slide content, layout, embedded images, and PowerPoint compatibility
 
 ## Careers (Oct 5)
-- [ ] Add a bilingual Careers page and navigation tab for the two current openings
-- [ ] Include verified role details, original job PDFs, and CV email application links
-- [ ] Verify language switching, application links, and header spacing
+- [x] Add a bilingual Careers page and navigation tab for the two current openings
+- [x] Include verified role details, original job PDFs, and CV email application links
+- [x] Verify language switching, application links, and header spacing
