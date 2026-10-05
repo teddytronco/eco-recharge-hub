@@ -5,7 +5,7 @@ import ehsEn from "@/assets/careers-ehs-en.pdf.asset.json";
 
 export const careers = {
   es: {
-    tab: "Carreras", eyebrow: "Trabaja en XD Materials", title: "Construye lo que sigue.",
+    tab: "Bolsa de Trabajo", eyebrow: "Trabaja en XD Materials", title: "Construye lo que sigue.",
     intro: "Forma parte de un equipo pequeño con un gran reto: dar un nuevo destino a las baterías de vehículos eléctricos en México.",
     principles: ["Impacto directo en la operación", "Responsabilidad desde el primer día", "Línea directa con la Dirección"],
     openings: "Vacantes abiertas", count: "2 oportunidades", start: "Inicio: noviembre 2026", reports: "Reporta al Director de Operaciones",
