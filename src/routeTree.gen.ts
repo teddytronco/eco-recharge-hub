@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CareersRouteImport } from './routes/careers'
+import { Route as CarrerasRouteImport } from './routes/carreras'
 import { Route as CompraDeBateriasUsadasRouteImport } from './routes/compra-de-baterias-usadas'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as CumplimientoRouteImport } from './routes/cumplimiento'
@@ -35,6 +36,11 @@ const IndexRoute = IndexRouteImport.update({
 const CareersRoute = CareersRouteImport.update({
   id: '/careers',
   path: '/careers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CarrerasRoute = CarrerasRouteImport.update({
+  id: '/carreras',
+  path: '/carreras',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CompraDeBateriasUsadasRoute = CompraDeBateriasUsadasRouteImport.update({
@@ -116,6 +122,7 @@ const RecursosSlugRoute = RecursosSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/careers': typeof CareersRoute
+  '/carreras': typeof CarrerasRoute
   '/compra-de-baterias-usadas': typeof CompraDeBateriasUsadasRoute
   '/contacto': typeof ContactoRoute
   '/cumplimiento': typeof CumplimientoRoute
@@ -135,6 +142,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/careers': typeof CareersRoute
+  '/carreras': typeof CarrerasRoute
   '/compra-de-baterias-usadas': typeof CompraDeBateriasUsadasRoute
   '/contacto': typeof ContactoRoute
   '/cumplimiento': typeof CumplimientoRoute
@@ -155,6 +163,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/careers': typeof CareersRoute
+  '/carreras': typeof CarrerasRoute
   '/compra-de-baterias-usadas': typeof CompraDeBateriasUsadasRoute
   '/contacto': typeof ContactoRoute
   '/cumplimiento': typeof CumplimientoRoute
@@ -176,6 +185,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/careers'
+    | '/carreras'
     | '/compra-de-baterias-usadas'
     | '/contacto'
     | '/cumplimiento'
@@ -195,6 +205,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/careers'
+    | '/carreras'
     | '/compra-de-baterias-usadas'
     | '/contacto'
     | '/cumplimiento'
@@ -214,6 +225,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/careers'
+    | '/carreras'
     | '/compra-de-baterias-usadas'
     | '/contacto'
     | '/cumplimiento'
@@ -234,6 +246,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CareersRoute: typeof CareersRoute
+  CarrerasRoute: typeof CarrerasRoute
   CompraDeBateriasUsadasRoute: typeof CompraDeBateriasUsadasRoute
   ContactoRoute: typeof ContactoRoute
   CumplimientoRoute: typeof CumplimientoRoute
@@ -265,6 +278,13 @@ declare module '@tanstack/react-router' {
       path: '/careers'
       fullPath: '/careers'
       preLoaderRoute: typeof CareersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/carreras': {
+      id: '/carreras'
+      path: '/carreras'
+      fullPath: '/carreras'
+      preLoaderRoute: typeof CarrerasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/compra-de-baterias-usadas': {
@@ -378,6 +398,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CareersRoute: CareersRoute,
+  CarrerasRoute: CarrerasRoute,
   CompraDeBateriasUsadasRoute: CompraDeBateriasUsadasRoute,
   ContactoRoute: ContactoRoute,
   CumplimientoRoute: CumplimientoRoute,
