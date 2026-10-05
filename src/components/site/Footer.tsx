@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import { CONTACT, useI18n, whatsappUrl } from "@/lib/i18n";
 import logo from "@/assets/xd-materials-logo.png.asset.json";
+import { careers } from "@/content/careers";
 export function Footer() {
   const { t, lang } = useI18n();
   const year = new Date().getFullYear();
@@ -11,6 +12,7 @@ export function Footer() {
     { to: "/servicios", label: t.nav.services },
     { to: "/materiales", label: t.nav.materials },
     { to: "/nosotros", label: t.nav.about },
+    { to: "/careers", label: careers[lang].tab },
   ] as const;
 
 

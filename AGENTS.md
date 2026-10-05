@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep bilingual recruitment content in a shared careers content module and serve it through `/careers`; this keeps navigation and job information consistent.
+- Careers applications use position-specific email links and the supplied job PDFs, not the customer lead form; this preserves the employer's stated CV workflow.

@@ -5,6 +5,8 @@ import { useI18n } from "@/lib/i18n";
 import { CONTACT } from "@/lib/i18n";
 import logo from "@/assets/xd-materials-logo.png.asset.json";
 import { LanguageToggle } from "./LanguageToggle";
+import { careers } from "@/content/careers";
+import { Button } from "@/components/ui/button";
 export function Header() {
   const { t, lang } = useI18n();
   const [open, setOpen] = React.useState(false);
@@ -14,6 +16,7 @@ export function Header() {
     { to: "/servicios", label: t.nav.services },
     { to: "/materiales", label: t.nav.materials },
     { to: "/nosotros", label: t.nav.about },
+    { to: "/careers", label: careers[lang].tab },
   ] as const;
 
 
@@ -27,7 +30,7 @@ export function Header() {
           onClick={() => setOpen(false)}
         >
           <img src={logo.url} alt="" width={768} height={489} className="h-8 w-auto shrink-0" />
-          <span className="hidden whitespace-nowrap text-base leading-none font-semibold tracking-tight lg:block">
+          <span className="hidden whitespace-nowrap text-base leading-none font-semibold tracking-tight 2xl:block">
             XD
             <span className="block text-[11px] font-medium tracking-[0.32em] text-muted-foreground uppercase">
               Materials
@@ -36,7 +39,7 @@ export function Header() {
 
         </Link>
 
-        <nav className="ml-auto hidden min-w-0 items-center gap-1 lg:flex">
+        <nav className="ml-auto hidden min-w-0 items-center gap-1 xl:flex">
           {links.map((l) => (
             <Link
               key={l.to}
@@ -49,11 +52,11 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="ml-auto flex shrink-0 items-center gap-1.5 lg:ml-0 lg:gap-2">
+        <div className="ml-auto flex shrink-0 items-center gap-1.5 xl:ml-0 xl:gap-2">
           <LanguageToggle />
           <a
             href={`tel:${CONTACT.phoneHref}`}
-            className="hidden items-center gap-2 rounded-md border border-border px-3 py-2 text-sm font-medium transition-colors hover:bg-secondary xl:inline-flex"
+            className="hidden items-center gap-2 rounded-md border border-border px-3 py-2 text-sm font-medium transition-colors hover:bg-secondary 2xl:inline-flex"
           >
             <Phone className="size-4" aria-hidden />
             {CONTACT.phoneDisplay}
@@ -72,20 +75,22 @@ export function Header() {
           >
             {t.cta.quote}
           </Link>
-          <button
+          <Button
             type="button"
+            variant="outline"
+            size="icon"
             aria-label={open ? t.nav.close : t.nav.menu}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex size-10 items-center justify-center rounded-md border border-border lg:hidden"
+            className="size-10 xl:hidden"
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
-          </button>
+          </Button>
         </div>
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background lg:hidden">
+        <div className="border-t border-border bg-background xl:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col px-5 py-3">
             {links.map((l) => (
               <Link
