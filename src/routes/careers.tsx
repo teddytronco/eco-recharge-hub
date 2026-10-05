@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, CalendarDays, FileText, MapPin, Send } from "lucide-react";
+import { useState } from "react";
+import { ArrowUpRight, CalendarDays, Check, FileText, Link2, MapPin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { careers } from "@/content/careers";
 import { CONTACT, useI18n } from "@/lib/i18n";
@@ -22,7 +23,7 @@ export const Route = createFileRoute("/careers")({
   component: CareersPage,
 });
 
-function CareersPage() {
+export function CareersPage() {
   const { lang } = useI18n();
   const c = careers[lang];
   return (
@@ -46,6 +47,14 @@ function CareersPage() {
         </ul>
       </div>
 
+      <section className="mx-auto max-w-7xl px-5 pt-16 lg:px-8">
+        <h2 className="text-3xl font-semibold tracking-normal">{c.whyTitle}</h2>
+        <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">{c.why}</p>
+        <ul className="mt-8 grid gap-4 sm:grid-cols-3">
+          {c.whyItems.map(([k, v]) => <li key={k} className="rounded-lg border border-border bg-card p-5 text-sm leading-relaxed"><span className="font-semibold">{k}:</span> <span className="text-muted-foreground">{v}</span></li>)}
+        </ul>
+      </section>
+
       <section id="vacantes" className="mx-auto max-w-7xl scroll-mt-24 px-5 py-16 lg:px-8">
         <div className="mb-9 flex flex-wrap items-end justify-between gap-3">
           <h2 className="text-3xl font-semibold tracking-normal">{c.openings}</h2>
@@ -53,33 +62,56 @@ function CareersPage() {
         </div>
         <div className="grid items-stretch gap-6 lg:grid-cols-2">
           {c.roles.map((role) => (
-            <article key={role.id} className="flex min-w-0 flex-col rounded-lg border border-border bg-card p-6 sm:p-8">
+            <article key={role.id} id={role.anchor} className="scroll-mt-24 flex min-w-0 flex-col rounded-lg border border-border bg-card p-6 sm:p-8">
               <div className="border-b border-border pb-6">
                 <p className="text-sm font-medium text-muted-foreground">{role.specialty}</p>
                 <h3 className="mt-2 text-2xl font-semibold tracking-normal">{role.title}</h3>
                 <div className="mt-5 flex items-center gap-2 text-sm"><MapPin className="size-4 shrink-0 text-muted-foreground" aria-hidden="true" />{role.location}</div>
                 <p className="mt-1 pl-6 text-sm text-muted-foreground">{role.mode}</p>
                 <div className="mt-3 flex items-center gap-2 text-sm"><CalendarDays className="size-4 shrink-0 text-muted-foreground" aria-hidden="true" />{c.start}</div>
-                <p className="mt-3 text-xs text-muted-foreground">{c.reports}</p>
               </div>
               <div className="space-y-7 py-6">
                 <div><h4 className="text-sm font-semibold">{c.responsibilities}</h4><p className="mt-2 text-sm leading-relaxed text-muted-foreground">{role.mission}</p><JobList items={role.responsibilities} /></div>
+                <div><h4 className="text-sm font-semibold">{c.first12}</h4><ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-relaxed text-muted-foreground">{role.first12.map((i) => <li key={i}>{i}</li>)}</ol></div>
                 <div><h4 className="text-sm font-semibold">{c.requirements}</h4><JobList items={role.requirements} /></div>
                 <div><h4 className="text-sm font-semibold">{c.offer}</h4><JobList items={role.offer} /></div>
               </div>
               <div className="mt-auto border-t border-border pt-6">
+                <p className="mb-1 text-xs text-muted-foreground">{c.reports}</p>
                 <p className="mb-4 text-xs text-muted-foreground">{c.subject}: <span className="font-medium text-foreground">{role.subject}</span></p>
                 <Button asChild className="h-11 w-full sm:w-auto"><a href={`mailto:${CONTACT.email}?subject=${encodeURIComponent(role.subject)}`}><Send aria-hidden="true" />{c.apply}</a></Button>
                 <p className="mt-2 text-xs text-muted-foreground">{c.emailNote}</p>
                 <Button asChild variant="link" className="mt-3 h-auto justify-start whitespace-normal px-0 text-left"><a href={role.pdf} target="_blank" rel="noopener noreferrer"><FileText aria-hidden="true" />{c.pdf}<ArrowUpRight aria-hidden="true" /></a></Button>
+                <CopyLink anchor={role.anchor} label={c.copy} done={c.copied} />
               </div>
             </article>
           ))}
         </div>
       </section>
 
+      <section className="border-t border-border">
+        <figure className="mx-auto flex max-w-4xl flex-col gap-6 px-5 py-16 sm:flex-row sm:items-start lg:px-8">
+          {LEADER_PHOTO && <img src={LEADER_PHOTO} alt={c.quoteName} className="size-20 shrink-0 rounded-full object-cover" />}
+          <div>
+            <blockquote className="text-xl leading-relaxed font-medium tracking-normal">“{c.quote}”</blockquote>
+            <figcaption className="mt-5 text-sm"><span className="font-semibold">{c.quoteName}</span><span className="text-muted-foreground">, {c.quoteRole}</span></figcaption>
+          </div>
+        </figure>
+      </section>
+
+      <section className="border-t border-border">
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
+          <h2 className="text-3xl font-semibold tracking-normal">{c.processTitle}</h2>
+          <ol className="mt-8 grid gap-4 sm:grid-cols-3">
+            {c.process.map((step, i) => <li key={step} className="rounded-lg border border-border bg-card p-5"><span className="text-sm font-semibold text-accent">{String(i + 1).padStart(2, "0")}</span><p className="mt-2 text-sm leading-relaxed">{step}</p></li>)}
+          </ol>
+        </div>
+      </section>
+
       <section className="border-t border-border bg-secondary/50">
-        <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8"><h2 className="text-2xl font-semibold tracking-normal">{c.howTitle}</h2><p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">{c.how}</p><a href={`mailto:${CONTACT.email}`} className="mt-5 inline-block break-all font-medium underline underline-offset-4">{CONTACT.email}</a></div>
+        <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8"><h2 className="text-2xl font-semibold tracking-normal">{c.openTitle}</h2><p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">{c.openText}</p>
+          <Button asChild size="lg" className="mt-6"><a href={`mailto:${CONTACT.email}?subject=${encodeURIComponent(c.openSubject)}`}><Send aria-hidden="true" />{c.openCta}</a></Button>
+        </div>
       </section>
     </>
   );
@@ -87,4 +119,16 @@ function CareersPage() {
 
 function JobList({ items }: { items: readonly string[] }) {
   return <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted-foreground">{items.map((item) => <li key={item} className="flex gap-2"><span className="mt-2 h-1 w-1 shrink-0 bg-muted-foreground" aria-hidden="true" /><span>{item}</span></li>)}</ul>;
+}
+// Set to an image URL to show the leadership photo; hidden while empty.
+const LEADER_PHOTO = "";
+
+function CopyLink({ anchor, label, done }: { anchor: string; label: string; done: string }) {
+  const [copied, setCopied] = useState(false);
+  return (
+    <button type="button" className="mt-2 flex items-center gap-2 text-xs font-medium text-muted-foreground hover:text-foreground"
+      onClick={async () => { await navigator.clipboard.writeText(`${window.location.origin}/carreras#${anchor}`); setCopied(true); setTimeout(() => setCopied(false), 2000); }}>
+      {copied ? <Check className="size-3.5" aria-hidden="true" /> : <Link2 className="size-3.5" aria-hidden="true" />}{copied ? done : label}
+    </button>
+  );
 }
