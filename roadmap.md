@@ -67,6 +67,6 @@ Deben aparecer en títulos, descripciones y H1/H2 de las páginas indicadas:
 - [x] Verify language switching, application links, and header spacing
 
 ## Careers update (Oct 7)
-- [ ] Update bilingual sales details and PDF links from the revised Battery Sourcing postings
-- [ ] Remove Christian Recio's name from recruitment attribution; retain only the operations title
-- [ ] Verify both languages, CV subject links, and updated PDFs
+- [x] Update bilingual sales details and PDF links from the revised Battery Sourcing postings
+- [x] Remove Christian Recio's name from recruitment attribution; retain only the operations title
+- [x] Verify both languages, CV subject links, and updated PDFs
