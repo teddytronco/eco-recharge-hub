@@ -12,7 +12,7 @@ export const Route = createFileRoute("/careers")({
   head: () => ({
     meta: [
       { title: "Carreras y vacantes | XD Materials" },
-      { name: "description", content: "Únete a XD Materials: vacantes de ventas de baterías EV y coordinación EHS en Monterrey, Saltillo y Arteaga. Envía tu CV." },
+      { name: "description", content: "Únete a XD Materials: Battery Sourcing / Business Development Executive y coordinación EHS en Monterrey, Saltillo y Arteaga. Envía tu CV." },
       { property: "og:title", content: "Trabaja en XD Materials | Careers" },
       { property: "og:description", content: "Construye tu futuro en baterías EV. Conoce nuestras dos vacantes y postúlate con tu CV." },
       { property: "og:type", content: "website" },
@@ -74,6 +74,7 @@ export function CareersPage() {
                 <div><h4 className="text-sm font-semibold">{c.responsibilities}</h4><p className="mt-2 text-sm leading-relaxed text-muted-foreground">{role.mission}</p><JobList items={role.responsibilities} /></div>
                 <div><h4 className="text-sm font-semibold">{c.first12}</h4><ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-relaxed text-muted-foreground">{role.first12.map((i) => <li key={i}>{i}</li>)}</ol></div>
                 <div><h4 className="text-sm font-semibold">{c.requirements}</h4><JobList items={role.requirements} /></div>
+                {"desirable" in role && <div><h4 className="text-sm font-semibold">{c.desirable}</h4><JobList items={role.desirable} /></div>}
                 <div><h4 className="text-sm font-semibold">{c.offer}</h4><JobList items={role.offer} /></div>
               </div>
               <div className="mt-auto border-t border-border pt-6">
@@ -91,10 +92,10 @@ export function CareersPage() {
 
       <section className="border-t border-border">
         <figure className="mx-auto flex max-w-4xl flex-col gap-6 px-5 py-16 sm:flex-row sm:items-start lg:px-8">
-          {LEADER_PHOTO && <img src={LEADER_PHOTO} alt={c.quoteName} className="size-20 shrink-0 rounded-full object-cover" />}
+          {LEADER_PHOTO && <img src={LEADER_PHOTO} alt={c.quoteRole} className="size-20 shrink-0 rounded-full object-cover" />}
           <div>
             <blockquote className="text-xl leading-relaxed font-medium tracking-normal">“{c.quote}”</blockquote>
-            <figcaption className="mt-5 text-sm"><span className="font-semibold">{c.quoteName}</span><span className="text-muted-foreground">, {c.quoteRole}</span></figcaption>
+            <figcaption className="mt-5 text-sm font-semibold">{c.quoteRole}</figcaption>
           </div>
         </figure>
       </section>
