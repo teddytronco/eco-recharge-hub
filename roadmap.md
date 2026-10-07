@@ -65,3 +65,8 @@ Deben aparecer en títulos, descripciones y H1/H2 de las páginas indicadas:
 - [x] Add a bilingual Careers page and navigation tab for the two current openings
 - [x] Include verified role details, original job PDFs, and CV email application links
 - [x] Verify language switching, application links, and header spacing
+
+## Careers update (Oct 7)
+- [x] Update bilingual sales details and PDF links from the revised Battery Sourcing postings
+- [x] Remove Christian Recio's name from recruitment attribution; retain only the operations title
+- [x] Verify both languages, CV subject links, and updated PDFs
