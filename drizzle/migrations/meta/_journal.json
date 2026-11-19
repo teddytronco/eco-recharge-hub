@@ -15,6 +15,13 @@
       "when": 1795130296355,
       "tag": "0001_restrict_quote_lead_submissions",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795130873379,
+      "tag": "0002_leads_dashboard_access_and_tracking",
+      "breakpoints": true
     }
   ]
 }

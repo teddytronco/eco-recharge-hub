@@ -17,6 +17,7 @@ import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
 import { FloatingWhatsApp } from "../components/site/FloatingWhatsApp";
 import { MobileActionBar } from "../components/site/MobileActionBar";
+import { SiteTracker } from "../components/site/SiteTracker";
 
 function NotFoundComponent() {
   return (
@@ -136,6 +137,7 @@ function RootComponent() {
           <Footer />
           <FloatingWhatsApp />
           <MobileActionBar />
+          <SiteTracker />
         </div>
       </I18nProvider>
     </QueryClientProvider>

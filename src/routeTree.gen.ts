@@ -10,6 +10,8 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
+import { Route as AuthRouteImport } from './routes/auth'
 import { Route as CareersRouteImport } from './routes/careers'
 import { Route as CarrerasRouteImport } from './routes/carreras'
 import { Route as CompraDeBateriasUsadasRouteImport } from './routes/compra-de-baterias-usadas'
@@ -19,8 +21,10 @@ import { Route as LegalRouteImport } from './routes/legal'
 import { Route as LogisticaRouteImport } from './routes/logistica'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as ProcesoRouteImport } from './routes/proceso'
+import { Route as ResetPasswordRouteImport } from './routes/reset-password'
 import { Route as ServiciosRouteImport } from './routes/servicios'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as AuthenticatedPanelRouteImport } from './routes/_authenticated/panel'
 import { Route as CoberturaIndexRouteImport } from './routes/cobertura.index'
 import { Route as CoberturaSlugRouteImport } from './routes/cobertura.$slug'
 import { Route as MaterialesIndexRouteImport } from './routes/materiales.index'
@@ -31,6 +35,15 @@ import { Route as RecursosSlugRouteImport } from './routes/recursos.$slug'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CareersRoute = CareersRouteImport.update({
@@ -78,6 +91,11 @@ const ProcesoRoute = ProcesoRouteImport.update({
   path: '/proceso',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ResetPasswordRoute = ResetPasswordRouteImport.update({
+  id: '/reset-password',
+  path: '/reset-password',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServiciosRoute = ServiciosRouteImport.update({
   id: '/servicios',
   path: '/servicios',
@@ -87,6 +105,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedPanelRoute = AuthenticatedPanelRouteImport.update({
+  id: '/panel',
+  path: '/panel',
+  getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 const CoberturaIndexRoute = CoberturaIndexRouteImport.update({
   id: '/cobertura/',
@@ -121,6 +144,7 @@ const RecursosSlugRoute = RecursosSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
   '/careers': typeof CareersRoute
   '/carreras': typeof CarrerasRoute
   '/compra-de-baterias-usadas': typeof CompraDeBateriasUsadasRoute
@@ -130,8 +154,10 @@ export interface FileRoutesByFullPath {
   '/logistica': typeof LogisticaRoute
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/servicios': typeof ServiciosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/panel': typeof AuthenticatedPanelRoute
   '/cobertura/$slug': typeof CoberturaSlugRoute
   '/materiales/$slug': typeof MaterialesSlugRoute
   '/recursos/$slug': typeof RecursosSlugRoute
@@ -141,6 +167,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
   '/careers': typeof CareersRoute
   '/carreras': typeof CarrerasRoute
   '/compra-de-baterias-usadas': typeof CompraDeBateriasUsadasRoute
@@ -150,8 +177,10 @@ export interface FileRoutesByTo {
   '/logistica': typeof LogisticaRoute
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/servicios': typeof ServiciosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/panel': typeof AuthenticatedPanelRoute
   '/cobertura/$slug': typeof CoberturaSlugRoute
   '/materiales/$slug': typeof MaterialesSlugRoute
   '/recursos/$slug': typeof RecursosSlugRoute
@@ -162,6 +191,8 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
+  '/auth': typeof AuthRoute
   '/careers': typeof CareersRoute
   '/carreras': typeof CarrerasRoute
   '/compra-de-baterias-usadas': typeof CompraDeBateriasUsadasRoute
@@ -171,8 +202,10 @@ export interface FileRoutesById {
   '/logistica': typeof LogisticaRoute
   '/nosotros': typeof NosotrosRoute
   '/proceso': typeof ProcesoRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/servicios': typeof ServiciosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/_authenticated/panel': typeof AuthenticatedPanelRoute
   '/cobertura/$slug': typeof CoberturaSlugRoute
   '/materiales/$slug': typeof MaterialesSlugRoute
   '/recursos/$slug': typeof RecursosSlugRoute
@@ -184,6 +217,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/auth'
     | '/careers'
     | '/carreras'
     | '/compra-de-baterias-usadas'
@@ -193,8 +227,10 @@ export interface FileRouteTypes {
     | '/logistica'
     | '/nosotros'
     | '/proceso'
+    | '/reset-password'
     | '/servicios'
     | '/sitemap.xml'
+    | '/panel'
     | '/cobertura/$slug'
     | '/materiales/$slug'
     | '/recursos/$slug'
@@ -204,6 +240,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/auth'
     | '/careers'
     | '/carreras'
     | '/compra-de-baterias-usadas'
@@ -213,8 +250,10 @@ export interface FileRouteTypes {
     | '/logistica'
     | '/nosotros'
     | '/proceso'
+    | '/reset-password'
     | '/servicios'
     | '/sitemap.xml'
+    | '/panel'
     | '/cobertura/$slug'
     | '/materiales/$slug'
     | '/recursos/$slug'
@@ -224,6 +263,8 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/_authenticated'
+    | '/auth'
     | '/careers'
     | '/carreras'
     | '/compra-de-baterias-usadas'
@@ -233,8 +274,10 @@ export interface FileRouteTypes {
     | '/logistica'
     | '/nosotros'
     | '/proceso'
+    | '/reset-password'
     | '/servicios'
     | '/sitemap.xml'
+    | '/_authenticated/panel'
     | '/cobertura/$slug'
     | '/materiales/$slug'
     | '/recursos/$slug'
@@ -245,6 +288,8 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
+  AuthRoute: typeof AuthRoute
   CareersRoute: typeof CareersRoute
   CarrerasRoute: typeof CarrerasRoute
   CompraDeBateriasUsadasRoute: typeof CompraDeBateriasUsadasRoute
@@ -254,6 +299,7 @@ export interface RootRouteChildren {
   LogisticaRoute: typeof LogisticaRoute
   NosotrosRoute: typeof NosotrosRoute
   ProcesoRoute: typeof ProcesoRoute
+  ResetPasswordRoute: typeof ResetPasswordRoute
   ServiciosRoute: typeof ServiciosRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   CoberturaSlugRoute: typeof CoberturaSlugRoute
@@ -271,6 +317,20 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/careers': {
@@ -336,6 +396,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProcesoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/reset-password': {
+      id: '/reset-password'
+      path: '/reset-password'
+      fullPath: '/reset-password'
+      preLoaderRoute: typeof ResetPasswordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/servicios': {
       id: '/servicios'
       path: '/servicios'
@@ -349,6 +416,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/panel': {
+      id: '/_authenticated/panel'
+      path: '/panel'
+      fullPath: '/panel'
+      preLoaderRoute: typeof AuthenticatedPanelRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
     }
     '/cobertura/': {
       id: '/cobertura/'
@@ -395,8 +469,21 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedPanelRoute: typeof AuthenticatedPanelRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedPanelRoute: AuthenticatedPanelRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
+  AuthRoute: AuthRoute,
   CareersRoute: CareersRoute,
   CarrerasRoute: CarrerasRoute,
   CompraDeBateriasUsadasRoute: CompraDeBateriasUsadasRoute,
@@ -406,6 +493,7 @@ const rootRouteChildren: RootRouteChildren = {
   LogisticaRoute: LogisticaRoute,
   NosotrosRoute: NosotrosRoute,
   ProcesoRoute: ProcesoRoute,
+  ResetPasswordRoute: ResetPasswordRoute,
   ServiciosRoute: ServiciosRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   CoberturaSlugRoute: CoberturaSlugRoute,

@@ -117,6 +117,9 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="mx-auto max-w-7xl px-5 py-6 text-xs text-muted-foreground lg:px-8">
           © {year} XD Materials. {t.footer.rights}
+          <Link to="/panel" rel="nofollow" className="ml-3 underline-offset-4 hover:text-foreground hover:underline">
+            {lang === "es" ? "Acceso equipo" : "Team login"}
+          </Link>
         </div>
       </div>
     </footer>
