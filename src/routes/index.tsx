@@ -19,19 +19,22 @@ import {
   Zap,
 } from "lucide-react";
 import { QuickLeadForm } from "@/components/site/QuickLeadForm";
+import { DriveUnitsSection } from "@/components/site/DriveUnitsSection";
 import { ContactActions, Section, SectionTitle } from "@/components/site/blocks";
 import evBatteryPlatform from "@/assets/ev-battery-platform-hd.jpg.asset.json";
 import { useI18n, whatsappUrl } from "@/lib/i18n";
 import { pageHead, serviceLd } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
+  validateSearch: (search: Record<string, unknown>): { material?: string } =>
+    typeof search["material"] === "string" ? { material: search["material"] } : {},
   staticData: { sitemap: true },
   head: () =>
     pageHead({
       path: "/",
-      title: "Reciclaje de baterías de litio en México | XD Materials",
+      title: "Reciclaje de baterías y compra de drive units EV | XD Materials",
       description:
-        "Recolección, transporte, manejo, tratamiento y reciclaje de baterías de litio para empresas en México y Latinoamérica.",
+        "Gestión de baterías de litio y compra de unidades de propulsión EV (drive units) para empresas en México y Latinoamérica.",
       jsonLd: serviceLd({
         name: "Gestión integral de baterías de litio",
         description: "Soluciones B2B de recolección, transporte, manejo, tratamiento y reciclaje de baterías de litio.",
@@ -46,7 +49,7 @@ const copy = {
   es: {
     eyebrow: "México · Centroamérica · Sudamérica",
     title: "Soluciones integrales para baterías de litio fuera de uso",
-    subtitle: "Coordinamos recolección, transporte, manejo, tratamiento y reciclaje con trazabilidad de principio a fin.",
+    subtitle: "Coordinamos la gestión de baterías con trazabilidad de principio a fin. También compramos unidades de propulsión EV (drive units).",
     primary: "Solicitar evaluación",
     secondary: "Conocer servicios",
     response: "Respuesta en un máximo de 24 horas hábiles",
@@ -80,7 +83,7 @@ const copy = {
   en: {
     eyebrow: "Mexico · Central America · South America",
     title: "End-to-end solutions for end-of-life lithium batteries",
-    subtitle: "We coordinate collection, transportation, handling, treatment and recycling with full traceability.",
+    subtitle: "We coordinate battery management with end-to-end traceability. We also purchase EV drive units.",
     primary: "Request an assessment",
     secondary: "Explore services",
     response: "Response within a maximum of 24 business hours",
@@ -120,6 +123,7 @@ const processIcons = [ClipboardCheck, PackageCheck, Truck, Recycle];
 
 function HomePage() {
   const { lang, t } = useI18n();
+  const { material } = Route.useSearch();
   const c = copy[lang];
 
   return (
@@ -150,7 +154,7 @@ function HomePage() {
             </div>
             <p className="mt-5 text-xs font-semibold tracking-[0.12em] text-accent uppercase">{c.response}</p>
           </div>
-          <QuickLeadForm />
+          <QuickLeadForm initialMaterial={material} />
         </div>
       </section>
 
@@ -170,6 +174,7 @@ function HomePage() {
         </div>
       </Section>
 
+      <DriveUnitsSection />
       <Section>
         <SectionTitle title={c.processTitle} />
         <ol className="mt-10 grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-4">{c.process.map(([title, body], i) => { const Icon = processIcons[i] ?? CheckCircle2; return <li key={title} className="bg-card p-6"><Icon className="size-5 text-accent-foreground" aria-hidden /><span className="mt-5 block text-xs text-muted-foreground">0{i + 1}</span><h3 className="mt-1 font-semibold">{title}</h3><p className="mt-2 text-sm text-muted-foreground">{body}</p></li>; })}</ol>
@@ -185,7 +190,7 @@ function HomePage() {
       <section id="evaluacion" className="scroll-mt-24 border-t border-border bg-primary text-primary-foreground">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 lg:grid-cols-[0.8fr_1.2fr] lg:px-8 lg:py-20">
           <div><h2 className="text-3xl font-semibold">{c.formTitle}</h2><p className="mt-3 max-w-md text-primary-foreground/70">{c.formSub}</p><div className="mt-8 rounded-md border border-primary-foreground/20 p-5"><div className="flex gap-3"><MapPin className="size-5 shrink-0 text-accent" aria-hidden /><div><p className="text-sm font-semibold">XD Materials</p><p className="mt-1 text-sm text-primary-foreground/70">{c.location}</p></div></div><ContactActions className="mt-5" /></div></div>
-          <QuickLeadForm />
+          <QuickLeadForm initialMaterial={material} />
         </div>
       </section>
     </>

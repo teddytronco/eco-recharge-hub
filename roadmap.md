@@ -1,5 +1,10 @@
 # Roadmap
 
+## EV drive-unit purchasing (Nov 19)
+- [x] Add concise Spanish/English purchasing content to Home, Materials and Services
+- [x] Add a relevant drive-unit image and inquiry choices
+- [x] Verify both languages, mobile layout and inquiry submission
+
 ## Plan SEO (aprobado 2026-09-04)
 
 - [x] Base técnica: canonical/og absolutos, og:image, JSON-LD, sitemap, robots

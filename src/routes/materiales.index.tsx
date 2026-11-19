@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BatteryCharging, Car, Factory, Laptop, Wrench, Zap } from "lucide-react";
 import { ChemistryGuide } from "@/components/site/ChemistryGuide";
+import { DriveUnitsSection } from "@/components/site/DriveUnitsSection";
 import { PageHero, Section, SectionTitle } from "@/components/site/blocks";
 import { useI18n } from "@/lib/i18n";
 import { pageHead } from "@/lib/seo";
@@ -10,17 +11,17 @@ export const Route = createFileRoute("/materiales/")({
   head: () =>
     pageHead({
       path: "/materiales",
-      title: "Tipos de baterías y químicas | XD Materials",
+      title: "Baterías, químicas y drive units EV | XD Materials",
       description:
-        "Guía visual de baterías EV, BESS, herramientas, electrónicos y químicas como NMC, LFP y NiMH para evaluación y reciclaje.",
+        "Guía visual de baterías EV, BESS y químicas como NMC, LFP y NiMH. También compramos unidades de propulsión EV (drive units).",
     }),
   component: MaterialsPage,
 });
 
 const copy = {
   es: {
-    title: "Baterías y materiales que gestionamos",
-    subtitle: "Identifique el tipo, formato y química de su material antes de solicitar una evaluación.",
+    title: "Baterías y unidades de propulsión EV",
+    subtitle: "Gestión de baterías y compra de drive units. Identifique su material para solicitar una evaluación.",
     categoriesTitle: "Categorías principales",
     categoriesSub: "De dónde provienen las baterías que gestionamos y cómo identificarlas.",
     categories: [
@@ -34,8 +35,8 @@ const copy = {
     cta: "Solicitar evaluación del material",
   },
   en: {
-    title: "Batteries and materials we manage",
-    subtitle: "Identify your material’s type, format and chemistry before requesting an assessment.",
+    title: "Batteries and EV drive units",
+    subtitle: "Battery management and drive-unit purchasing. Identify your material to request an assessment.",
     categoriesTitle: "Main categories",
     categoriesSub: "Where the batteries we manage come from and how to identify them.",
     categories: [
@@ -59,6 +60,7 @@ function MaterialsPage() {
   return (
     <>
       <PageHero eyebrow={t.brand.tagline} title={c.title} subtitle={c.subtitle} />
+      <DriveUnitsSection />
       <ChemistryGuide />
       <Section>
         <SectionTitle title={c.categoriesTitle} subtitle={c.categoriesSub} />

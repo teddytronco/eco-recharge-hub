@@ -1,4 +1,5 @@
 import * as React from "react";
+import { EV_DRIVE_UNIT } from "@/content/drive-units";
 
 export type Lang = "es" | "en";
 
@@ -112,8 +113,9 @@ const es = {
     quick: {
       title: "Cuéntenos qué tiene",
       subtitle: "Tres datos. Le respondemos en 24 horas hábiles.",
-      type: "Tipo de batería",
+      type: "Tipo de material",
       typeOptions: [
+        EV_DRIVE_UNIT.inquiry.es,
         "Vehículo eléctrico (EV)",
         "Almacenamiento / BESS",
         "Herramienta eléctrica",
@@ -127,7 +129,7 @@ const es = {
       sending: "Enviando…",
       done: "Gracias. Le contactamos en un máximo de 24 horas hábiles.",
       error: "No se pudo enviar. Intente por WhatsApp o teléfono.",
-      invalid: "Indique un teléfono o correo válido y el tipo de batería.",
+      invalid: "Indique un teléfono o correo válido y el tipo de material.",
       full: "¿Prefiere el formulario completo?",
     },
     trustTitle: "Con quién trabajamos",
@@ -335,7 +337,7 @@ const es = {
       phone: "Teléfono *",
       country: "País *",
       city: "Ciudad / Estado *",
-      chemistry: "Química o tipo de batería *",
+      chemistry: "Química o tipo de material *",
       format: "Formato *",
       quantity: "Cantidad estimada (kg o unidades) *",
       condition: "Estado del material *",
@@ -347,8 +349,8 @@ const es = {
       urgent: "Requiere atención prioritaria",
     },
     options: {
-      chemistry: ["Ion litio (Li-ion)", "LFP", "NMC / NCA", "Polímero de litio", "Litio primario", "Otra / por identificar"],
-      format: ["Celdas", "Módulos", "Packs completos", "Chatarra de proceso", "Mixto"],
+      chemistry: [EV_DRIVE_UNIT.inquiry.es, "Ion litio (Li-ion)", "LFP", "NMC / NCA", "Polímero de litio", "Litio primario", "Otra / por identificar"],
+      format: ["Unidad de propulsión completa", "Celdas", "Módulos", "Packs completos", "Chatarra de proceso", "Mixto"],
       condition: ["Fin de vida útil, sin daño visible", "No funcionales", "Aparentemente en buen estado", "Desconocido"],
       frequency: ["Única vez", "Mensual", "Trimestral", "Por evento / según generación"],
     },
@@ -519,8 +521,9 @@ const en: Dict = {
     quick: {
       title: "Start your assessment",
       subtitle: "Three details. We reply in 24 business hours.",
-      type: "Battery type",
+      type: "Material type",
       typeOptions: [
+        EV_DRIVE_UNIT.inquiry.en,
         "Electric vehicle (EV)",
         "Storage / BESS",
         "Power tools",
@@ -534,7 +537,7 @@ const en: Dict = {
       sending: "Sending…",
       done: "Thank you. We will contact you within 24 business hours.",
       error: "Could not send. Please try WhatsApp or phone.",
-      invalid: "Enter a valid phone or email and the battery type.",
+      invalid: "Enter a valid phone or email and the material type.",
       full: "Prefer the full form?",
     },
     trustTitle: "Who we work with",
@@ -741,7 +744,7 @@ const en: Dict = {
       phone: "Phone *",
       country: "Country *",
       city: "City / State *",
-      chemistry: "Battery chemistry or type *",
+      chemistry: "Chemistry or material type *",
       format: "Format *",
       quantity: "Estimated quantity (kg or units) *",
       condition: "Material condition *",
@@ -753,8 +756,8 @@ const en: Dict = {
       urgent: "Requires priority attention",
     },
     options: {
-      chemistry: ["Lithium-ion (Li-ion)", "LFP", "NMC / NCA", "Lithium polymer", "Primary lithium", "Other / to be identified"],
-      format: ["Cells", "Modules", "Complete packs", "Process scrap", "Mixed"],
+      chemistry: [EV_DRIVE_UNIT.inquiry.en, "Lithium-ion (Li-ion)", "LFP", "NMC / NCA", "Lithium polymer", "Primary lithium", "Other / to be identified"],
+      format: ["Complete drive unit", "Cells", "Modules", "Complete packs", "Process scrap", "Mixed"],
       condition: ["End of life, no visible damage", "Non-functional", "Apparently in good condition", "Unknown"],
       frequency: ["One time", "Monthly", "Quarterly", "Per event / as generated"],
     },

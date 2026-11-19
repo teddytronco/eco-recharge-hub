@@ -11,3 +11,4 @@
 
 - Keep bilingual recruitment content in a shared careers content module and serve it through `/careers`; this keeps navigation and job information consistent.
 - Careers applications use position-specific email links and the supplied job PDFs, not the customer lead form; this preserves the employer's stated CV workflow.
+- Keep EV drive-unit copy and inquiry identifiers in a shared bilingual content module; reuse the existing lead fields so component inquiries follow the established contact workflow.

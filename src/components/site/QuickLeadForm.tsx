@@ -4,16 +4,20 @@ import { useServerFn } from "@tanstack/react-start";
 import { ArrowRight, Check } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { submitQuickLead } from "@/lib/leads.functions";
+import { EV_DRIVE_UNIT } from "@/content/drive-units";
 
 const fieldClass =
   "mt-1.5 w-full rounded-md border border-primary-foreground/25 bg-primary-foreground/10 px-3 py-3 text-base text-primary-foreground outline-none transition-colors placeholder:text-primary-foreground/50 focus:border-accent focus:ring-2 focus:ring-accent/40 sm:text-sm";
 
-export function QuickLeadForm() {
+export function QuickLeadForm({ initialMaterial }: { initialMaterial?: string | undefined }) {
   const { t, lang } = useI18n();
   const q = t.home.quick;
   const send = useServerFn(submitQuickLead);
 
   const [batteryType, setBatteryType] = React.useState("");
+  React.useEffect(() => {
+    if (initialMaterial === EV_DRIVE_UNIT.id) setBatteryType(EV_DRIVE_UNIT.inquiry[lang]);
+  }, [initialMaterial, lang]);
   const [quantity, setQuantity] = React.useState("");
   const [contact, setContact] = React.useState("");
   const [state, setState] = React.useState<"idle" | "sending" | "done" | "error" | "invalid">(
