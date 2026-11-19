@@ -66,7 +66,7 @@ export function summarize(
     contactTaps: clicks.length,
     byChannel,
     contactAttempts,
-    contactRate: sessions.size ? Math.round(((leads.length + contactSessions.size) / sessions.size) * 1000) / 10 : 0,
+    contactRate: sessions.size ? Math.min(100, Math.round(((leads.length + contactSessions.size) / sessions.size) * 1000) / 10) : 0,
     daily,
     topPages: topCounts(visits.map((v) => v.path)),
     topSources: topCounts(visits.map((v) => v.referrer_host || "Directo / Direct")),

@@ -1,5 +1,9 @@
 # Roadmap
 
+## Private leads & KPI dashboard (Nov 19)
+- [x] Sign-in-only /panel for crecio@xd-global.com with monthly visits, contact taps, form leads, charts, CSV and PDF export
+- [x] Count anonymous visits and WhatsApp/phone/email taps on the live site
+
 ## EV drive-unit purchasing (Nov 19)
 - [x] Add concise Spanish/English purchasing content to Home, Materials and Services
 - [x] Add a relevant drive-unit image and inquiry choices
