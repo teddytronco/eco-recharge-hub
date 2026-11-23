@@ -76,7 +76,8 @@ export function summarize(
 
 export function toCsv(rows: (string | number | null | undefined)[][]) {
   return "\uFEFF" + rows.map((r) => r.map((v) => {
-    const s = v == null ? "" : String(v);
+    let s = v == null ? "" : String(v);
+    if (typeof v === "string" && /^[=+\-@\t\r]/.test(s)) s = "'" + s;
     return /[",\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
   }).join(",")).join("\r\n");
 }
