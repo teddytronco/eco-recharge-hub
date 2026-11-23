@@ -79,3 +79,8 @@ Deben aparecer en títulos, descripciones y H1/H2 de las páginas indicadas:
 - [x] Update bilingual sales details and PDF links from the revised Battery Sourcing postings
 - [x] Remove Christian Recio's name from recruitment attribution; retain only the operations title
 - [x] Verify both languages, CV subject links, and updated PDFs
+
+## LinkedIn banner redesign (Nov 23, 2026)
+- [x] Add subtle environmental-impact accent to XD LinkedIn banner (1584x396)
+- [x] Use the website's EV battery pack photo as banner background
+- [x] Deliver final banner(s) to /mnt/documents
