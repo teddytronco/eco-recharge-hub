@@ -20,7 +20,7 @@ const copy = {
       "Trabajamos con enfoque en seguridad, cumplimiento y rendición de cuentas. Cuando un servicio requiere documentación o autorizaciones específicas, estas se confirman conforme al proyecto y se comparten por canales controlados.",
     ],
     principles: ["Seguridad antes que velocidad", "Alcances y responsabilidades claros", "Evidencia documental del servicio"],
-    location: "Ramos Arizpe, Coahuila, México",
+    location: "Arteaga, Coahuila, México",
     contact: "Contacto directo",
   },
   en: {
@@ -32,7 +32,7 @@ const copy = {
       "We work with safety, compliance and accountability at the center. When a service requires specific documentation or authorizations, they are confirmed for the project and shared through controlled channels.",
     ],
     principles: ["Safety before speed", "Clear scope and accountability", "Documented service evidence"],
-    location: "Ramos Arizpe, Coahuila, Mexico",
+    location: "Arteaga, Coahuila, Mexico",
     contact: "Direct contact",
   },
 } as const;

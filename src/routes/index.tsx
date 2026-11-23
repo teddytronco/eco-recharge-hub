@@ -78,7 +78,7 @@ const copy = {
     disclosureBody: "La documentación aplicable se confirma y comparte de forma controlada según el material, origen, ruta y alcance del proyecto. No publicamos documentación sensible en este sitio.",
     formTitle: "Evalúe su material",
     formSub: "Comparta tres datos. Nuestro equipo confirmará los siguientes pasos.",
-    location: "Ramos Arizpe, Coahuila, México",
+    location: "Arteaga, Coahuila, México",
   },
   en: {
     eyebrow: "Mexico · Central America · South America",
@@ -112,7 +112,7 @@ const copy = {
     disclosureBody: "Applicable documentation is confirmed and shared securely according to the material, origin, route and project scope. Sensitive records are not published on this site.",
     formTitle: "Assess your material",
     formSub: "Share three details. Our team will confirm the next steps.",
-    location: "Ramos Arizpe, Coahuila, Mexico",
+    location: "Arteaga, Coahuila, Mexico",
   },
 } as const;
 
