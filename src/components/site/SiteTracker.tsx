@@ -5,7 +5,23 @@ import { useI18n } from "@/lib/i18n";
 import { contactChannel } from "@/lib/kpis";
 import { recordContactClick, recordVisit } from "@/lib/tracking.functions";
 
-const PRIVATE = ["/panel", "/auth"];
+const PRIVATE = ["/panel", "/auth", "/reset-password"];
+const INTERNAL_KEY = "xd_internal";
+
+/** Team browsers: anyone who opened the private login/panel or holds a signed-in session. */
+function isInternal(path: string) {
+  try {
+    if (PRIVATE.some((p) => path.startsWith(p)) || new URLSearchParams(window.location.search).has("team")) {
+      localStorage.setItem(INTERNAL_KEY, "1");
+    }
+    if (Object.keys(localStorage).some((k) => k.startsWith("sb-") && k.endsWith("-auth-token"))) {
+      localStorage.setItem(INTERNAL_KEY, "1");
+    }
+    return localStorage.getItem(INTERNAL_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
 
 function sessionId() {
   let id = sessionStorage.getItem("xd_visit");
@@ -18,7 +34,7 @@ function sessionId() {
 
 function skipTracking(path: string) {
   const host = window.location.hostname;
-  return PRIVATE.some((p) => path.startsWith(p)) || host.includes("id-preview--") || host.endsWith("lovableproject.com");
+  return isInternal(path) || PRIVATE.some((p) => path.startsWith(p)) || host.includes("id-preview--") || host.endsWith("lovableproject.com");
 }
 
 /** Records anonymous page visits and contact-button taps for the private leads dashboard. */
